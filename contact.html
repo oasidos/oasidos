@@ -1,379 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | OASIDOS</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-/* 全站统一样式变量 */
-:root {
-    --color-primary: #2C3E50;
-    --color-dark: #212121;
-    --color-text: #444444;
-    --color-text-light: #777777;
-    --color-bg-light: #F5F5F5;
-    --color-white: #FFFFFF;
-    --shadow: 0 2px 8px rgba(0, 0, 0,0.1);
-    --radius: 4px;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - OASIDOS Starlink Mini Accessories</title>
+    <meta name="description" content="Contact OASIDOS for Starlink Mini accessories cooperation, consultation and after-sales service.">
+    <meta name="keywords" content="OASIDOS contact, Starlink accessories contact, business cooperation">
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <!-- 性能优化：字体预连接，缩短网络依赖链 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- LCP首屏图片预加载（根据你实际首图路径自行微调） -->
+    <link rel="preload" href="assets/contact-banner.webp" as="image" type="image/webp">
 
-body {
-    font-family: 'Inter', Arial, sans-serif;
-    color: var(--color-text);
-    line-height: 1.7;
-    background-color: var(--color-bg-light);
-}
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* ====================== 全局变量 ====================== */
+        :root {
+            --color-primary: #2C3E50;
+            --color-dark: #212121;
+            --color-text: #444444;
+            --color-text-light: #777777;
+            --color-bg-light: #F5F5F5;
+            --color-accent: #D35400;
+            --color-white: #FFFFFF;
+            /* 修复rgba语法错误：补全透明度参数 */
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+        /* ====================== 全局重置 ====================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-ul {
-    list-style: none;
-}
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            font-display: swap; /* 优化字体加载，避免文字阻塞 */
+            color: var(--color-text);
+            line-height: 1.6;
+            background-color: var(--color-bg-light);
+        }
 
-.container {
-    width: 92%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-.btn {
-    display: inline-block;
-    padding: 12px 28px;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    font-weight: 500;
-    border-radius: var(--radius);
-    transition: background-color 0.3s ease;
-    border: none;
-    cursor: pointer;
-}
+        ul {
+            list-style: none;
+        }
 
-.btn:hover {
-    background-color: #1f2d3d;
-}
+        /* ====================== 通用工具类 ====================== */
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-/* 顶部导航 */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--color-white);
-    box-shadow: var(--shadow);
-    z-index: 999;
-}
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            font-weight: 500;
+            border-radius: 2px;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
 
-.nav-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-}
+        .btn:hover {
+            background-color: #1f2d3d;
+        }
 
-.logo-img {
-    height: 50px;
-    width: auto;
-    max-width: 180px;
-    object-fit: contain;
-    display: block;
-}
+        .section-padding {
+            padding: 60px 0;
+        }
 
-.nav-menu {
-    display: flex;
-    gap: 32px;
-}
+        .section-title {
+            font-size: 28px;
+            color: var(--color-dark);
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
 
-.nav-menu li a {
-    font-weight: 500;
-    color: var(--color-dark);
-    transition: color 0.3s;
-}
+        /* ====================== 顶部导航 ====================== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-white);
+            box-shadow: var(--shadow);
+            z-index: 999;
+        }
 
-.nav-menu li a:hover,
-.nav-menu li a.active {
-    color: var(--color-primary);
-}
+        .nav-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
 
-.menu-toggle {
-    display: none;
-}
+        .logo-img {
+            height: 50px;
+            width: auto;
+            max-width: 180px;
+            object-fit: contain;
+            display: block;
+        }
 
-/* 主体通用间距 */
-.main-content {
-    margin-top: 90px;
-    padding-bottom: 40px;
-}
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+        }
 
-/* 独立标题区域（不在背景图内） */
-.page-title {
-    text-align: center;
-    margin-bottom: 25px;
-}
-.page-title h2 {
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--color-dark);
-    margin-bottom: 8px;
-}
-.page-title h4 {
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--color-text);
-}
+        .nav-menu li a {
+            font-weight: 500;
+            color: var(--color-dark);
+            transition: color 0.3s;
+        }
 
-/* 顶部背景信息栏 */
-.top-info-bar {
-    background: url('assets/banner.webp') no-repeat center center;
-    background-size: cover;
-    color: var(--color-white);
-    padding: 40px 20px;
-    text-align: center;
-    border-radius: var(--radius);
-    position: relative;
-    margin-bottom: 40px;
-}
-.top-info-bar::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.55);
-    border-radius: var(--radius);
-    z-index: 1;
-}
-.top-info-bar > * {
-    position: relative;
-    z-index: 2;
-}
+        .nav-menu li a:hover,
+        .nav-menu li a.active {
+            color: var(--color-primary);
+        }
 
-.info-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--color-dark);
+        }
 
-.info-col {
-    text-align: center;
-}
-
-.info-col i {
-    font-size: 24px;
-    color: var(--color-white);
-    margin-bottom: 8px;
-    display: block;
-}
-
-.info-col .label {
-    text-transform: uppercase;
-    font-size: 14px;
-    margin-bottom: 5px;
-    opacity: 0.95;
-}
-
-.info-col .text {
-    font-size: 15px;
-}
-
-/* 联系人卡片 */
-.contact-person-bar {
-    background-color: var(--color-white);
-    box-shadow: var(--shadow);
-    border-radius: var(--radius);
-    padding: 25px;
-    margin-bottom: 40px;
-}
-
-.person-full-name {
-    font-size: 28px;
-    color: var(--color-dark);
-    font-weight: 700;
-    margin-bottom: 20px;
-    display: block;
-}
-
-.person-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    row-gap: 12px;
-}
-
-.person-grid p {
-    font-size: 14px;
-    color: var(--color-text);
-}
-
-/* 表单区域 */
-.form-wrap {
-    background-color: var(--color-white);
-    box-shadow: var(--shadow);
-    border-radius: var(--radius);
-    padding: 25px;
-}
-
-.form-notice {
-    background-color: var(--color-bg-light);
-    color: var(--color-primary);
-    padding: 15px;
-    border-left: 3px solid var(--color-primary);
-    margin-bottom: 20px;
-    font-size: 15px;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-.form-full {
-    margin-bottom: 20px;
-}
-
-.form-wrap input,
-.form-wrap textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: var(--radius);
-    font-size: 16px;
-    outline: none;
-    transition: border 0.3s;
-}
-
-.form-wrap input:focus,
-.form-wrap textarea:focus {
-    border-color: var(--color-primary);
-}
-
-.form-wrap textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-.form-footer {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.form-footer .submit-btn {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    border: none;
-    padding: 12px 25px;
-    font-size: 16px;
-    border-radius: var(--radius);
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.form-footer .submit-btn:hover {
-    background-color: #1f2d3d;
-}
-
-.form-footer .submit-btn:disabled {
-    background-color: var(--color-text-light);
-    cursor: not-allowed;
-}
-
-.form-footer .checkbox-wrap {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    color: var(--color-text);
-}
-
-/* 表单提示 */
-.form-message {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: var(--radius);
-    font-size: 15px;
-    display: none;
-}
-.success {
-    background: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-    display: block;
-}
-.error {
-    background: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-    display: block;
-}
-
-/* 页脚 */
-footer {
-    background-color: var(--color-dark);
-    color: var(--color-white);
-    padding: 50px 0 20px;
-    margin-top: 50px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    margin-bottom: 40px;
-}
-
-.footer-col h4 {
-    font-size: 18px;
-    margin-bottom: 16px;
-    position: relative;
-    padding-bottom: 8px;
-}
-
-.footer-col h4::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 2px;
-    background-color: var(--color-primary);
-}
-
-.footer-col p,
-.footer-col a {
-    font-size: 14px;
-    color: #ccc;
-    line-height: 1.8;
-}
-
-.footer-col a:hover {
-    color: var(--color-white);
-}
-
-.copyright {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid #333;
-    font-size: 13px;
-    color: #999;
-}
-
- /* ========== 悬浮WhatsApp按钮 ========== */
+        /* ====================== 悬浮WhatsApp按钮 ====================== */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -386,239 +149,293 @@ footer {
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             transition: all 0.3s ease;
+            cursor: pointer;
+            outline: none;
+            border: none;
         }
+
         .whatsapp-float:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
         }
+
         .whatsapp-float img {
             width: 32px;
             height: 32px;
         }
-/* 响应式适配 */
-@media (max-width: 992px) {
-    .info-row,
-    .person-grid,
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-@media (max: 768px) {
-    .nav-menu {
-        display: none;
-    }
-    .info-row,
-    .person-grid,
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-    .form-footer {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        font-size: 24px;
-        bottom: 15px;
-        right: 15px;
-    }
-}
+        /* ====================== 主体联系区域 ====================== */
+        .main-contact {
+            margin-top: 90px;
+            background-color: var(--color-white);
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: var(--shadow);
+        }
 
-@media (max: 576px) {
-    .info-row,
-    .person-grid,
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-    .top-info-bar {
-        padding: 25px 15px;
-    }
-    .page-title h2 {
-        font-size: 28px;
-    }
-    .page-title h4 {
-        font-size: 18px;
-    }
-}
-</style>
+        .contact-banner {
+            width: 100%;
+            margin-bottom: 35px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .contact-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .contact-content h2 {
+            font-size: 24px;
+            color: var(--color-dark);
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .contact-content p {
+            font-size: 16px;
+            color: var(--color-text);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .contact-info-item {
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+
+        .contact-info-item h3 {
+            font-size: 18px;
+            color: var(--color-primary);
+            margin-bottom: 12px;
+        }
+
+        .contact-form {
+            margin-top: 40px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            font-size: 16px;
+        }
+
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* ====================== 页脚样式 ====================== */
+        footer {
+            margin-top: 60px;
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            padding: 50px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--color-primary);
+        }
+
+        .footer-col p,
+        .footer-col a {
+            font-size: 14px;
+            color: #ccc;
+            line-height: 1.8;
+        }
+
+        .footer-col a:hover {
+            color: var(--color-white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 13px;
+            color: #999;
+        }
+
+        /* ====================== 响应式布局（修复媒体查询语法） ====================== */
+        @media (max-width: 992px) {
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            .main-contact {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+            .whatsapp-float img {
+                width: 28px;
+                height: 28px;
+            }
+            .nav-wrap {
+                height: 60px;
+            }
+            .logo-img {
+                height: 40px;
+            }
+            .main-contact {
+                margin-top: 80px;
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-<!-- 顶部导航 -->
-<header>
-    <div class="container nav-wrap">
-        <a href="index.html">
-            <img src="assets/logo.webp" alt="OASIDOS Logo" class="logo-img">
-        </a>
-        <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-    </div>
-</header>
-
-<div class="container main-content">
-    <!-- 独立标题区域（已移出背景图容器） -->
-    <div class="page-title">
-        <h2>OASIDOS</h2>
-        <h4>Starlink Mini Accessories</h4>
-    </div>
-
-    <!-- 顶部背景信息栏（仅保留地址/电话/图标，无标题） -->
-    <div class="top-info-bar">
-        <div class="info-row">
-            <div class="info-col">
-                <i class="fas fa-map-marker-alt"></i>
-                <div class="label">Address</div>
-                <div class="text">2nd Floor, Factory Building No. 1, No. 16 Kangzheng Road, Danzhutou Community, Nanwan Street, Longgang District</div>
-            </div>
-            <div class="info-col">
-                <i class="fas fa-phone"></i>
-                <div class="label">Phone</div>
-                <div class="text">+86 18025475525</div>
-            </div>
-            <div class="info-col">
-                <i class="fas fa-envelope"></i>
-                <div class="label">Email</div>
-                <div class="text">hello@oasidos.com</div>
-            </div>
+    <!-- 顶部导航栏 -->
+    <header>
+        <div class="container nav-wrap">
+            <a href="index.html" aria-label="Return to homepage">
+                <img src="assets/logo.webp" alt="OASIDOS Official Logo" class="logo-img" width="180" height="50">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" aria-label="Mobile navigation menu">☰</div>
         </div>
-    </div>
+    </header>
 
-    <!-- 联系人信息卡片 -->
-    <div class="contact-person-bar">
-        <div class="person-full-name">Kevin</div>
-        <div class="person-grid">
-            <p>Position: Sales Manager</p>
-            <p>Email: kevin@oasidos.com</p>
-            <p>Mobile phone: +86 18025475525</p>
-            <p>Whatsapp: +86 18025475525</p>
-            <p>Wechat: Starlink_mini</p>
-            <p></p>
-        </div>
-    </div>
+    <!-- 主体内容 -->
+    <div class="container">
+        <main class="main-contact">
+            <!-- 首屏Banner（LCP图片，移除懒加载，补全宽高） -->
+            <div class="contact-banner">
+                <img src="assets/contact-banner.webp" alt="OASIDOS Contact Channel" width="1200" height="400">
+            </div>
 
-    <!-- 在线表单区域 -->
-    <div class="form-wrap">
-        <div class="form-notice">
-            Get the latest price? We'll respond as soon as possible(within 12 hours)
-        </div>
-        <form id="contactForm" action="https://formspree.io/f/mnjyboar" method="POST">
-            <div class="form-row">
-                <input type="text" name="name" placeholder="What's your name?" required>
-                <input type="tel" name="phone" placeholder="Contact number:" required>
-            </div>
-            <div class="form-row">
-                <input type="email" name="email" placeholder="Your contact email:" required>
-                <input type="text" name="company" placeholder="Your company name:" required>
-            </div>
-            <div class="form-full">
-                <textarea name="message" placeholder="What do you wish to enquire about?" required></textarea>
-            </div>
-            <div class="form-footer">
-                <button type="submit" class="submit-btn" id="submitBtn" disabled>
-                    <span>✓</span> Submit
-                </button>
-                <div class="checkbox-wrap">
-                    <input type="checkbox" id="privacy" name="privacy" required>
-                    <label for="privacy">I agree to the privacy policy</label>
+            <div class="contact-content">
+                <h2>Get In Touch</h2>
+                <p>Welcome to contact us for product consultation, bulk order, cooperation and after-sales support. We will reply you as soon as possible.</p>
+
+                <!-- 联系方式区域 -->
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <h3>Company Address</h3>
+                        <p>2nd Floor, Factory Building No. 1, No. 16 Kangzheng Road, Danzhutou Community, Nanwan Street, Longgang District</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <h3>Contact Way</h3>
+                        <p>Email: hello@oasidos.com</p>
+                        <p>Tel / WeChat / WhatsApp: +8618025475525</p>
+                    </div>
+                </div>
+
+                <!-- 留言表单区域 -->
+                <div class="contact-form">
+                    <h2>Send Us A Message</h2>
+                    <form action="" method="post">
+                        <input type="text" name="name" placeholder="Your Name" required aria-label="Your name">
+                        <input type="email" name="email" placeholder="Your Email" required aria-label="Your email">
+                        <textarea name="message" placeholder="Your Message" required aria-label="Your message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
                 </div>
             </div>
-        </form>
-        <div id="formMessage" class="form-message"></div>
+        </main>
     </div>
-</div>
 
-<!-- 全站统一四栏页脚 -->
-<footer>
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>OASIDOS</h4>
-                <p>2nd Floor, Factory Building No. 1, No. 16 Kangzheng Road, Danzhutou Community, Nanwan Street, Longgang District</p>
+    <!-- 页脚区域 -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>OASIDOS</h4>
+                    <p>2nd Floor, Factory Building No. 1, No. 16 Kangzheng Road, Danzhutou Community, Nanwan Street, Longgang District</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="products.html">Products</a></p>
+                    <p><a href="about.html">About Us</a></p>
+                    <p><a href="contact.html">Contact</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <p><a href="mini-case.html">Mini Case</a></p>
+                    <p><a href="roof-mount.html">Roof Mount</a></p>
+                    <p><a href="router-mount.html">Router Mount</a></p>
+                    <p><a href="tripod.html">Tripod</a></p>
+                    <p><a href="products.html">Car Mount</a></p>
+                    <p><a href="car-adapter.html">Car Adapter</a></p>
+                    <p><a href="protective-cover.html">Protective Cover</a></p>
+                    <p><a href="other-accessories.html">Other Accessories</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p>Email: hello@oasidos.com</p>
+                    <p>Tel / WeChat / WhatsApp: +8618025475525</p>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <p><a href="index.html">Home</a></p>
-                <p><a href="products.html">Products</a></p>
-                <p><a href="about.html">About Us</a></p>
-                <p><a href="contact.html">Contact</a></p>
-            </div>
-            <div class="footer-col">
-                <h4>Products</h4>
-                <p><a href="mini-case.html">Mini Case</a></p>
-                <p><a href="roof-mount.html">Roof Mount</a></p>
-                <p><a href="router-mount.html">Router Mount</p>
-                <p><a href="tripod.html">Tripod</a></p>
-                <p><a href="car-mount.html">Car Mount</a></p>
-                <p><a href="car-adapter.html">Car Adapter</p>
-                <p><a href="protective-cover.html">Protective Cover</p>
-                <p><a href="other-accessories.html">Other Accessories</p>
-            </div>
-            <div class="footer-col">
-                <h4>Contact Us</h4>
-                <p>Email: hello@oasidos.com</p>
-                <p>Tel / WeChat / WhatsApp: +8618025475525</p>
+            <div class="copyright">
+                © 2026 OASIDOS. All Rights Reserved.
             </div>
         </div>
-        <div class="copyright">
-            © 2026 OASIDOS. All Rights Reserved.
-        </div>
-    </div>
-</footer>
+    </footer>
 
-<!-- 悬浮WhatsApp按钮 -->
-<a href="https://wa.me/+8618025475525" target="_blank" class="whatsapp-float">💬</a>
-
-<script>
-// 隐私勾选 & 表单提交逻辑
-const privacyCheckbox = document.getElementById('privacy');
-const submitBtn = document.getElementById('submitBtn');
-const contactForm = document.getElementById('contactForm');
-const formMessage = document.getElementById('formMessage');
-
-privacyCheckbox.addEventListener('change', function() {
-    submitBtn.disabled = !this.checked;
-});
-
-contactForm.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<span>⌛</span> Submitting...';
-    formMessage.className = 'form-message';
-
-    try {
-        const formData = new FormData(this);
-        const response = await fetch(this.action, {
-            method: this.method,
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-
-        if (response.ok) {
-            formMessage.className = 'form-message success';
-            formMessage.textContent = 'Thank you! Your message has been sent successfully. We will contact you soon.';
-            contactForm.reset();
-            privacyCheckbox.checked = false;
-        } else {
-            const errorData = await response.json();
-            throw new Error(errorData.error || 'Something went wrong, please try again.');
-        }
-    } catch (error) {
-        formMessage.className = 'form-message error';
-        formMessage.textContent = `Error: ${error.message}`;
-    } finally {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = '<span>✓</span> Submit';
-    }
-});
-</script>
+    <!-- 悬浮WhatsApp按钮 -->
+    <a href="https://wa.me/8618025475525" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat via WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="32" height="32">
+    </a>
 </body>
 </html>
