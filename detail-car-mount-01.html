@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlink Mini Car Mount | OASIDOS</title>
+    <meta name="description" content="Starlink Mini Suction Cup Mount for Dashboard & Windshield, heat-resistant ABS material, stable for all vehicles.">
+    <meta name="keywords" content="Starlink Mini, Car Mount, Suction Cup Bracket, Dashboard Mount, Windshield Mount">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 全局统一样式变量 */
+        :root {
+            --color-primary: #2C3E50;
+            --color-dark: #212121;
+            --color-text: #444444;
+            --color-text-light: #777777;
+            --color-bg-light: #F5F5F5;
+            --color-white: #FFFFFF;
+            --shadow: 0 2px 8px rgba(0, 0, 0.08);
+            --radius: 4px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            color: var(--color-text);
+            line-height: 1.7;
+            background-color: var(--color-bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 顶部导航 全站统一 */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-white);
+            box-shadow: var(--shadow);
+            z-index: 999;
+        }
+
+        .nav-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+            max-width: 180px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-menu li a {
+            font-weight: 500;
+            color: var(--color-dark);
+            transition: color 0.3s;
+        }
+
+        .nav-menu li a:hover,
+        .nav-menu li a.active {
+            color: var(--color-primary);
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        /* 主体区域 */
+        .main {
+            margin-top: 90px;
+            padding: 40px 0;
+        }
+
+        /* 产品主容器 左右等高对齐 */
+        .product-main-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+            background: var(--color-white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+
+        /* ========== 左侧：1:1主图 + 缩略图（已移除下方表格） ========== */
+        .product-left {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* 1:1 主图轮播 */
+        .slider-container {
+            position: relative;
+            width: 100%;
+        }
+        .slider-box {
+            width: 100%;
+            padding-top: 100%;
+            position: relative;
+            background: #fafafa;
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+        .slider-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .slider-item.active {
+            opacity: 1;
+            z-index: 2;
+        }
+        .slider-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* 1:1图片完整展示、不变形 */
+            display: block;
+        }
+        /* 轮播切换按钮 */
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(0,0,0,0.4);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 3;
+            transition: background 0.3s;
+        }
+        .slider-btn:hover {
+            background: rgba(0,0,0.6);
+        }
+        .prev-btn {
+            left: 10px;
+        }
+        .next-btn {
+            right: 10px;
+        }
+
+        /* 下方缩略图导航 */
+        .thumb-list {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 8px;
+        }
+        .thumb-item {
+            width: 100%;
+            padding-top: 100%;
+            position: relative;
+            background: #fafafa;
+            border-radius: var(--radius);
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border 0.2s;
+        }
+        .thumb-item.active {
+            border-color: var(--color-primary);
+        }
+        .thumb-item img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* ========== 右侧：产品信息 字体缩小、等高对齐 ========== */
+        .product-right {
+            height: 100%;
+        }
+        .product-right h1 {
+            font-size: 20px;
+            line-height: 1.4;
+            color: var(--color-dark);
+            margin-bottom: 18px;
+        }
+        .price-moq {
+            padding: 12px 15px;
+            background: var(--color-bg-light);
+            border-radius: var(--radius);
+            margin-bottom: 18px;
+        }
+        .price-moq p {
+            font-size: 14px;
+            margin: 6px 0;
+        }
+        .price-moq strong {
+            color: var(--color-primary);
+            font-size: 15px;
+        }
+        .info-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #eee;
+        }
+        /* 缩小卖点字体、紧凑间距 */
+        .bullet-list li {
+            font-size: 13px;
+            margin-bottom: 8px;
+            padding-left: 18px;
+            position: relative;
+            line-height: 1.6;
+        }
+        .bullet-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+            font-weight: bold;
+        }
+
+        /* 规格参数板块 */
+        .spec-section {
+            background: var(--color-white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+        .full-spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .full-spec-table th,
+        .full-spec-table td {
+            border: 1px solid #eee;
+            padding: 12px 15px;
+            font-size: 14px;
+        }
+        .full-spec-table th {
+            background: var(--color-bg-light);
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* ========== Product Details 竖向单列布局（长方形图、完整展示） ========== */
+        .detail-gallery {
+            background: var(--color-white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+        /* 改为竖向单列 */
+        .gallery-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            width: 100%;
+            /* 移除固定1:1比例，自适应长方形图片 */
+            position: relative;
+            background: #fafafa;
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            object-fit: contain; /* 长方形图片完整展示、不变形 */
+            display: block;
+        }
+
+        /* 页脚 全站统一 */
+        footer {
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            padding: 50px 0 20px;
+            margin-top: 20px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--color-primary);
+        }
+        .footer-col p,
+        .footer-col a {
+            font-size: 14px;
+            color: #ccc;
+            line-height: 1.8;
+        }
+        .footer-col a:hover {
+            color: var(--color-white);
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 13px;
+            color: #999;
+        }
+
+        /* 悬浮WhatsApp按钮 */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: #fff;
+            box-shadow: var(--shadow);
+            z-index: 9999;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+        }
+
+        /* 响应式适配 */
+        @media (max: 992px) {
+            .product-main-wrap {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .thumb-list {
+                grid-template-columns: repeat(3, 1fr);
+                row-gap: 10px;
+            }
+        }
+        @media (max: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            .product-right h1 {
+                font-size: 18px;
+            }
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+        @media (max: 576px) {
+            .product-main-wrap,
+            .spec-section,
+            .detail-gallery {
+                padding: 20px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header>
+        <div class="container nav-wrap">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="OASIDOS Logo" class="logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html" class="active">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container main">
+        <!-- 主模块：左右等高布局 -->
+        <div class="product-main-wrap">
+            <!-- 左侧：1:1主图 + 缩略图（已移除表格） -->
+            <div class="product-left">
+                <!-- 1:1 主图轮播 -->
+                <div class="slider-container">
+                    <div class="slider-box">
+                        <div class="slider-item active">
+                            <img src="assets\detail-car-mount-01\Starlink_Car_Mount1.webp" alt="Starlink Mini Car Mount">
+                        </div>
+                        <div class="slider-item">
+                            <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (2).webp" alt="Starlink Mini Car Mount">
+                        </div>
+                        <div class="slider-item">
+                            <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (3).webp" alt="Starlink Mini Car Mount">
+                        </div>
+                        <div class="slider-item">
+                            <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (4).webp" alt="Starlink Mini Car Mount">
+                        </div>
+                        <div class="slider-item">
+                            <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (5).webp" alt="Starlink Mini Car Mount">
+                        </div>
+                        <div class="slider-item">
+                            <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (6).webp" alt="Starlink Mini Car Mount">
+                        </div>
+                    </div>
+                    <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <!-- 下方缩略图导航 -->
+                <div class="thumb-list">
+                    <div class="thumb-item active" data-index="0">
+                        <img src=assets\detail-car-mount-01\Starlink_Car_Mount1.webp" alt="">
+                    </div>
+                    <div class="thumb-item" data-index="1">
+                        <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (2).webp" alt="">
+                    </div>
+                    <div class="thumb-item" data-index="2">
+                        <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (3).webp" alt="">
+                    </div>
+                    <div class="thumb-item" data-index="3">
+                        <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (4).webp" alt="">
+                    </div>
+                    <div class="thumb-item" data-index="4">
+                        <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (5).webp" alt="">
+                    </div>
+                    <div class="thumb-item" data-index="5">
+                        <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (6).webp" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧：标题 / MOQ / 价格 / About this item -->
+            <div class="product-right">
+                <h1>Starlink Mini Car Mount, Suction Cup Mount for Dashboard & Windshield, Heat-Resistant Stable Vehicle Bracket for Starlink Mini Satellite Internet Kit</h1>
+
+                <div class="price-moq">
+                    <p><strong>MOQ:</strong> 10 pcs</p>
+                    <p><strong>EXW Price:</strong> $4.5 - $7 / pcs</p>
+                </div>
+
+                <h3 class="info-title">About this item</h3>
+                <ul class="bullet-list">
+                    <li><strong>Exclusive Compatibility</strong>: Specially designed only for Starlink Mini Internet Kit, not for other models.</li>
+                    <li><strong>Dual Installation</strong>: Fit dashboard or windshield, suitable for cars, trucks, SUVs and vans.</li>
+                    <li><strong>Clear View</strong>: Reasonable height will not block driving sight, ensure safety.</li>
+                    <li><strong>Strong Suction</strong>: High-strength nano suction cup, stable on bumpy roads & high speed.</li>
+                    <li><strong>Durable Material</strong>: Heat-resistant ABS material, sturdy for long-term use.</li>
+                    <li><strong>Easy Install</strong>: Tool-free installation and removal, all parts included.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 底部：Features & Specifications 规格参数 -->
+        <div class="spec-section">
+            <h3 class="info-title">Features & Specifications</h3>
+            <table class="full-spec-table">
+                <tr>
+                    <th>Item</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Brand</td>
+                    <td>OASIDOS</td>
+                </tr>
+                <tr>
+                    <td>Compatible Device</td>
+                    <td>Starlink Mini</td>
+                </tr>
+                <tr>
+                    <td>Mounting Type</td>
+                    <td>Dashboard / Windshield</td>
+                </tr>
+                <tr>
+                    <td>Main Material</td>
+                    <td>Heat-resistant ABS, Polycarbonate</td>
+                </tr>
+                <tr>
+                    <td>Features</td>
+                    <td>Adjustable, Lightweight, Non-Slip, Reusable Suction Cup</td>
+                </tr>
+                <tr>
+                    <td>Applicable Vehicle</td>
+                    <td>Car, Truck, SUV, Van</td>
+                </tr>
+                <tr>
+                    <td>Item Weight</td>
+                    <td>0.23 Kg</td>
+                </tr>
+                <tr>
+                    <td>Package Contents</td>
+                    <td>1 * Starlink Mini Car Mount</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 底部：Product Details 竖向单列布局（长方形图完整展示） -->
+        <div class="detail-gallery">
+            <h3 class="info-title">Product Details</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets\detail-car-mount-01\Starlink_Car_Mount_Details1 (1).webp" alt="Product Detail">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets\detail-car-mount-01\Starlink_Car_Mount_Details1 (2).webp" alt="Product Detail">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets\detail-car-mount-01\Starlink_Car_Mount_Details1 (3).webp" alt="Product Detail">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets\detail-car-mount-01\Starlink_Car_Mount_Details1 (4).webp" alt="Product Detail">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets\detail-car-mount-01\Starlink_Car_Mount_Details1 (5).webp" alt="Product Detail">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets\detail-car-mount-01\Starlink_Car_Mount_Details1 (6).webp" alt="Product Detail">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>OASIDOS</h4>
+                    <p>2nd Floor, Factory Building No. 1, No. 16 Kangzheng Road, Danzhutou Community, Nanwan Street, Longgang District</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="product.html">Products</a></p>
+                    <p><a href="about.html">About Us</a></p>
+                    <p><a href="contact.html">Contact</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <p><a href="mini-case.html">Mini Case</a></p>
+                    <p><a href="roof-mount.html">Roof Mount</p>
+                    <p><a href="router-mount.html">Router Mount</p>
+                    <p><a href="tripod.html">Tripod</p>
+                    <p><a href="car-mount.html">Car Mount</p>
+                    <p><a href="car-adapter.html">Car Adapter</p>
+                    <p><a href="protective-cover.html">Protective Cover</p>
+                    <p><a href="other-accessories.html">Other Accessories</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p>Email: hello@oasidos.com</p>
+                    <p>Tel / WeChat / WhatsApp: +8618025475525</p>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2026 OASIDOS. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- 悬浮WhatsApp按钮 -->
+    <a href="https://wa.me/+8618025475525" target="_blank" class="whatsapp-float">💬</a>
+
+    <!-- 轮播+缩略图切换JS -->
+    <script>
+        const sliderItems = document.querySelectorAll('.slider-item');
+        const thumbItems = document.querySelectorAll('.thumb-item');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        let currentIndex = 0;
+        const total = sliderItems.length;
+
+        // 切换主图
+        function switchImg(index) {
+            sliderItems.forEach(item => item.classList.remove('active'));
+            thumbItems.forEach(thumb => thumb.classList.remove('active'));
+            sliderItems[index].classList.add('active');
+            thumbItems[index].classList.add('active');
+            currentIndex = index;
+        }
+
+        // 左右箭头切换
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + total) % total;
+            switchImg(currentIndex);
+        });
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % total;
+        });
+
+        // 点击缩略图切换
+        thumbItems.forEach(thumb => {
+            thumb.addEventListener('click', function(){
+                const idx = parseInt(this.dataset.index);
+                switch(idx);
+            });
+        });
+    </script>
+</body>
+</html>
