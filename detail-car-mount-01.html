@@ -263,6 +263,40 @@
             font-weight: bold;
         }
 
+        /* 新增：按钮样式 */
+        .product-actions {
+            margin-top: 25px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .action-btn {
+            padding: 10px 20px;
+            border-radius: var(--radius);
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .chat-btn {
+            background-color: #25D366;
+            color: white;
+        }
+        .chat-btn:hover {
+            background-color: #128C7E;
+        }
+        .inquiry-btn {
+            background-color: var(--color-primary);
+            color: white;
+        }
+        .inquiry-btn:hover {
+            background-color: #1a2530;
+        }
+
         /* 规格参数板块 */
         .spec-section {
             background: var(--color-white);
@@ -288,12 +322,20 @@
             color: var(--dark);
         }
 
-        /* 页脚 全站统一 */
+        /* 页脚 全站统一 - 修改为全屏展示 */
         footer {
             background-color: var(--color-dark);
             color: var(--color-white);
             padding: 50px 0 20px;
             margin-top: 20px;
+            width: 100%; /* 确保全屏宽度 */
+            left: 0;
+            right: 0;
+        }
+        .footer-inner {
+            width: 92%;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         .footer-grid {
             display: grid;
@@ -392,6 +434,13 @@
             .footer-grid {
                 grid-template-columns: 1fr;
             }
+            .product-actions {
+                flex-direction: column;
+            }
+            .action-btn {
+                width: 100%;
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -483,6 +532,16 @@
                     <li><strong>Durable Material</strong>: Heat-resistant ABS material, sturdy for long-term use.</li>
                     <li><strong>Easy Install</strong>: Tool-free installation and removal, all parts included.</li>
                 </ul>
+
+                <!-- 新增：Chat now 和 Inquiry 按钮 -->
+                <div class="product-actions">
+                    <a href="https://wa.me/+8618025475525" target="_blank" class="action-btn chat-btn">
+                        <i class="fab fa-whatsapp"></i> Chat now
+                    </a>
+                    <a href="contact.html" class="action-btn inquiry-btn">
+                        <i class="fas fa-envelope"></i> Inquiry
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -528,11 +587,11 @@
                 </tr>
             </table>
         </div>
+    </div>
 
-
-    <!-- 页脚 -->
+    <!-- 页脚 - 修改为全屏展示 -->
     <footer>
-        <div class="container">
+        <div class="footer-inner">
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>OASIDOS</h4>
@@ -548,13 +607,13 @@
                 <div class="footer-col">
                     <h4>Products</h4>
                     <p><a href="mini-case.html">Mini Case</a></p>
-                    <p><a href="roof-mount.html">Roof Mount</a></p> <!-- 修复原写法：缺少闭合a标签 -->
-                    <p><a href="router-mount.html">Router Mount</a></p> <!-- 修复原写法：缺少闭合a标签 -->
-                    <p><a href="tripod.html">Tripod</a></p> <!-- 修复原写法：缺少闭合a标签 -->
-                    <p><a href="car-mount.html">Car Mount</a></p> <!-- 修复原写法：缺少闭合a标签 -->
-                    <p><a href="car-adapter.html">Car Adapter</a></p> <!-- 修复原写法：缺少闭合a标签 -->
-                    <p><a href="protective-cover.html">Protective Cover</a></p> <!-- 修复原写法：缺少闭合a标签 -->
-                    <p><a href="other-accessories.html">Other Accessories</a></p> <!-- 修复原写法：缺少闭合a标签 -->
+                    <p><a href="roof-mount.html">Roof Mount</a></p>
+                    <p><a href="router-mount.html">Router Mount</a></p>
+                    <p><a href="tripod.html">Tripod</a></p>
+                    <p><a href="car-mount.html">Car Mount</a></p>
+                    <p><a href="car-adapter.html">Car Adapter</a></p>
+                    <p><a href="protective-cover.html">Protective Cover</a></p>
+                    <p><a href="other-accessories.html">Other Accessories</a></p>
                 </div>
                 <div class="footer-col">
                     <h4>Contact Us</h4>
