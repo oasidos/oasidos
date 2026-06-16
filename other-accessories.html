@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Other Accessories - OASIDOS Starlink Mini Accessories</title>
-    <meta name="description" content="Starlink Mini other supporting accessories for outdoor and indoor use.">
+    <meta name="description" content="Other Starlink Mini accessories, practical spare parts and daily supplies.">
     <meta name="keywords" content="Starlink accessories, Starlink spare parts, Starlink Mini accessories">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="assets/Starlink-Other-Accessories1.webp" as="image" type="image/webp">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        /* ====================== 全局变量 ====================== */
         :root {
             --color-primary: #2C3E50;
             --color-dark: #212121;
@@ -18,31 +22,40 @@
             --color-bg-light: #F5F5F5;
             --color-accent: #D35400;
             --color-white: #FFFFFF;
-            --shadow: 0 2px 8px rgba(0, 0, 0.08);
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
+
+        /* ====================== 全局重置 ====================== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Inter', Arial, sans-serif;
+            font-display: swap;
             color: var(--color-text);
             line-height: 1.6;
             background-color: var(--color-bg-light);
         }
+
         a {
             text-decoration: none;
             color: inherit;
         }
+
         ul {
             list-style: none;
         }
+
+        /* ====================== 通用样式 ====================== */
         .container {
             width: 92%;
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .btn {
             display: inline-block;
             padding: 12px 28px;
@@ -54,12 +67,15 @@
             border: none;
             cursor: pointer;
         }
+
         .btn:hover {
             background-color: #1f2d3d;
         }
+
         .section-padding {
             padding: 60px 0;
         }
+
         .section-title {
             font-size: 28px;
             color: var(--color-dark);
@@ -67,7 +83,57 @@
             margin-bottom: 40px;
             font-weight: 700;
         }
- /* ========== 悬浮WhatsApp按钮 ========== */
+
+        /* ====================== 顶部导航 ====================== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-white);
+            box-shadow: var(--shadow);
+            z-index: 999;
+        }
+
+        .nav-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+            max-width: 180px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-menu li a {
+            font-weight: 500;
+            color: var(--color-dark);
+            transition: color 0.3s;
+        }
+
+        .nav-menu li a:hover,
+        .nav-menu li a.active {
+            color: var(--color-primary);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--color-dark);
+        }
+
+        /* ====================== 悬浮WhatsApp按钮 ====================== */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -80,64 +146,31 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             transition: all 0.3s ease;
+            cursor: pointer;
+            outline: none;
+            border: none;
         }
+
         .whatsapp-float:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
         }
+
         .whatsapp-float img {
             width: 32px;
             height: 32px;
         }
-        /* 顶部导航 */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: var(--color-white);
-            box-shadow: var(--shadow);
-            z-index: 999;
-        }
-        .nav-wrap {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-        .logo-img {
-            height: 50px;
-            width: auto;
-            max-width: 180px;
-            object-fit: contain;
-            display: block;
-        }
-        .nav-menu {
-            display: flex;
-            gap: 32px;
-        }
-        .nav-menu li a {
-            font-weight: 500;
-            color: var(--color-dark);
-            transition: color 0.3s;
-        }
-        .nav-menu li a:hover, .nav-menu li a.active {
-            color: var(--color-primary);
-        }
-        .menu-toggle {
-            display: none;
-        }
 
-        /* 主体布局 */
+        /* ====================== 主体布局 ====================== */
         .main-wrap {
             margin-top: 90px;
             display: grid;
             grid-template-columns: 220px 1fr;
             gap: 30px;
         }
-        /* 左侧分类栏 */
+
         .sidebar {
             background-color: var(--color-white);
             padding: 25px;
@@ -145,6 +178,7 @@
             box-shadow: var(--shadow);
             height: fit-content;
         }
+
         .sidebar h3 {
             font-size: 20px;
             color: var(--color-dark);
@@ -152,27 +186,31 @@
             padding-bottom: 10px;
             border-bottom: 1px solid #eee;
         }
+
         .category-list li {
             margin-bottom: 12px;
         }
+
         .category-list a {
             display: block;
             padding: 10px 14px;
             border-radius: 2px;
             transition: all 0.3s;
         }
-        .category-list a:hover, .category-list a.active {
+
+        .category-list a:hover,
+        .category-list a.active {
             background-color: var(--color-primary);
             color: var(--color-white);
         }
 
-        /* 右侧产品区 */
         .product-main {
             background-color: var(--color-white);
             padding: 25px;
             border-radius: 4px;
             box-shadow: var(--shadow);
         }
+
         .product-main h2 {
             font-size: 24px;
             color: var(--color-dark);
@@ -180,11 +218,13 @@
             padding-bottom: 10px;
             border-bottom: 1px solid #eee;
         }
+
         .product-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
+
         .product-card {
             background: #fff;
             border-radius: 4px;
@@ -192,15 +232,18 @@
             box-shadow: var(--shadow);
             transition: transform 0.3s ease;
         }
+
         .product-card:hover {
             transform: translateY(-5px);
         }
+
         .product-card-img-wrap {
             width: 100%;
             padding-top: 100%;
             position: relative;
             background-color: #fafafa;
         }
+
         .product-card img {
             position: absolute;
             top: 0;
@@ -209,7 +252,10 @@
             height: 100%;
             object-fit: contain;
             display: block;
+            opacity: 1;
+            transition: opacity 0.3s ease;
         }
+
         .product-card .product-name {
             padding: 15px;
             font-size: 16px;
@@ -218,25 +264,28 @@
             text-align: center;
         }
 
-        /* 页脚样式 */
+        /* ====================== 页脚 ====================== */
         footer {
             margin-top: 60px;
             background-color: var(--color-dark);
             color: var(--color-white);
             padding: 50px 0 20px;
         }
+
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 30px;
             margin-bottom: 40px;
         }
+
         .footer-col h4 {
             font-size: 18px;
             margin-bottom: 16px;
             position: relative;
             padding-bottom: 8px;
         }
+
         .footer-col h4::after {
             content: '';
             position: absolute;
@@ -246,14 +295,18 @@
             height: 2px;
             background-color: var(--color-primary);
         }
-        .footer-col p, .footer-col a {
+
+        .footer-col p,
+        .footer-col a {
             font-size: 14px;
             color: #ccc;
             line-height: 1.8;
         }
+
         .footer-col a:hover {
             color: var(--color-white);
         }
+
         .copyright {
             text-align: center;
             padding-top: 20px;
@@ -262,7 +315,7 @@
             color: #999;
         }
 
-        /* 响应式适配 */
+        /* ====================== 响应式布局 ====================== */
         @media (max-width: 992px) {
             .main-wrap {
                 grid-template-columns: 1fr;
@@ -274,14 +327,36 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-        @media (max: 768px) {
+
+        @media (max-width: 768px) {
             .nav-menu {
                 display: none;
             }
         }
-        @media (max: 576px) {
-            .product-grid, .footer-grid {
+
+        @media (max-width: 576px) {
+            .product-grid,
+            .footer-grid {
                 grid-template-columns: 1fr;
+            }
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+            .whatsapp-float img {
+                width: 28px;
+                height: 28px;
+            }
+            .nav-wrap {
+                height: 60px;
+            }
+            .logo-img {
+                height: 40px;
+            }
+            .main-wrap {
+                margin-top: 80px;
             }
         }
     </style>
@@ -289,8 +364,8 @@
 <body>
     <header>
         <div class="container nav-wrap">
-            <a href="index.html">
-                <img src="assets/logo.webp" alt="OASIDOS Logo" class="logo-img">
+            <a href="index.html" aria-label="Go to homepage">
+                <img src="assets/logo.webp" alt="OASIDOS Logo" class="logo-img" width="180" height="50">
             </a>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
@@ -298,12 +373,13 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <div class="menu-toggle" aria-label="Toggle navigation">☰</div>
         </div>
     </header>
 
     <div class="container">
         <div class="main-wrap">
-            <aside class="sidebar">
+            <aside class="sidebar" aria-label="Product categories">
                 <h3>Product Categories</h3>
                 <ul class="category-list">
                     <li><a href="products.html">Car Mount</a></li>
@@ -318,54 +394,54 @@
             </aside>
 
             <main class="product-main">
-                <h2>Starlink Other Accessories</h2>
+                <h2>Other Starlink Accessories Series</h2>
                 <div class="product-grid">
                     <div class="product-card">
-                        <a href="detail-other-01.html">
+                        <a href="detail-other-01.html" aria-label="View details of Spare Parts">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Other-Accessories1.webp" alt="Other Accessory 01"loading="lazy">
+                                <img src="assets/Starlink-Other-Accessories1.webp" alt="Starlink Mini Spare Parts" width="800" height="800">
                             </div>
-                            <div class="product-name">Cable Organizer</div>
+                            <div class="product-name">Spare Parts</div>
                         </a>
                     </div>
                     <div class="product-card">
-                        <a href="detail-other-02.html">
+                        <a href="detail-other-02.html" aria-label="View details of Connection Cables">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Other-Accessories2.webp" alt="Other Accessory 02"loading="lazy">
+                                <img src="assets/Starlink-Other-Accessories2.webp" alt="Starlink Mini Connection Cables" loading="lazy" width="800" height="800">
                             </div>
-                            <div class="product-name">Replacement Parts</div>
+                            <div class="product-name">Connection Cables</div>
                         </a>
                     </div>
                     <div class="product-card">
-                        <a href="detail-other-03.html">
+                        <a href="detail-other-03.html" aria-label="View details of Extension Brackets">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Other-Accessories3.webp" alt="Other Accessory 03"loading="lazy">
+                                <img src="assets/Starlink-Other-Accessories3.webp" alt="Starlink Mini Extension Brackets" loading="lazy" width="800" height="800">
                             </div>
-                            <div class="product-name">Cable Protector</div>
+                            <div class="product-name">Extension Brackets</div>
                         </a>
                     </div>
                     <div class="product-card">
-                        <a href="detail-other-04.html">
+                        <a href="detail-other-04.html" aria-label="View details of Fixing Kits">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Other-Accessories4.webp" alt="Other Accessory 04"loading="lazy">
+                                <img src="assets/Starlink-Other-Accessories4.webp" alt="Starlink Mini Fixing Kits" loading="lazy" width="800" height="800">
                             </div>
-                            <div class="product-name">Installation Kits</div>
+                            <div class="product-name">Fixing Kits</div>
                         </a>
                     </div>
                     <div class="product-card">
-                        <a href="detail-other-05.html">
+                        <a href="detail-other-05.html" aria-label="View details of Rubber Pads">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Other-Accessories5.webp" alt="Other Accessory 05"loading="lazy">
+                                <img src="assets/Starlink-Other-Accessories5.webp" alt="Starlink Mini Rubber Pads" loading="lazy" width="800" height="800">
                             </div>
-                            <div class="product-name">Extension Cable</div>
+                            <div class="product-name">Rubber Pads</div>
                         </a>
                     </div>
                     <div class="product-card">
-                        <a href="detail-other-06.html">
+                        <a href="detail-other-06.html" aria-label="View details of Combination Sets">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Other-Accessories6.webp" alt="Other Accessory 06"loading="lazy">
+                                <img src="assets/Starlink-Other-Accessories6.webp" alt="Starlink Mini Combination Sets" loading="lazy" width="800" height="800">
                             </div>
-                            <div class="product-name">Combination Set</div>
+                            <div class="product-name">Combination Sets</div>
                         </a>
                     </div>
                 </div>
@@ -384,18 +460,18 @@
                     <h4>Quick Links</h4>
                     <p><a href="index.html">Home</a></p>
                     <p><a href="products.html">Products</a></p>
-                    <p><a href="about.html">About Us</p>
+                    <p><a href="about.html">About Us</a></p>
                     <p><a href="contact.html">Contact</a></p>
                 </div>
                 <div class="footer-col">
                     <h4>Products</h4>
                     <p><a href="mini-case.html">Mini Case</a></p>
                     <p><a href="roof-mount.html">Roof Mount</a></p>
-                    <p><a href="router-mount.html">Router Mount</p>
-                    <p><a href="tripod.html">Tripod</p>
-                    <p><a href="car-mount.html">Car Mount</p>
-                    <p><a href="car-adapter.html">Car Adapter</p>
-                    <p><a href="protective-cover.html">Protective Cover</p>
+                    <p><a href="router-mount.html">Router Mount</a></p>
+                    <p><a href="tripod.html">Tripod</a></p>
+                    <p><a href="products.html">Car Mount</a></p>
+                    <p><a href="car-adapter.html">Car Adapter</a></p>
+                    <p><a href="protective-cover.html">Protective Cover</a></p>
                     <p><a href="other-accessories.html">Other Accessories</a></p>
                 </div>
                 <div class="footer-col">
@@ -409,9 +485,9 @@
             </div>
         </div>
     </footer>
-    <!-- 悬浮WhatsApp聊天按钮 -->
-    <a href="https://wa.me/8618025475525" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
+
+    <a href="https://wa.me/8618025475525" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat via WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
 </body>
 </html>
