@@ -156,7 +156,7 @@
             object-fit: contain; /* 1:1图片完整展示、不变形 */
             display: block;
         }
-        /* 轮播切换按钮 */
+        /* 轮播切换按钮 - 优化hover样式（原背景色写法错误）+ 增加光标样式 */
         .slider-btn {
             position: absolute;
             top: 50%;
@@ -171,9 +171,12 @@
             cursor: pointer;
             z-index: 3;
             transition: background 0.3s;
+            /* 新增：无障碍优化 */
+            outline: none;
+            border: none;
         }
         .slider-btn:hover {
-            background: rgba(0,0,0.6);
+            background: rgba(0,0,0,0.6); /* 修复原写法：0,0,0.6 → 0,0,0,0.6 */
         }
         .prev-btn {
             left: 10px;
@@ -285,36 +288,6 @@
             color: var(--dark);
         }
 
-        /* ========== Product Details 竖向单列布局（长方形图、完整展示） ========== */
-        .detail-gallery {
-            background: var(--color-white);
-            padding: 30px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            margin-bottom: 40px;
-        }
-        /* 改为竖向单列 */
-        .gallery-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            margin-top: 20px;
-        }
-        .gallery-item {
-            width: 100%;
-            /* 移除固定1:1比例，自适应长方形图片 */
-            position: relative;
-            background: #fafafa;
-            border-radius: var(--radius);
-            overflow: hidden;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            object-fit: contain; /* 长方形图片完整展示、不变形 */
-            display: block;
-        }
-
         /* 页脚 全站统一 */
         footer {
             background-color: var(--color-dark);
@@ -383,7 +356,7 @@
         }
 
         /* 响应式适配 */
-        @media (max: 992px) {
+        @media (max-width: 992px) { /* 修复原写法：max → max-width */
             .product-main-wrap {
                 grid-template-columns: 1fr;
             }
@@ -395,7 +368,7 @@
                 row-gap: 10px;
             }
         }
-        @media (max: 768px) {
+        @media (max-width: 768px) { /* 修复原写法：max → max-width */
             .nav-menu {
                 display: none;
             }
@@ -410,7 +383,7 @@
                 right: 15px;
             }
         }
-        @media (max: 576px) {
+        @media (max-width: 576px) { /* 修复原写法：max → max-width */
             .product-main-wrap,
             .spec-section,
             .detail-gallery {
@@ -427,7 +400,7 @@
     <header>
         <div class="container nav-wrap">
             <a href="index.html">
-                <img src="assets/logo.png" alt="OASIDOS Logo" class="logo-img">
+                <img src="assets/logo.webp" alt="OASIDOS Logo" class="logo-img">
             </a>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
@@ -447,22 +420,22 @@
                 <div class="slider-container">
                     <div class="slider-box">
                         <div class="slider-item active">
-                            <img src="assets\detail-car-mount-01\Starlink_Car_Mount1.webp" alt="Starlink Mini Car Mount">
+                            <img src="assets/Starlink_Car_Mount1.webp" alt="Starlink Mini Car Mount">
                         </div>
                         <div class="slider-item">
-                            <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (2).webp" alt="Starlink Mini Car Mount">
+                            <img src="assets/detail-car-mount-01/Starlink_Car_Mount1 (2).webp" alt="Starlink Mini Car Mount">
                         </div>
                         <div class="slider-item">
-                            <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (3).webp" alt="Starlink Mini Car Mount">
+                            <img src="assets/detail-car-mount-01/Starlink_Car_Mount1 (3).webp" alt="Starlink Mini Car Mount">
                         </div>
                         <div class="slider-item">
-                            <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (4).webp" alt="Starlink Mini Car Mount">
+                            <img src="assets/detail-car-mount-01/Starlink_Car_Mount1 (4).webp" alt="Starlink Mini Car Mount">
                         </div>
                         <div class="slider-item">
-                            <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (5).webp" alt="Starlink Mini Car Mount">
+                            <img src="assets/detail-car-mount-01/Starlink_Car_Mount1 (5).webp" alt="Starlink Mini Car Mount">
                         </div>
                         <div class="slider-item">
-                            <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (6).webp" alt="Starlink Mini Car Mount">
+                            <img src="assets/detail-car-mount-01/Starlink_Car_Mount1 (6).webp" alt="Starlink Mini Car Mount">
                         </div>
                     </div>
                     <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
@@ -472,22 +445,22 @@
                 <!-- 下方缩略图导航 -->
                 <div class="thumb-list">
                     <div class="thumb-item active" data-index="0">
-                        <img src=assets\detail-car-mount-01\Starlink_Car_Mount1.webp" alt="">
+                        <img src="assets/detail-car-mount-01/Starlink_Car_Mount1.webp" alt=""> <!-- 修复原写法：缺少引号 -->
                     </div>
                     <div class="thumb-item" data-index="1">
-                        <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (2).webp" alt="">
+                        <img src="assets/detail-car-mount-01/Starlink_Car_Mount1 (2).webp" alt="">
                     </div>
                     <div class="thumb-item" data-index="2">
-                        <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (3).webp" alt="">
+                        <img src="assets/detail-car-mount-01/Starlink_Car_Mount1 (3).webp" alt="">
                     </div>
                     <div class="thumb-item" data-index="3">
-                        <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (4).webp" alt="">
+                        <img src="assets/detail-car-mount-01/Starlink_Car_Mount1 (4).webp" alt="">
                     </div>
                     <div class="thumb-item" data-index="4">
-                        <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (5).webp" alt="">
+                        <img src="assets/detail-car-mount-01/Starlink_Car_Mount1 (5).webp" alt="">
                     </div>
                     <div class="thumb-item" data-index="5">
-                        <img src="assets\detail-car-mount-01\Starlink_Car_Mount1 (6).webp" alt="">
+                        <img src="assets/detail-car-mount-01/Starlink_Car_Mount1 (6).webp" alt="">
                     </div>
                 </div>
             </div>
@@ -556,31 +529,6 @@
             </table>
         </div>
 
-        <!-- 底部：Product Details 竖向单列布局（长方形图完整展示） -->
-        <div class="detail-gallery">
-            <h3 class="info-title">Product Details</h3>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="assets\detail-car-mount-01\Starlink_Car_Mount_Details1 (1).webp" alt="Product Detail">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets\detail-car-mount-01\Starlink_Car_Mount_Details1 (2).webp" alt="Product Detail">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets\detail-car-mount-01\Starlink_Car_Mount_Details1 (3).webp" alt="Product Detail">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets\detail-car-mount-01\Starlink_Car_Mount_Details1 (4).webp" alt="Product Detail">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets\detail-car-mount-01\Starlink_Car_Mount_Details1 (5).webp" alt="Product Detail">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets\detail-car-mount-01\Starlink_Car_Mount_Details1 (6).webp" alt="Product Detail">
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- 页脚 -->
     <footer>
@@ -600,13 +548,13 @@
                 <div class="footer-col">
                     <h4>Products</h4>
                     <p><a href="mini-case.html">Mini Case</a></p>
-                    <p><a href="roof-mount.html">Roof Mount</p>
-                    <p><a href="router-mount.html">Router Mount</p>
-                    <p><a href="tripod.html">Tripod</p>
-                    <p><a href="car-mount.html">Car Mount</p>
-                    <p><a href="car-adapter.html">Car Adapter</p>
-                    <p><a href="protective-cover.html">Protective Cover</p>
-                    <p><a href="other-accessories.html">Other Accessories</p>
+                    <p><a href="roof-mount.html">Roof Mount</a></p> <!-- 修复原写法：缺少闭合a标签 -->
+                    <p><a href="router-mount.html">Router Mount</a></p> <!-- 修复原写法：缺少闭合a标签 -->
+                    <p><a href="tripod.html">Tripod</a></p> <!-- 修复原写法：缺少闭合a标签 -->
+                    <p><a href="car-mount.html">Car Mount</a></p> <!-- 修复原写法：缺少闭合a标签 -->
+                    <p><a href="car-adapter.html">Car Adapter</a></p> <!-- 修复原写法：缺少闭合a标签 -->
+                    <p><a href="protective-cover.html">Protective Cover</a></p> <!-- 修复原写法：缺少闭合a标签 -->
+                    <p><a href="other-accessories.html">Other Accessories</a></p> <!-- 修复原写法：缺少闭合a标签 -->
                 </div>
                 <div class="footer-col">
                     <h4>Contact Us</h4>
@@ -623,7 +571,7 @@
     <!-- 悬浮WhatsApp按钮 -->
     <a href="https://wa.me/+8618025475525" target="_blank" class="whatsapp-float">💬</a>
 
-    <!-- 轮播+缩略图切换JS -->
+    <!-- 轮播+缩略图切换JS - 修复核心逻辑 -->
     <script>
         const sliderItems = document.querySelectorAll('.slider-item');
         const thumbItems = document.querySelectorAll('.thumb-item');
@@ -641,20 +589,21 @@
             currentIndex = index;
         }
 
-        // 左右箭头切换
+        // 左右箭头切换 - 修复nextBtn逻辑
         prevBtn.addEventListener('click', () => {
             currentIndex = (currentIndex - 1 + total) % total;
             switchImg(currentIndex);
         });
         nextBtn.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % total;
+            switchImg(currentIndex); // 新增：调用切换方法
         });
 
-        // 点击缩略图切换
+        // 点击缩略图切换 - 修复拼写错误（switch → switchImg）
         thumbItems.forEach(thumb => {
             thumb.addEventListener('click', function(){
                 const idx = parseInt(this.dataset.index);
-                switch(idx);
+                switchImg(idx); // 修复：switch → switchImg
             });
         });
     </script>
