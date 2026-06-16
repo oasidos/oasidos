@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        /* 全局变量 */
         :root {
             --color-primary: #2C3E50;
             --color-dark: #212121;
@@ -18,31 +19,40 @@
             --color-bg-light: #F5F5F5;
             --color-accent: #D35400;
             --color-white: #FFFFFF;
-            --shadow: 0 2px 8px rgba(0, 0, 0.08);
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* 修复rgba语法错误 */
         }
+
+        /* 全局重置 */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Inter', Arial, sans-serif;
             color: var(--color-text);
             line-height: 1.6;
             background-color: var(--color-bg-light);
         }
+
         a {
             text-decoration: none;
             color: inherit;
         }
+
         ul {
             list-style: none;
         }
+
+        /* 通用容器 */
         .container {
             width: 92%;
             max-width: 1200px;
             margin: 0 auto;
         }
+
+        /* 通用按钮 */
         .btn {
             display: inline-block;
             padding: 12px 28px;
@@ -54,12 +64,15 @@
             border: none;
             cursor: pointer;
         }
+
         .btn:hover {
             background-color: #1f2d3d;
         }
+
         .section-padding {
             padding: 60px 0;
         }
+
         .section-title {
             font-size: 28px;
             color: var(--color-dark);
@@ -78,12 +91,14 @@
             box-shadow: var(--shadow);
             z-index: 999;
         }
+
         .nav-wrap {
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 70px;
         }
+
         .logo-img {
             height: 50px;
             width: auto;
@@ -91,58 +106,28 @@
             object-fit: contain;
             display: block;
         }
+
         .nav-menu {
             display: flex;
             gap: 32px;
         }
+
         .nav-menu li a {
             font-weight: 500;
             color: var(--color-dark);
             transition: color 0.3s;
         }
-        .nav-menu li a:hover, .nav-menu li a.active {
+
+        .nav-menu li a:hover, 
+        .nav-menu li a.active {
             color: var(--color-primary);
         }
+
         .menu-toggle {
             display: none;
         }
 
-        /* 主体布局 */
-        .main-wrap {
-            margin-top: 90px;
-            display: grid;
-            grid-template-columns: 220px 1fr;
-            gap: 30px;
-        }
-        /* 左侧分类栏 */
-        .sidebar {
-            background-color: var(--color-white);
-            padding: 25px;
-            border-radius: 4px;
-            box-shadow: var(--shadow);
-            height: fit-content;
-        }
-        .sidebar h3 {
-            font-size: 20px;
-            color: var(--color-dark);
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-        .category-list li {
-            margin-bottom: 12px;
-        }
-        .category-list a {
-            display: block;
-            padding: 10px 14px;
-            border-radius: 2px;
-            transition: all 0.3s;
-        }
-        .category-list a:hover, .category-list a.active {
-            background-color: var(--color-primary);
-            color: var(--color-white);
-        }
- /* ========== 悬浮WhatsApp按钮 ========== */
+        /* 悬浮WhatsApp按钮 */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -155,17 +140,62 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             transition: all 0.3s ease;
         }
+
         .whatsapp-float:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
         }
+
         .whatsapp-float img {
             width: 32px;
             height: 32px;
         }
+
+        /* 主体布局 */
+        .main-wrap {
+            margin-top: 90px;
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 30px;
+        }
+
+        /* 左侧分类栏 */
+        .sidebar {
+            background-color: var(--color-white);
+            padding: 25px;
+            border-radius: 4px;
+            box-shadow: var(--shadow);
+            height: fit-content;
+        }
+
+        .sidebar h3 {
+            font-size: 20px;
+            color: var(--color-dark);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .category-list li {
+            margin-bottom: 12px;
+        }
+
+        .category-list a {
+            display: block;
+            padding: 10px 14px;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        .category-list a:hover, 
+        .category-list a.active {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+
         /* 右侧产品区 */
         .product-main {
             background-color: var(--color-white);
@@ -173,6 +203,7 @@
             border-radius: 4px;
             box-shadow: var(--shadow);
         }
+
         .product-main h2 {
             font-size: 24px;
             color: var(--color-dark);
@@ -180,11 +211,13 @@
             padding-bottom: 10px;
             border-bottom: 1px solid #eee;
         }
+
         .product-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
+
         .product-card {
             background: #fff;
             border-radius: 4px;
@@ -192,15 +225,18 @@
             box-shadow: var(--shadow);
             transition: transform 0.3s ease;
         }
+
         .product-card:hover {
             transform: translateY(-5px);
         }
+
         .product-card-img-wrap {
             width: 100%;
             padding-top: 100%;
             position: relative;
             background-color: #fafafa;
         }
+
         .product-card img {
             position: absolute;
             top: 0;
@@ -209,7 +245,9 @@
             height: 100%;
             object-fit: contain;
             display: block;
+            loading: lazy; /* 统一懒加载属性位置 */
         }
+
         .product-card .product-name {
             padding: 15px;
             font-size: 16px;
@@ -225,18 +263,21 @@
             color: var(--color-white);
             padding: 50px 0 20px;
         }
+
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 30px;
             margin-bottom: 40px;
         }
+
         .footer-col h4 {
             font-size: 18px;
             margin-bottom: 16px;
             position: relative;
             padding-bottom: 8px;
         }
+
         .footer-col h4::after {
             content: '';
             position: absolute;
@@ -246,14 +287,18 @@
             height: 2px;
             background-color: var(--color-primary);
         }
-        .footer-col p, .footer-col a {
+
+        .footer-col p, 
+        .footer-col a {
             font-size: 14px;
             color: #ccc;
             line-height: 1.8;
         }
+
         .footer-col a:hover {
             color: var(--color-white);
         }
+
         .copyright {
             text-align: center;
             padding-top: 20px;
@@ -274,13 +319,16 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+
         @media (max-width: 768px) {
             .nav-menu {
                 display: none;
             }
         }
-        @media (max: 576px) {
-            .product-grid, .footer-grid {
+
+        @media (max-width: 576px) { /* 修复媒体查询语法错误 */
+            .product-grid, 
+            .footer-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -309,7 +357,7 @@
                     <li><a href="products.html">Car Mount</a></li>
                     <li><a href="car-adapter.html">Car Adapter</a></li>
                     <li><a href="roof-mount.html">Roof Mount</a></li>
-                    <li><a href=".html" class="active">Router Mount</a></li>
+                    <li><a href="router-mount.html" class="active">Router Mount</a></li> <!-- 修复链接错误 -->
                     <li><a href="mini-case.html">Mini Case</a></li>
                     <li><a href="tripod.html">Tripod</a></li>
                     <li><a href="protective-cover.html">Protective Cover</a></li>
@@ -323,7 +371,7 @@
                     <div class="product-card">
                         <a href="detail-router-mount-01.html">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Router-Mount1.webp" alt="Router Mount 01"loading="lazy">
+                                <img src="assets/Starlink-Router-Mount1.webp" alt="Wall Router Bracket - OASIDOS Starlink Mini Accessory" loading="lazy">
                             </div>
                             <div class="product-name">Wall Router Bracket</div>
                         </a>
@@ -331,7 +379,7 @@
                     <div class="product-card">
                         <a href="detail-router-mount-02.html">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Router-Mount2.webp" alt="Router Mount 02"loading="lazy">
+                                <img src="assets/Starlink-Router-Mount2.webp" alt="Desktop Router Holder - OASIDOS Starlink Mini Accessory" loading="lazy">
                             </div>
                             <div class="product-name">Desktop Router Holder</div>
                         </a>
@@ -339,7 +387,7 @@
                     <div class="product-card">
                         <a href="detail-router-mount-03.html">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Router-Mount3.webp" alt="Router Mount 03"loading="lazy">
+                                <img src="assets/Starlink-Router-Mount3.webp" alt="Space Saving Router Mount - OASIDOS Starlink Mini Accessory" loading="lazy">
                             </div>
                             <div class="product-name">Space Saving Router Mount</div>
                         </a>
@@ -347,7 +395,7 @@
                     <div class="product-card">
                         <a href="detail-router-mount-04.html">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Router-Mount4.webp" alt="Router Mount 04"loading="lazy">
+                                <img src="assets/Starlink-Router-Mount4.webp" alt="Anti-Slip Router Stand - OASIDOS Starlink Mini Accessory" loading="lazy">
                             </div>
                             <div class="product-name">Anti-Slip Router Stand</div>
                         </a>
@@ -355,7 +403,7 @@
                     <div class="product-card">
                         <a href="detail-router-mount-05.html">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Router-Mount5.webp" alt="Router Mount 05"loading="lazy">
+                                <img src="assets/Starlink-Router-Mount5.webp" alt="Metal Router Bracket - OASIDOS Starlink Mini Accessory" loading="lazy">
                             </div>
                             <div class="product-name">Metal Router Bracket</div>
                         </a>
@@ -363,7 +411,7 @@
                     <div class="product-card">
                         <a href="detail-router-mount-06.html">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Router-Mount6.webp" alt="Router Mount 06"loading="lazy">
+                                <img src="assets/Starlink-Router-Mount6.webp" alt="Adjustable Router Mount - OASIDOS Starlink Mini Accessory" loading="lazy">
                             </div>
                             <div class="product-name">Adjustable Router Mount</div>
                         </a>
@@ -409,9 +457,10 @@
             </div>
         </div>
     </footer>
+
     <!-- 悬浮WhatsApp聊天按钮 -->
     <a href="https://wa.me/8618025475525" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat with us on WhatsApp">
     </a>
 </body>
 </html>
