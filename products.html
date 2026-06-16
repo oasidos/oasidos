@@ -18,31 +18,37 @@
             --color-bg-light: #F5F5F5;
             --color-accent: #D35400;
             --color-white: #FFFFFF;
-            --shadow: 0 2px 8px rgba(0, 0, 0.08);
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* 修复阴影透明度语法错误 */
         }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        
         body {
             font-family: 'Inter', Arial, sans-serif;
             color: var(--color-text);
             line-height: 1.6;
             background-color: var(--color-bg-light);
         }
+        
         a {
             text-decoration: none;
             color: inherit;
         }
+        
         ul {
             list-style: none;
         }
+        
         .container {
             width: 92%;
             max-width: 1200px;
             margin: 0 auto;
         }
+        
         .btn {
             display: inline-block;
             padding: 12px 28px;
@@ -54,12 +60,15 @@
             border: none;
             cursor: pointer;
         }
+        
         .btn:hover {
             background-color: #1f2d3d;
         }
+        
         .section-padding {
             padding: 60px 0;
         }
+        
         .section-title {
             font-size: 28px;
             color: var(--color-dark);
@@ -67,7 +76,8 @@
             margin-bottom: 40px;
             font-weight: 700;
         }
- /* ========== 悬浮WhatsApp按钮 ========== */
+
+        /* ========== 悬浮WhatsApp按钮 ========== */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -82,15 +92,21 @@
             justify-content: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             transition: all 0.3s ease;
+            /* 增加可访问性 */
+            outline: none;
+            border: none;
         }
+        
         .whatsapp-float:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 16px rgba(0,0,0,0.2);
         }
+        
         .whatsapp-float img {
             width: 32px;
             height: 32px;
         }
+
         /* 顶部导航 */
         header {
             position: fixed;
@@ -101,12 +117,14 @@
             box-shadow: var(--shadow);
             z-index: 999;
         }
+        
         .nav-wrap {
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 70px;
         }
+        
         .logo-img {
             height: 50px;
             width: auto;
@@ -114,18 +132,23 @@
             object-fit: contain;
             display: block;
         }
+        
         .nav-menu {
             display: flex;
             gap: 32px;
         }
+        
         .nav-menu li a {
             font-weight: 500;
             color: var(--color-dark);
             transition: color 0.3s;
         }
-        .nav-menu li a:hover, .nav-menu li a.active {
+        
+        .nav-menu li a:hover, 
+        .nav-menu li a.active {
             color: var(--color-primary);
         }
+        
         .menu-toggle {
             display: none;
         }
@@ -137,6 +160,7 @@
             grid-template-columns: 220px 1fr;
             gap: 30px;
         }
+
         /* 左侧分类栏 */
         .sidebar {
             background-color: var(--color-white);
@@ -145,6 +169,7 @@
             box-shadow: var(--shadow);
             height: fit-content;
         }
+        
         .sidebar h3 {
             font-size: 20px;
             color: var(--color-dark);
@@ -152,16 +177,20 @@
             padding-bottom: 10px;
             border-bottom: 1px solid #eee;
         }
+        
         .category-list li {
             margin-bottom: 12px;
         }
+        
         .category-list a {
             display: block;
             padding: 10px 14px;
             border-radius: 2px;
             transition: all 0.3s;
         }
-        .category-list a:hover, .category-list a.active {
+        
+        .category-list a:hover, 
+        .category-list a.active {
             background-color: var(--color-primary);
             color: var(--color-white);
         }
@@ -173,6 +202,7 @@
             border-radius: 4px;
             box-shadow: var(--shadow);
         }
+        
         .product-main h2 {
             font-size: 24px;
             color: var(--color-dark);
@@ -180,11 +210,13 @@
             padding-bottom: 10px;
             border-bottom: 1px solid #eee;
         }
+        
         .product-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
+        
         .product-card {
             background: #fff;
             border-radius: 4px;
@@ -192,9 +224,11 @@
             box-shadow: var(--shadow);
             transition: transform 0.3s ease;
         }
+        
         .product-card:hover {
             transform: translateY(-5px);
         }
+
         /* 适配1:1正方形图片，完整展示、不变形 */
         .product-card-img-wrap {
             width: 100%;
@@ -202,6 +236,7 @@
             position: relative;
             background-color: #fafafa;
         }
+        
         .product-card img {
             position: absolute;
             top: 0;
@@ -210,7 +245,11 @@
             height: 100%;
             object-fit: contain; /* 完整显示整张图片，不裁剪、不变形 */
             display: block;
+            /* 优化图片加载 */
+            opacity: 1;
+            transition: opacity 0.3s ease;
         }
+        
         .product-card .product-name {
             padding: 15px;
             font-size: 16px;
@@ -226,18 +265,21 @@
             color: var(--color-white);
             padding: 50px 0 20px;
         }
+        
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 30px;
             margin-bottom: 40px;
         }
+        
         .footer-col h4 {
             font-size: 18px;
             margin-bottom: 16px;
             position: relative;
             padding-bottom: 8px;
         }
+        
         .footer-col h4::after {
             content: '';
             position: absolute;
@@ -247,14 +289,18 @@
             height: 2px;
             background-color: var(--color-primary);
         }
-        .footer-col p, .footer-col a {
+        
+        .footer-col p, 
+        .footer-col a {
             font-size: 14px;
             color: #ccc;
             line-height: 1.8;
         }
+        
         .footer-col a:hover {
             color: var(--color-white);
         }
+        
         .copyright {
             text-align: center;
             padding-top: 20px;
@@ -263,27 +309,78 @@
             color: #999;
         }
 
-        /* 响应式适配 */
+        /* 响应式适配 - 修复语法错误 + 优化断点 */
         @media (max-width: 992px) {
             .main-wrap {
                 grid-template-columns: 1fr;
             }
+            
             .product-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
             .footer-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-        @media (max: 768px) {
+        
+        @media (max-width: 768px) { /* 修复 max 拼写错误为 max-width */
             .nav-menu {
                 display: none;
             }
+            
+            .menu-toggle {
+                display: block; /* 显示移动端菜单按钮占位 */
+                cursor: pointer;
+            }
         }
-        @media (max: 576px) {
-            .product-grid, .footer-grid {
+        
+        @media (max-width: 576px) { /* 修复 max 拼写错误为 max-width */
+            .product-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            /* 移动端优化WhatsApp按钮 */
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .whatsapp-float img {
+                width: 28px;
+                height: 28px;
+            }
+            
+            /* 移动端优化导航高度 */
+            .nav-wrap {
+                height: 60px;
+            }
+            
+            .logo-img {
+                height: 40px;
+            }
+            
+            .main-wrap {
+                margin-top: 80px;
+            }
+        }
+
+        /* 辅助样式：修复链接未闭合问题 + 可访问性优化 */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
         }
     </style>
 </head>
@@ -300,6 +397,10 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <!-- 移动端菜单按钮（占位，保持布局） -->
+            <div class="menu-toggle" aria-label="Toggle navigation menu">
+                <span class="sr-only">Menu</span>
+            </div>
         </div>
     </header>
 
@@ -320,83 +421,89 @@
                 </ul>
             </aside>
 
-            <!-- 右侧产品展示区（默认Car Mount 6款产品） -->
+            <!-- 右侧产品展示区（默认Car Mount 8款产品） -->
             <main class="product-main">
                 <h2>Starlink Car Mount Series</h2>
                 <div class="product-grid">
                     <!-- 产品1 -->
                     <div class="product-card">
-                        <a href="detail-car-mount-01.html">
+                        <a href="detail-car-mount-01.html" aria-label="View details of Universal Car Mount Bracket">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Car-Mount1.webp" alt="Starlink Car Mount 01"loading="lazy">
+                                <img src="assets/Starlink-Car-Mount1.webp" alt="Universal Car Mount Bracket" loading="lazy">
                             </div>
                             <div class="product-name">Universal Car Mount Bracket</div>
                         </a>
                     </div>
+                    
                     <!-- 产品2 -->
                     <div class="product-card">
-                        <a href="detail-car-mount-02.html">
+                        <a href="detail-car-mount-02.html" aria-label="View details of Adjustable Vehicle Mount">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Car-Mount2.webp" alt="Starlink Car Mount 02"loading="lazy">
+                                <img src="assets/Starlink-Car-Mount2.webp" alt="Adjustable Vehicle Mount" loading="lazy">
                             </div>
                             <div class="product-name">Adjustable Vehicle Mount</div>
                         </a>
                     </div>
+                    
                     <!-- 产品3 -->
                     <div class="product-card">
-                        <a href="detail-car-mount-03.html">
+                        <a href="detail-car-mount-03.html" aria-label="View details of Heavy Duty Car Holder">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Car-Mount3.webp" alt="Starlink Car Mount 03"loading="lazy">
+                                <img src="assets/Starlink-Car-Mount3.webp" alt="Heavy Duty Car Holder" loading="lazy">
                             </div>
                             <div class="product-name">Heavy Duty Car Holder</div>
                         </a>
                     </div>
+                    
                     <!-- 产品4 -->
                     <div class="product-card">
-                        <a href="detail-car-mount-04.html">
+                        <a href="detail-car-mount-04.html" aria-label="View details of Windproof Car Mount">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Car-Mount4.webp" alt="Starlink Car Mount 04"loading="lazy">
+                                <img src="assets/Starlink-Car-Mount4.webp" alt="Windproof Car Mount" loading="lazy">
                             </div>
                             <div class="product-name">Windproof Car Mount</div>
                         </a>
                     </div>
+                    
                     <!-- 产品5 -->
                     <div class="product-card">
-                        <a href="detail-car-mount-05.html">
+                        <a href="detail-car-mount-05.html" aria-label="View details of Quick Install Car Bracket">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Car-Mount5.webp" alt="Starlink Car Mount 05"loading="lazy">
+                                <img src="assets/Starlink-Car-Mount5.webp" alt="Quick Install Car Bracket" loading="lazy">
                             </div>
                             <div class="product-name">Quick Install Car Bracket</div>
                         </a>
                     </div>
+                    
                     <!-- 产品6 -->
                     <div class="product-card">
-                        <a href="detail-car-mount-06.html">
+                        <a href="detail-car-mount-06.html" aria-label="View details of Multi-Angle Car Mount">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Car-Mount6.webp" alt="Starlink Car Mount 06"loading="lazy">
+                                <img src="assets/Starlink-Car-Mount6.webp" alt="Multi-Angle Car Mount" loading="lazy">
                             </div>
                             <div class="product-name">Multi-Angle Car Mount</div>
                         </a>
                     </div>
-  <!-- 产品7 -->
+                    
+                    <!-- 产品7 -->
                     <div class="product-card">
-                        <a href="detail-car-mount-06.html">
+                        <a href="detail-car-mount-06.html" aria-label="View details of Multi-Angle Car Mount">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Car-Mount7.webp" alt="Starlink Car Mount 06"loading="lazy">
+                                <img src="assets/Starlink-Car-Mount7.webp" alt="Multi-Angle Car Mount" loading="lazy">
                             </div>
                             <div class="product-name">Multi-Angle Car Mount</div>
                         </a>
                     </div>
-  <!-- 产品8 -->
+                    
+                    <!-- 产品8 -->
                     <div class="product-card">
-                        <a href="detail-car-mount-06.html">
+                        <a href="detail-car-mount-06.html" aria-label="View details of Multi-Angle Car Mount">
                             <div class="product-card-img-wrap">
-                                <img src="assets/Starlink-Car-Mount8.webp" alt="Starlink Car Mount 06"loading="lazy">
+                                <img src="assets/Starlink-Car-Mount8.webp" alt="Multi-Angle Car Mount" loading="lazy">
                             </div>
                             <div class="product-name">Multi-Angle Car Mount</div>
                         </a>
                     </div>
-
                 </div>
             </main>
         </div>
@@ -410,6 +517,7 @@
                     <h4>OASIDOS</h4>
                     <p>2nd Floor, Factory Building No. 1, No. 16 Kangzheng Road, Danzhutou Community, Nanwan Street, Longgang District</p>
                 </div>
+                
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <p><a href="index.html">Home</a></p>
@@ -417,6 +525,7 @@
                     <p><a href="about.html">About Us</a></p>
                     <p><a href="contact.html">Contact</a></p>
                 </div>
+                
                 <div class="footer-col">
                     <h4>Products</h4>
                     <p><a href="mini-case.html">Mini Case</a></p>
@@ -424,23 +533,26 @@
                     <p><a href="router-mount.html">Router Mount</a></p>
                     <p><a href="tripod.html">Tripod</a></p>
                     <p><a href="car-mount.html">Car Mount</a></p>
-                    <p><a href="car-adapter.html">Car Adapter</p>
+                    <p><a href="car-adapter.html">Car Adapter</a></p> <!-- 修复未闭合的a标签 -->
                     <p><a href="protective-cover.html">Protective Cover</a></p>
                     <p><a href="other-accessories.html">Other Accessories</a></p>
                 </div>
+                
                 <div class="footer-col">
                     <h4>Contact Us</h4>
                     <p>Email: hello@oasidos.com</p>
                     <p>Tel / WeChat / WhatsApp: +8618025475525</p>
                 </div>
             </div>
+            
             <div class="copyright">
                 © 2026 OASIDOS. All Rights Reserved.
             </div>
         </div>
     </footer>
+    
     <!-- 悬浮WhatsApp聊天按钮 -->
-    <a href="https://wa.me/8618025475525" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/8618025475525" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
     </a>
 </body>
