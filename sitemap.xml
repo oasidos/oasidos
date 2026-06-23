@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:fo="http://www.w3.org/1999/XSL/Format"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
@@ -9,309 +13,323 @@
 
 <url>
   <loc>https://oasidos.com/</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://oasidos.com/products</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://oasidos.com/about</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://oasidos.com/contact</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://oasidos.com/car-adapter</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://oasidos.com/roof-mount</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://oasidos.com/router-mount</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://oasidos.com/mini-case</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://oasidos.com/tripod</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://oasidos.com/protective-cover</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://oasidos.com/other-accessories</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://oasidos.com/starlink-mini-case-02</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://oasidos.com/starlink-roof-mount-02</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://oasidos.com/starlink-router-mount-02</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://oasidos.com/starlink-tripod-03</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://oasidos.com/starlink-mini-car-adapter-02</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://oasidos.com/starlink-mini-car-mount-02</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://oasidos.com/starlink-protective-cover-03</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://oasidos.com/starlink-other-accessories-05</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://oasidos.com/car-mount.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://oasidos.com/product.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://oasidos.com/starlink-mini-car-mount-09</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://oasidos.com/starlink-mini-car-mount-01</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-mini-car-mount-02.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-mini-car-mount-03</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-mini-car-mount-03.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-mini-car-mount-04</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-mini-car-mount-04.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-mini-car-mount-05</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-mini-car-mount-05.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-mini-car-mount-06</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-mini-car-mount-06.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-mini-car-mount-07</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-car-adapter-01.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-mini-car-mount-08</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-car-adapter-02.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-mini-car-adapter-01</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-car-adapter-03.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-mini-car-adapter-03</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-car-adapter-04.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-mini-car-adapter-04</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-car-adapter-05.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-mini-car-adapter-05</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-car-adapter-06.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-mini-car-adapter-06</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-roof-mount-01.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-roof-mount-01</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-roof-mount-02.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-roof-mount-03</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-roof-mount-03.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-roof-mount-04</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-roof-mount-04.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-roof-mount-05</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-roof-mount-05.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-roof-mount-06</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-roof-mount-06.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-router-mount-01</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-router-mount-01.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-router-mount-03</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-router-mount-02.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-router-mount-04</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-router-mount-03.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-router-mount-05</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-router-mount-04.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-mini-case-01</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-router-mount-05.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-mini-case-03</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-router-mount-06.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-mini-case-04</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-mini-case-01.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-mini-case-05</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-mini-case-02.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-mini-case-06</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-mini-case-03.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-tripod-01</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-mini-case-04.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-tripod-02</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-mini-case-05.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-tripod-04</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-mini-case-06.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-tripod-05</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-tripod-01.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-protective-cover-01</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-tripod-02.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-protective-cover-02</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-tripod-03.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-protective-cover-04</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-tripod-04.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-protective-cover-05</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-tripod-05.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-protective-cover-06</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-tripod-06.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-protective-cover-07</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-protective-cover-01.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-other-accessories-01</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-protective-cover-02.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-other-accessories-02</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-protective-cover-03.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-other-accessories-03</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-protective-cover-04.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-other-accessories-04</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-protective-cover-05.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-other-accessories-06</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://oasidos.com/starlink-protective-cover-06.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
+  <loc>https://oasidos.com/starlink-other-accessories-07</loc>
+  <lastmod>2026-06-23T08:27:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
-<url>
-  <loc>https://oasidos.com/starlink-other-accessories-01.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://oasidos.com/starlink-other-accessories-02.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://oasidos.com/starlink-other-accessories-03.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://oasidos.com/starlink-other-accessories-04.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://oasidos.com/starlink-other-accessories-05.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://oasidos.com/starlink-other-accessories-06.html</loc>
-  <lastmod>2026-06-17T06:05:19+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
 
 </urlset>
