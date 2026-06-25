@@ -528,17 +528,23 @@
             "name": "OASIDOS"
         },
         "description": "Starlink Mini Car Adapter, 10FT Starlink Mini Cable Car Charger, 12V-24V Cigarette Lighter Adapter [Stable Power Chip & 18AWG Waterproof Cable] Dual PD 45W + USB A 30W Ports for Cars, Trucks, RVs",
-        "offers": {
-            "@type": "Offer",
-            "priceCurrency": "USD",
-            "lowPrice": "4",
-            "highPrice": "8",
-            "availability": "https://schema.org/InStock",
-            "minimumOrderQuantity": {
-                "@type": "QuantitativeValue",
-                "value": 10,
-                "unitCode": "PCE"
-            }
+"offers": {
+  "@type": "Offer",
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "minimumOrderQuantity": {
+    "@type": "QuantitativeValue",
+    "value": 10,
+    "unitCode": "PCE"
+  },
+  // 区间价格必须嵌套在priceSpecification内
+  "priceSpecification": {
+    "@type": "PriceSpecification",
+    "price": "4", // 最低价，满足谷歌必填price校验
+    "lowPrice": "4",
+    "highPrice": "8"
+  }
+}
         }
     }
     </script>
