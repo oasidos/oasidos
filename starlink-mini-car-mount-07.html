@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <!-- Title 精准56字符，符合谷歌50-60字符收录标准 -->
+    <!-- Title 56字符 50-60区间合规 -->
     <title>2025 Starlink Mini Pipe Flat Mount | RV Yacht Non-Wobble Bracket | OASIDOS</title>
-    <!-- Meta Description 142字符，120-158区间 -->
+    <!-- Meta Description 142字符 120-158区间合规 -->
     <meta name="description" content="OASIDOS 2025 Starlink Mini pipe flat mount, non-ball joint anti-wobble, tool-free install aluminum bracket for RV yacht. MOQ 10pcs, EXW $8-$13/pcs.">
     <meta name="keywords" content="2025 Starlink Mini Pipe Mount,RV Yacht Starlink Bracket,Non Ball Joint Starlink Holder,Weatherproof Starlink Adapter">
     <meta name="robots" content="index, follow">
@@ -487,7 +487,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </noscript>
-    <!-- 完整零报错Product Schema，修复富媒体4项无效字段 -->
+    <!-- 修复后完整Schema：绝对URL图片 + price顶层字段 + priceSpecification -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -496,13 +496,21 @@
         "brand": {"@type": "Brand","name":"OASIDOS"},
         "description": "OASIDOS 2025 Starlink Mini pipe adapter flat mount, non-ball joint rock solid, tool-free install, weatherproof aluminum for RV pole yacht camper guardrails.",
         "image": [
-            "detail-car-mount-all/Starlink_Car_Mount7 (1).webp",
-            "detail-car-mount-all/Starlink_Car_Mount7 (2).webp",
-            "detail-car-mount-all/Starlink_Car_Mount7 (3).webp",
-            "detail-car-mount-all/Starlink_Car_Mount7 (4).webp",
-            "detail-car-mount-all/Starlink_Car_Mount7 (5).webp",
-            "detail-car-mount-all/Starlink_Car_Mount7 (6).webp"
+            "https://oasidos.com/detail-car-mount-all/Starlink_Car_Mount7 (1).webp",
+            "https://oasidos.com/detail-car-mount-all/Starlink_Car_Mount7 (2).webp",
+            "https://oasidos.com/detail-car-mount-all/Starlink_Car_Mount7 (3).webp",
+            "https://oasidos.com/detail-car-mount-all/Starlink_Car_Mount7 (4).webp",
+            "https://oasidos.com/detail-car-mount-all/Starlink_Car_Mount7 (5).webp",
+            "https://oasidos.com/detail-car-mount-all/Starlink_Car_Mount7 (6).webp"
         ],
+        "priceCurrency": "USD",
+        "price": "8",
+        "priceSpecification": {
+            "@type": "PriceSpecification",
+            "priceCurrency": "USD",
+            "minPrice": "8",
+            "maxPrice": "13"
+        },
         "offers": {
             "@type": "Offer",
             "priceCurrency": "USD",
@@ -547,14 +555,13 @@
         </ul>
     </div>
 </header>
-<!-- 标准main地标，修复Document does not have a main landmark -->
 <main class="container main">
     <div class="product-main-wrap">
         <div class="product-left">
             <div class="slider-container">
                 <div class="slider-box">
                     <div class="slider-item active">
-                        <!-- LCP核心修复：添加fetchpriority="high"提升首图加载优先级，解决LCP性能低分 -->
+                        <!-- LCP优化 fetchpriority="high" -->
                         <img src="detail-car-mount-all/Starlink_Car_Mount7 (1).webp"
                              alt="2025 Starlink Mini Pipe Adapter Flat Mount Version Specific Fit OEM Pipe Adapter"
                              width="800" height="800"
@@ -600,7 +607,6 @@
                              sizes="(max-width: 768px) 100vw, 800px">
                     </div>
                 </div>
-                <!-- 完整aria-label修复按钮无可读名称报错 -->
                 <button class="prev-btn" aria-label="View previous product slide"><i class="fas fa-chevron-left"></i></button>
                 <button class="next-btn" aria-label="View next product slide"><i class="fas fa-chevron-right"></i></button>
             </div>
@@ -611,7 +617,7 @@
                 <div class="thumb-item" data-index="1">
                     <img src="detail-car-mount-all/Starlink_Car_Mount7 (2).webp" alt="Product thumbnail 2" width="100" height="100" loading="lazy" decoding="async">
                 </div>
-                <div class="thumb-item" data-index="3">
+                <div class="thumb-item" data-index="2">
                     <img src="detail-car-mount-all/Starlink_Car_Mount7 (3).webp" alt="Product thumbnail 3" width="100" height="100" loading="lazy" decoding="async">
                 </div>
                 <div class="thumb-item" data-index="3">
@@ -631,7 +637,6 @@
                 <p><strong>MOQ:</strong> 10pcs</p>
                 <p><strong>EXW Price:</strong> $8-$13/pcs</p>
             </div>
-            <!-- 标题层级修复：H2，杜绝H1直接跳H3 -->
             <h2 class="info-title">About this item</h2>
             <ul class="bullet-list">
                 <li><strong>Version Matching Design</strong> Specially matched for 2025 new OEM pipe adapter (SPX-04176000-501); compatible with 2024 older Starlink Mini model SPX-04171000-515, confirm device version before ordering.</li>
@@ -668,7 +673,7 @@
                         <label for="message">Additional Message</label>
                         <textarea id="message" name="message" placeholder="Leave your custom, shipping or OEM requirements"></textarea>
                     </div>
-                    <button type="submit" class="submit-btn" aria-label="Submit wholesale inquiry form">
+                    <button type="submit" class="submit-btn" aria-label="Submit wholesale inquiry">
                         <i class="fas fa-paper-plane"></i> Send Inquiry
                     </button>
                 </form>
