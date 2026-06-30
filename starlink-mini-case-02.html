@@ -5,29 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <!-- Title 50-60字符合规 -->
     <title>Lockable Starlink Mini Hard Case | Waterproof Carry Bag with Custom Foam | OASIDOS</title>
-    <!-- Meta Description 120-158字符合规 -->
-    <meta name="description" content="OASIDOS lockable Starlink Mini hard case, waterproof carry bag with custom foam, shockproof for travel camping. MOQ 20pcs, EXW price $13-$19 for outdoor travel & RV use.">
-    <meta name="keywords" content="Starlink Mini hard case,black waterproof storage box,custom EVA foam carrying bag,shockproof satellite accessory,RV travel protective case">
+    <meta name="description" content="OASIDOS lockable Starlink Mini hard case, waterproof carry bag with custom foam, shockproof for travel camping. MOQ 20pcs, EXW $15-$22/pcs.">
+    <meta name="keywords" content="Lockable Starlink Mini Case,Waterproof Carry Bag,Shockproof Starlink Storage Case,Custom Foam Hard Shell Case,Outdoor Travel Starlink Bag">
     <meta name="robots" content="index, follow">
     <meta name="author" content="OASIDOS">
     <meta name="language" content="English">
     <meta name="geo.region" content="US">
     <meta name="geo.placename" content="United States">
-    <!-- 固定域名绝对Canonical链接 -->
     <link rel="canonical" href="https://oasidos.com/starlink-mini-case-02.html">
-    <!-- Open Graph 社交SEO标签 -->
+    <!-- Open Graph -->
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://oasidos.com/starlink-mini-case-02.html">
     <meta property="og:title" content="Lockable Starlink Mini Hard Case | Waterproof Carry Bag with Custom Foam | OASIDOS">
-    <meta property="og:description" content="OASIDOS lockable Starlink Mini hard case, waterproof carry bag with custom foam, shockproof for travel camping. MOQ 20pcs, EXW price $13-$19 for outdoor travel & RV use.">
-    <meta property="og:image" content="https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case2%20(1).webp">
+    <meta property="og:description" content="OASIDOS lockable Starlink Mini hard case, waterproof carry bag with custom foam, shockproof for travel camping. MOQ 20pcs, EXW $15-$22/pcs.">
+    <meta property="og:image" content="https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case2_1.webp">
     <meta property="og:site_name" content="OASIDOS">
-    <!-- Twitter Card 标签 -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Lockable Starlink Mini Hard Case | Waterproof Carry Bag with Custom Foam | OASIDOS">
-    <meta name="twitter:description" content="OASIDOS lockable Starlink Mini hard case, waterproof carry bag with custom foam, shockproof for travel camping. MOQ 20pcs, EXW price $13-$19 for outdoor travel & RV use.">
-    <meta name="twitter:image" content="https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case2%20(1).webp">
-    <!-- 移除无效wa.me预连接 -->
+    <meta name="twitter:description" content="OASIDOS lockable Starlink Mini hard case, waterproof carry bag with custom foam, shockproof for travel camping. MOQ 20pcs, EXW $15-$22/pcs.">
+    <meta name="twitter:image" content="https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case2_1.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" as="style">
@@ -41,7 +38,7 @@
             --color-bg-light: #FFFFFF;
             --color-white: #FFFFFF;
             --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            --radius: 4px;
+            --radius: 4;
         }
         * {
             margin: 0;
@@ -135,7 +132,7 @@
             width: 100%;
             padding-top: 100%;
             position: relative;
-            background: #eeee; /* 增加灰色底色，纯白图片不会隐形 */
+            background: #eeee;
             border-radius: var(--radius);
             overflow: hidden;
         }
@@ -149,7 +146,7 @@
             transition: opacity 0.4s ease;
         }
         .slider-item.active {
-            opacity: 1;
+            opacity: 1 !important;
             z-index: 2;
         }
         .slider-item img {
@@ -157,6 +154,7 @@
             height: 100%;
             object-fit: contain;
             display: block;
+            opacity: 1 !important;
             background: #f5f5f5;
         }
         .prev-btn, .next-btn {
@@ -211,6 +209,7 @@
             height: 100%;
             object-fit: contain;
             display: block;
+            opacity: 1 !important;
         }
         .product-right {
             height: 100%;
@@ -282,6 +281,10 @@
             color: #ffffff;
             min-width: 48px;
             min-height: 48px;
+            /* 关键：清除浏览器原生按钮样式，杜绝变灰 */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
         }
         .product-actions .chat-btn {
             background-color: #25D366;
@@ -293,9 +296,13 @@
         .product-actions .chat-btn:active {
             background-color: #0ea84c;
         }
+        /* 永久锁定原色核心代码 */
         .product-actions .inquiry-btn {
             background-color: #2c3a4c;
-            opacity: 1 !important; /* 锁定按钮原色，不会变浅灰 */
+            opacity: 1 !important;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
         }
         .product-actions .inquiry-btn:hover {
             background-color: #1f2a37;
@@ -502,14 +509,13 @@
             .action-btn { width: 100%; justify-content: center; }
         }
     </style>
-    <!-- 字体增加display=swap 消除文字阻塞 -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </noscript>
-    <!-- 完整零报错Product Schema，图片全部URL编码 -->
+    <!-- Schema 图片路径全部无空格 -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -518,12 +524,12 @@
         "brand": {"@type": "Brand","name":"OASIDOS"},
         "description": "OASIDOS lockable Starlink Mini hard case, waterproof carry bag with custom foam, shockproof for travel camping.",
         "image": [
-            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case2%20(1).webp",
-            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case2%20(2).webp",
-            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case2%20(3).webp",
-            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case2%20(4).webp",
-            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case2%20(5).webp",
-            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case2%20(6).webp"
+            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case2_1.webp",
+            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case2_2.webp",
+            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case2_3.webp",
+            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case2_4.webp",
+            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case2_5.webp",
+            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case2_6.webp"
         ],
         "priceCurrency": "USD",
         "price": "15",
@@ -596,7 +602,6 @@
         </a>
         <ul class="nav-menu">
             <li><a href="https://oasidos.com/index.html" rel="noopener noreferrer">Home</a></li>
-            <!-- 固定产品列表页面products.html -->
             <li><a href="https://oasidos.com/products.html" class="active" rel="noopener noreferrer">Products</a></li>
             <li><a href="https://oasidos.com/about.html" rel="noopener noreferrer">About Us</a></li>
             <li><a href="https://oasidos.com/contact.html" rel="noopener noreferrer">Contact</a></li>
@@ -608,13 +613,12 @@
         <div class="product-left">
             <div class="slider-container">
                 <div class="slider-box">
-                    <!-- 首图强制透明度兜底，JS未加载也显示 -->
+                    <!-- 首图强制显示兜底 -->
                     <div class="slider-item active" style="opacity:1 !important;z-index:2;">
-                        <img src="detail-mini-case-all/Starlink_Mini_Case2%20(1).webp"
+                        <img src="detail-mini-case-all/Starlink_Mini_Case2_1.webp"
                              alt="Lockable Starlink Mini Waterproof Hard Carry Bag Custom EVA Foam Storage Case For Camping RV"
                              width="800" height="800"
                              loading="eager"
-                             fetchpriority="high"
                              decoding="async"
                              srcset="detail-mini-case-all/Starlink_Mini_Case2-200.webp 200w,
                                      detail-mini-case-all/Starlink_Mini_Case2-400.webp 400w,
@@ -622,8 +626,8 @@
                              sizes="(max-width: 768px) 600px, 593px">
                     </div>
                     <div class="slider-item">
-                        <img src="detail-mini-case-all/Starlink_Mini_Case2%20(2).webp"
-                             alt="Lockable ABS Starlink Mini Storage Case Custom EVA Foam Interior Shockproof"
+                        <img src="detail-mini-case-all/Starlink_Mini_Case2_2.webp"
+                             alt="Lockable ABS Starlink Mini Storage Case Custom EVA Foam Interior"
                              width="800" height="800"
                              loading="lazy" decoding="async"
                              srcset="detail-mini-case-all/Starlink_Mini_Case2-200.webp 200w,
@@ -632,7 +636,7 @@
                              sizes="(max-width: 768px) 600px, 593px">
                     </div>
                     <div class="slider-item">
-                        <img src="detail-mini-case-all/Starlink_Mini_Case2%20(3).webp"
+                        <img src="detail-mini-case-all/Starlink_Mini_Case2_3.webp"
                              alt="Secure Lockable Starlink Mini Hard Bag IP Waterproof Dustproof Seal"
                              width="800" height="800"
                              loading="lazy" decoding="async"
@@ -642,7 +646,7 @@
                              sizes="(max-width: 768px) 600px, 593px">
                     </div>
                     <div class="slider-item">
-                        <img src="detail-mini-case-all/Starlink_Mini_Case2%20(4).webp"
+                        <img src="detail-mini-case-all/Starlink_Mini_Case2_4.webp"
                              alt="Travel Lockable Starlink Mini Carry Case With Detachable Shoulder Strap"
                              width="800" height="800"
                              loading="lazy" decoding="async"
@@ -652,8 +656,8 @@
                              sizes="(max-width: 768px) 600px, 593px">
                     </div>
                     <div class="slider-item">
-                        <img src="detail-mini-case-all/Starlink_Mini_Case2%20(5).webp"
-                             alt="Shockproof Lockable Starlink Mini Storage Box For Outdoor Camping Hiking"
+                        <img src="detail-mini-case-all/Starlink_Mini_Case2_5.webp"
+                             alt="Shockproof Lockable Starlink Mini Storage Box For Outdoor Camping"
                              width="800" height="800"
                              loading="lazy" decoding="async"
                              srcset="detail-mini-case-all/Starlink_Mini_Case2-200.webp 200w,
@@ -662,8 +666,8 @@
                              sizes="(max-width: 768px) 600px, 593px">
                     </div>
                     <div class="slider-item">
-                        <img src="detail-mini-case-all/Starlink_Mini_Case2%20(6).webp"
-                             alt="OASIDOS Lockable Starlink Mini Full Kit Protective Waterproof Hard Case"
+                        <img src="detail-mini-case-all/Starlink_Mini_Case2_6.webp"
+                             alt="OASIDOS Lockable Starlink Mini Full Kit Protective Hard Case"
                              width="800" height="800"
                              loading="lazy" decoding="async"
                              srcset="detail-mini-case-all/Starlink_Mini_Case2-200.webp 200w,
@@ -804,14 +808,14 @@
             </div>
             <div class="footer-col">
                 <h4>Products</h4>
-                <p><a href="https://oasidos.com/products.html" rel="noopener noreferrer">Mini Case</a></p>
-                <p><a href="https://oasidos.com/products.html" rel="noopener noreferrer">Roof Mount</a></p>
-                <p><a href="https://oasidos.com/products.html" rel="noopener noreferrer">Router Mount</a></p>
-                <p><a href="https://oasidos.com/products.html" rel="noopener noreferrer">Tripod</a></p>
-                <p><a href="https://oasidos.com/products.html" rel="noopener noreferrer">Car Mount</a></p>
-                <p><a href="https://oasidos.com/products.html" rel="noopener noreferrer">Car Adapter</a></p>
-                <p><a href="https://oasidos.com/products.html" rel="noopener noreferrer">Protective Cover</a></p>
-                <p><a href="https://oasidos.com/products.html" rel="noopener noreferrer">Other Accessories</a></p>
+                <p><a href="https://oasidos.com/products.html" rel="noopener noreferrer">All Mini Cases</a></p>
+                <p><a href="https://oasidos.com/products.html" rel="noopener noreferrer">Roof Mount Kits</a></p>
+                <p><a href="https://oasidos.com/products.html" rel="noopener noreferrer">Router Mounts</a></p>
+                <p><a href="https://oasidos.com/products.html" rel="noopener noreferrer">Tripod Accessories</a></p>
+                <p><a href="https://oasidos.com/products.html" rel="noopener noreferrer">Car Mount Brackets</a></p>
+                <p><a href="https://oasidos.com/products.html" rel="noopener noreferrer">Car Adapters</a></p>
+                <p><a href="https://oasidos.com/products.html" rel="noopener noreferrer">Protective Bags</a></p>
+                <p><a href="https://oasidos.com/products.html" rel="noopener noreferrer">Other Satellite Parts</a></p>
             </div>
             <div class="footer-col">
                 <h4>Contact Us</h4>
