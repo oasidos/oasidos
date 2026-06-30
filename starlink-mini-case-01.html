@@ -18,16 +18,16 @@
     <meta property="og:url" content="https://oasidos.com/starlink-mini-case-01.html">
     <meta property="og:title" content="Starlink Mini Waterproof Hard Case | Shockproof Travel Storage Bag | OASIDOS">
     <meta property="og:description" content="OASIDOS Starlink Mini waterproof hard case, shockproof storage bag with precision foam, dual carry design for travel camping. MOQ 20pcs, EXW $20-$28/pcs.">
-    <meta property="og:image" content="https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (1)-400.webp">
+    <meta property="og:image" content="https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (1).webp">
     <meta property="og:site_name" content="OASIDOS">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (1)-400.webp">
+    <meta name="twitter:image" content="https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (1).webp">
 
-    <!-- ========== 关键优化1：内联首屏关键CSS，彻底消除渲染阻塞 ========== -->
+    <!-- 内联关键CSS，还原原版页眉布局，修复导航错乱 -->
     <style>
         :root {
             --color-primary: #2C3E50;
-            --color-dark: #121212;
+            --color-dark: #212121;
             --color-text: #333333;
             --color-text-light: #555555;
             --color-text-footer: #e0e0e0;
@@ -43,10 +43,51 @@
         a:focus-visible {outline-color:var(--color-primary)}
         ul {list-style:none}
         .container {width:92%;max-width:1200px;margin:0 auto}
-        header {position:fixed;top:0;left:0;width:100%;height:70px;background:#fff;box-shadow:var(--shadow);z-index:999}
-        .nav-wrap {display:flex;justify-content:space-between;align-items:center;height:70px}
-        .logo-img {height:50px;width:auto;max-width:180px;object-fit:contain;display:block}
-        .menu-toggle {display:none;border:none;background:transparent;font-size:24px;color:var(--color-dark)}
+        /* 原版页眉样式 完全还原初始布局 */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-white);
+            box-shadow: var(--shadow);
+            z-index: 999;
+        }
+        .nav-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+        .logo-img {
+            height: 50px;
+            width: auto;
+            max-width: 180px;
+            object-fit: contain;
+            display: block;
+        }
+        /* 桌面端强制横向导航，还原原版32px间距 */
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+        }
+        .nav-menu li a {
+            font-weight: 500;
+            color: var(--color-dark);
+            transition: color 0.3s;
+        }
+        .nav-menu li a:hover,
+        .nav-menu li a.active {
+            color: var(--color-primary);
+        }
+        /* 移动端菜单按钮仅小屏显示，大屏隐藏 */
+        .menu-toggle {
+            display: none;
+            border: none;
+            background: transparent;
+            font-size: 24px;
+            color: var(--color-dark);
+        }
         .main {margin-top:90px;padding:40px 0}
         .product-main-wrap {display:grid;grid-template-columns:1fr 1.2fr;gap:40px;background:#fff;padding:30px;border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:40px;align-items:flex-start}
         .product-left {display:flex;flex-direction:column;gap:15px}
@@ -93,13 +134,13 @@
         .footer-col a:hover {color:#fff}
         .copyright {text-align:center;padding-top:20px;border-top:1px solid #444;font-size:13px;color:#bbbbbb}
         .whatsapp-float {position:fixed;bottom:25px;right:25px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:#fff;box-shadow:var(--shadow);z-index:9999}
-        /* 移动端媒体查询内联，无需等待外部样式 */
+        /* 移动端媒体查询，仅小屏隐藏导航菜单 */
         @media (max-width:992px){
+            .nav-menu {display:none}
+            .menu-toggle {display:block}
             .product-main-wrap {grid-template-columns:1fr}
             .footer-grid {grid-template-columns:repeat(2,1fr);min-width:unset}
             .thumb-list {grid-template-columns:repeat(3,1fr);row-gap:10px}
-            .menu-toggle {display:block}
-            .nav-menu {display:none}
         }
         @media (max-width:768px){
             .product-right h1 {font-size:18px}
@@ -116,22 +157,20 @@
         }
     </style>
 
-    <!-- ========== 优化2：LCP首图预加载+低尺寸移动端优先，减少555KiB图片损耗 ========== -->
-    <link rel="preload" as="image" href="https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (1)-400.webp" imagesizes="100vw" imagesrcset="https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (1)-400.webp 400w">
+    <!-- LCP图片标准预加载 -->
+    <link rel="preload" as="image" href="detail-mini-case-all/Starlink_Mini_Case1 (1).webp" fetchpriority="high">
 
-    <!-- ========== 优化3：字体零阻塞加载方案，彻底解决1890ms字体扣分 ========== -->
-    <!-- 1. 先使用系统无衬线字体兜底渲染文字 -->
-    <!-- 2. 异步加载字体，font-display:swap，不阻塞渲染 -->
+    <!-- 字体异步无阻塞加载 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap&display=swap">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap&display=swap"></noscript>
 
-    <!-- ========== 优化4：FontAwesome异步非阻塞加载，消除1880ms渲染阻塞请求 ========== -->
+    <!-- FontAwesome异步加载 -->
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css&display=swap">
     <noscript><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css&display=swap"></noscript>
 
-    <!-- 完整增强Schema -->
+    <!-- 完整Schema结构化数据 -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -154,12 +193,12 @@
                 "manufacturer": {"@type":"Organization","name":"OASIDOS","address":{"@type":"PostalAddress","streetAddress":"2nd Floor, Factory Building No.1, No.16 Kangzheng Road, Danzhutou Community, Nanwan Street","addressLocality":"Longgang District","addressRegion":"Guangdong","addressCountry":"CN"}},
                 "description": "OASIDOS Starlink Mini waterproof hard case, shockproof storage bag with precision foam, dual carry design for travel camping.",
                 "image": [
-                    "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (1)-400.webp",
-                    "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (2)-400.webp",
-                    "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (3)-400.webp",
-                    "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (4)-400.webp",
-                    "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (5)-400.webp",
-                    "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (6)-400.webp"
+                    "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (1).webp",
+                    "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (2).webp",
+                    "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (3).webp",
+                    "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (4).webp",
+                    "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (5).webp",
+                    "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (6).webp"
                 ],
                 "priceCurrency": "USD",
                 "price": "20",
@@ -192,12 +231,13 @@
 <header>
     <div class="container nav-wrap">
         <a href="index.html" aria-label="OASIDOS Homepage">
-            <!-- 图片增加缓存提示，浏览器缓存复用 -->
-            <img src="assets/logo.webp" alt="OASIDOS Logo" width="180" height="50" loading="lazy" decoding="async" fetchpriority="low" hreflang="en">
+            <img src="assets/logo.webp" alt="OASIDOS Logo" width="180" height="50" loading="lazy" decoding="async" fetchpriority="low">
         </a>
+        <!-- 移动端菜单按钮，大屏自动隐藏，不干扰桌面导航 -->
         <button class="menu-toggle" aria-label="Open mobile navigation menu">
             <i class="fas fa-bars"></i>
         </button>
+        <!-- 原版横向导航菜单，桌面端正常横向排列无错乱 -->
         <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html" class="active">Products</a></li>
@@ -212,47 +252,45 @@
             <div class="slider-container">
                 <div class="slider-box">
                     <div class="slider-item active">
-                        <!-- LCP图片移动端优先400w小图，大幅降低体积555KiB损耗 -->
-                        <img src="detail-mini-case-all/Starlink_Mini_Case1 (1)-400.webp"
+                        <img src="detail-mini-case-all/Starlink_Mini_Case1 (1).webp"
                              alt="Starlink Mini Waterproof Hard Case Shockproof Travel Storage Bag"
                              width="800" height="800"
                              loading="eager"
                              fetchpriority="high"
                              decoding="async"
                              srcset="detail-mini-case-all/Starlink_Mini_Case1 (1)-400.webp 400w, detail-mini-case-all/Starlink_Mini_Case1 (1)-800.webp 800w"
-                             sizes="(max-width: 768px) 90vw, 800px"
-                             hreflang="en">
+                             sizes="(max-width: 768px) 90vw, 800px">
                     </div>
                     <div class="slider-item">
-                        <img src="detail-mini-case-all/Starlink_Mini_Case1 (2)-400.webp"
+                        <img src="detail-mini-case-all/Starlink_Mini_Case1 (2).webp"
                              alt="Starlink Mini Hard Case with Precision Cut EVA Foam Interior"
                              width="800" height="800" loading="lazy" decoding="async"
                              srcset="detail-mini-case-all/Starlink_Mini_Case1 (2)-400.webp 400w, detail-mini-case-all/Starlink_Mini_Case1 (2)-800.webp 800w"
                              sizes="(max-width: 768px) 100vw, 800px">
                     </div>
                     <div class="slider-item">
-                        <img src="detail-mini-case-all/Starlink_Mini_Case1 (3)-400.webp"
+                        <img src="detail-mini-case-all/Starlink_Mini_Case1 (3).webp"
                              alt="Waterproof Dustproof Starlink Mini Carry Case with Pressure Valve"
                              width="800" height="800" loading="lazy" decoding="async"
                              srcset="detail-mini-case-all/Starlink_Mini_Case1 (3)-400.webp 400w, detail-mini-case-all/Starlink_Mini_Case1 (3)-800.webp 800w"
                              sizes="(max-width: 768px) 100vw, 800px">
                     </div>
                     <div class="slider-item">
-                        <img src="detail-mini-case-all/Starlink_Mini_Case1 (4)-400.webp"
+                        <img src="detail-mini-case-all/Starlink_Mini_Case1 (4).webp"
                              alt="Dual Carry Design Starlink Mini Case with Shoulder Strap and Handle"
                              width="800" height="800" loading="lazy" decoding="async"
                              srcset="detail-mini-case-all/Starlink_Mini_Case1 (4)-400.webp 400w, detail-mini-case-all/Starlink_Mini_Case1 (4)-800.webp 800w"
                              sizes="(max-width: 768px) 100vw, 800px">
                     </div>
                     <div class="slider-item">
-                        <img src="detail-mini-case-all/Starlink_Mini_Case1 (5)-400.webp"
+                        <img src="detail-mini-case-all/Starlink_Mini_Case1 (5).webp"
                              alt="Shockproof Starlink Mini Storage Case for Outdoor Camping Hiking"
                              width="800" height="800" loading="lazy" decoding="async"
                              srcset="detail-mini-case-all/Starlink_Mini_Case1 (5)-400.webp 400w, detail-mini-case-all/Starlink_Mini_Case1 (5)-800.webp 800w"
                              sizes="(max-width: 768px) 100vw, 800px">
                     </div>
                     <div class="slider-item">
-                        <img src="detail-mini-case-all/Starlink_Mini_Case1 (6)-400.webp"
+                        <img src="detail-mini-case-all/Starlink_Mini_Case1 (6).webp"
                              alt="OASIDOS Starlink Mini Hard Case Full Kit Storage Solution"
                              width="800" height="800" loading="lazy" decoding="async"
                              srcset="detail-mini-case-all/Starlink_Mini_Case1 (6)-400.webp 400w, detail-mini-case-all/Starlink_Mini_Case1 (6)-800.webp 800w"
@@ -264,22 +302,22 @@
             </div>
             <div class="thumb-list">
                 <div class="thumb-item active" data-index="0" tabindex="0" role="button" aria-label="View product image 1">
-                    <img src="detail-mini-case-all/Starlink_Mini_Case1 (1)-400.webp" alt="Product thumbnail 1" width="100" height="100" loading="lazy" decoding="async">
+                    <img src="detail-mini-case-all/Starlink_Mini_Case1 (1).webp" alt="Product thumbnail 1" width="100" height="100" loading="lazy" decoding="async">
                 </div>
                 <div class="thumb-item" data-index="1" tabindex="0" role="button" aria-label="View product image 2">
-                    <img src="detail-mini-case-all/Starlink_Mini_Case1 (2)-400.webp" alt="Product thumbnail 2" width="100" height="100" loading="lazy" decoding="async">
+                    <img src="detail-mini-case-all/Starlink_Mini_Case1 (2).webp" alt="Product thumbnail 2" width="100" height="100" loading="lazy" decoding="async">
                 </div>
                 <div class="thumb-item" data-index="2" tabindex="0" role="button" aria-label="View product image 3">
-                    <img src="detail-mini-case-all/Starlink_Mini_Case1 (3)-400.webp" alt="Product thumbnail 3" width="100" height="100" loading="lazy" decoding="async">
+                    <img src="detail-mini-case-all/Starlink_Mini_Case1 (3).webp" alt="Product thumbnail 3" width="100" height="100" loading="lazy" decoding="async">
                 </div>
                 <div class="thumb-item" data-index="3" tabindex="0" role="button" aria-label="View product image 4">
-                    <img src="detail-mini-case-all/Starlink_Mini_Case1 (4)-400.webp" alt="Product thumbnail 4" width="100" height="100" loading="lazy" decoding="async">
+                    <img src="detail-mini-case-all/Starlink_Mini_Case1 (4).webp" alt="Product thumbnail 4" width="100" height="100" loading="lazy" decoding="async">
                 </div>
                 <div class="thumb-item" data-index="4" tabindex="0" role="button" aria-label="View product image 5">
-                    <img src="detail-mini-case-all/Starlink_Mini_Case1 (5)-400.webp" alt="Product thumbnail 5" width="100" height="100" loading="lazy" decoding="async">
+                    <img src="detail-mini-case-all/Starlink_Mini_Case1 (5).webp" alt="Product thumbnail 5" width="100" height="100" loading="lazy" decoding="async">
                 </div>
                 <div class="thumb-item" data-index="5" tabindex="0" role="button" aria-label="View product image 6">
-                    <img src="detail-mini-case-all/Starlink_Mini_Case1 (6)-400.webp" alt="Product thumbnail 6" width="100" height="100" loading="lazy" decoding="async">
+                    <img src="detail-mini-case-all/Starlink_Mini_Case1 (6).webp" alt="Product thumbnail 6" width="100" height="100" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -412,7 +450,7 @@
     </div>
 </footer>
 <a href="https://wa.me/+8618038131740" target="_blank" class="whatsapp-float" rel="noopener noreferrer" aria-label="Floating WhatsApp quick chat button">💬</a>
-<!-- 优化5：JS延迟加载，使用defer，不阻塞解析，消除TBT -->
+<!-- JS添加defer，不阻塞图片渲染 -->
 <script type="module" defer>
     const sliderItems = document.querySelectorAll('.slider-item');
     const thumbItems = document.querySelectorAll('.thumb-item');
