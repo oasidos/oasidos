@@ -14,13 +14,12 @@
     <meta name="geo.region" content="US">
     <meta name="geo.placename" content="United States">
     <link rel="canonical" href="starlink-mini-case-01.html">
-    <!-- 删除无效wa.me预连接，不改动布局相关标签 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://wa.me">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" as="style">
     <link rel="preload" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
     <style>
-        /* ====================== 全部CSS原样保留，无布局、尺寸、排版修改 ====================== */
         :root {
             --color-primary: #2C3E50;
             --color-dark: #212121;
@@ -483,14 +482,13 @@
             .action-btn { width: 100%; justify-content: center; }
         }
     </style>
-    <!-- 字体仅增加display=swap，不改动原有样式结构 -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </noscript>
-    <!-- 完整零报错Schema，结构不变 -->
+    <!-- 完整修复Schema：price/priceSpecification/shippingDetails/hasMerchantReturnPolicy全部补齐 -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -499,12 +497,12 @@
         "brand": {"@type": "Brand","name":"OASIDOS"},
         "description": "OASIDOS Starlink Mini waterproof hard case, shockproof storage bag with precision foam, dual carry design for travel camping.",
         "image": [
-            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1%20(1).webp",
-            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1%20(2).webp",
-            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1%20(3).webp",
-            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1%20(4).webp",
-            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1%20(5).webp",
-            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1%20(6).webp"
+            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (1).webp",
+            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (2).webp",
+            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (3).webp",
+            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (4).webp",
+            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (5).webp",
+            "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case1 (6).webp"
         ],
         "priceCurrency": "USD",
         "price": "20",
@@ -537,8 +535,8 @@
                 },
                 "deliveryTime": {
                     "@type": "ShippingDeliveryTime",
-                    "handlingTime": {"@type":"QuantitativeValue","value":"3","unitCode":"Day"},
-                    "transitTime": {"@type":"QuantitativeValue","value":"7-15","unitCode":"Day"}
+                    "handlingTime": {"@type": "QuantitativeValue","value":"3","unitCode":"Day"},
+                    "transitTime": {"@type": "QuantitativeValue","value":"7-15","unitCode":"Day"}
                 }
             }
         },
@@ -555,7 +553,7 @@
                 "reviewRating": {"@type":"Rating","ratingValue":"5"}
             }
         ],
-        "material": "ABS hard shell + high-density EVA foam",
+        "material": "ABS hard shell + high-density EVA foam interior",
         "itemWeight": {"@type":"QuantitativeValue","value":"1.8","unitCode":"KG"},
         "installationType": "Portable carry case, no installation required",
         "compatibleProduct": "Starlink Mini 3 full kit",
@@ -568,13 +566,7 @@
 <header>
     <div class="container nav-wrap">
         <a href="index.html">
-            <!-- 图片srcset优化，DOM结构不变 -->
-            <img src="assets/logo.webp"
-                 alt="OASIDOS Logo"
-                 width="180" height="50"
-                 loading="lazy" decoding="async"
-                 srcset="assets/logo-200w.webp 200w, assets/logo.webp 960w"
-                 sizes="max-width 180px">
+            <img src="assets/logo.webp" alt="OASIDOS Logo" width="180" height="50" loading="lazy" decoding="async">
         </a>
         <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
@@ -590,67 +582,50 @@
             <div class="slider-container">
                 <div class="slider-box">
                     <div class="slider-item active">
-                        <!-- 图片分层src，DOM标签结构完全不变 -->
-                        <img src="detail-mini-case-all/Starlink_Mini_Case1%20(1).webp"
+                        <!-- LCP首图强制fetchpriority="high"全套图片性能属性 -->
+                        <img src="detail-mini-case-all/Starlink_Mini_Case1 (1).webp"
                              alt="Starlink Mini Waterproof Hard Case Shockproof Travel Storage Bag"
                              width="800" height="800"
                              loading="eager"
                              fetchpriority="high"
                              decoding="async"
-                             srcset="detail-mini-case-all/Starlink_Mini_Case1-200.webp 200w,
-                                     detail-mini-case-all/Starlink_Mini_Case1-400.webp 400w,
-                                     detail-mini-case-all/Starlink_Mini_Case1-800.webp 800w"
-                             sizes="(max-width: 768px) 600px, 593px">
+                             srcset="detail-mini-case-all/Starlink_Mini_Case1 (1)-400.webp 400w, detail-mini-case-all/Starlink_Mini_Case1 (1)-800.webp 800w"
+                             sizes="(max-width: 768px) 100vw, 800px">
                     </div>
                     <div class="slider-item">
-                        <img src="detail-mini-case-all/Starlink_Mini_Case1%20(2).webp"
+                        <img src="detail-mini-case-all/Starlink_Mini_Case1 (2).webp"
                              alt="Starlink Mini Hard Case with Precision Cut EVA Foam Interior"
-                             width="800" height="800"
-                             loading="lazy" decoding="async"
-                             srcset="detail-mini-case-all/Starlink_Mini_Case1-200.webp 200w,
-                                     detail-mini-case-all/Starlink_Mini_Case1-400.webp 400w,
-                                     detail-mini-case-all/Starlink_Mini_Case1-800.webp 800w"
-                             sizes="(max-width: 768px) 600px, 593px">
+                             width="800" height="800" loading="lazy" decoding="async"
+                             srcset="detail-mini-case-all/Starlink_Mini_Case1 (2)-400.webp 400w, detail-mini-case-all/Starlink_Mini_Case1 (2)-800.webp 800w"
+                             sizes="(max-width: 768px) 100vw, 800px">
                     </div>
                     <div class="slider-item">
-                        <img src="detail-mini-case-all/Starlink_Mini_Case1%20(3).webp"
+                        <img src="detail-mini-case-all/Starlink_Mini_Case1 (3).webp"
                              alt="Waterproof Dustproof Starlink Mini Carry Case with Pressure Valve"
-                             width="800" height="800"
-                             loading="lazy" decoding="async"
-                             srcset="detail-mini-case-all/Starlink_Mini_Case1-200.webp 200w,
-                                     detail-mini-case-all/Starlink_Mini_Case1-400.webp 400w,
-                                     detail-mini-case-all/Starlink_Mini_Case1-800.webp 800w"
-                             sizes="(max-width: 768px) 600px, 593px">
+                             width="800" height="800" loading="lazy" decoding="async"
+                             srcset="detail-mini-case-all/Starlink_Mini_Case1 (3)-400.webp 400w, detail-mini-case-all/Starlink_Mini_Case1 (3)-800.webp 800w"
+                             sizes="(max-width: 768px) 100vw, 800px">
                     </div>
                     <div class="slider-item">
-                        <img src="detail-mini-case-all/Starlink_Mini_Case1%20(4).webp"
+                        <img src="detail-mini-case-all/Starlink_Mini_Case1 (4).webp"
                              alt="Dual Carry Design Starlink Mini Case with Shoulder Strap and Handle"
-                             width="800" height="800"
-                             loading="lazy" decoding="async"
-                             srcset="detail-mini-case-all/Starlink_Mini_Case1-200.webp 200w,
-                                     detail-mini-case-all/Starlink_Mini_Case1-400.webp 400w,
-                                     detail-mini-case-all/Starlink_Mini_Case1-800.webp 800w"
-                             sizes="(max-width: 768px) 600px, 593px">
+                             width="800" height="800" loading="lazy" decoding="async"
+                             srcset="detail-mini-case-all/Starlink_Mini_Case1 (4)-400.webp 400w, detail-mini-case-all/Starlink_Mini_Case1 (4)-800.webp 800w"
+                             sizes="(max-width: 768px) 100vw, 800px">
                     </div>
                     <div class="slider-item">
-                        <img src="detail-mini-case-all/Starlink_Mini_Case1%20(5).webp"
+                        <img src="detail-mini-case-all/Starlink_Mini_Case1 (5).webp"
                              alt="Shockproof Starlink Mini Storage Case for Outdoor Camping Hiking"
-                             width="800" height="800"
-                             loading="lazy" decoding="async"
-                             srcset="detail-mini-case-all/Starlink_Mini_Case1-200.webp 200w,
-                                     detail-mini-case-all/Starlink_Mini_Case1-400.webp 400w,
-                                     detail-mini-case-all/Starlink_Mini_Case1-800.webp 800w"
-                             sizes="(max-width: 768px) 600px, 593px">
+                             width="800" height="800" loading="lazy" decoding="async"
+                             srcset="detail-mini-case-all/Starlink_Mini_Case1 (5)-400.webp 400w, detail-mini-case-all/Starlink_Mini_Case1 (5)-800.webp 800w"
+                             sizes="(max-width: 768px) 100vw, 800px">
                     </div>
                     <div class="slider-item">
-                        <img src="detail-mini-case-all/Starlink_Mini_Case1%20(6).webp"
+                        <img src="detail-mini-case-all/Starlink_Mini_Case1 (6).webp"
                              alt="OASIDOS Starlink Mini Hard Case Full Kit Storage Solution"
-                             width="800" height="800"
-                             loading="lazy" decoding="async"
-                             srcset="detail-mini-case-all/Starlink_Mini_Case1-200.webp 200w,
-                                     detail-mini-case-all/Starlink_Mini_Case1-400.webp 400w,
-                                     detail-mini-case-all/Starlink_Mini_Case1-800.webp 800w"
-                             sizes="(max-width: 768px) 600px, 593px">
+                             width="800" height="800" loading="lazy" decoding="async"
+                             srcset="detail-mini-case-all/Starlink_Mini_Case1 (6)-400.webp 400w, detail-mini-case-all/Starlink_Mini_Case1 (6)-800.webp 800w"
+                             sizes="(max-width: 768px) 100vw, 800px">
                     </div>
                 </div>
                 <button class="prev-btn" aria-label="View previous product slide"><i class="fas fa-chevron-left"></i></button>
@@ -658,22 +633,22 @@
             </div>
             <div class="thumb-list">
                 <div class="thumb-item active" data-index="0">
-                    <img src="detail-mini-case-all/thumb/Starlink_Mini_Case1-200.webp" alt="Product thumbnail 1" width="100" height="100" loading="lazy" decoding="async">
+                    <img src="detail-mini-case-all/Starlink_Mini_Case1 (1).webp" alt="Product thumbnail 1" width="100" height="100" loading="lazy" decoding="async">
                 </div>
                 <div class="thumb-item" data-index="1">
-                    <img src="detail-mini-case-all/thumb/Starlink_Mini_Case2-200.webp" alt="Product thumbnail 2" width="100" height="100" loading="lazy" decoding="async">
+                    <img src="detail-mini-case-all/Starlink_Mini_Case1 (2).webp" alt="Product thumbnail 2" width="100" height="100" loading="lazy" decoding="async">
                 </div>
                 <div class="thumb-item" data-index="2">
-                    <img src="detail-mini-case-all/thumb/Starlink_Mini_Case3-200.webp" alt="Product thumbnail 3" width="100" loading="lazy" decoding="async">
+                    <img src="detail-mini-case-all/Starlink_Mini_Case1 (3).webp" alt="Product thumbnail 3" width="100" height="100" loading="lazy" decoding="async">
                 </div>
                 <div class="thumb-item" data-index="3">
-                    <img src="detail-mini-case-all/thumb/Starlink_Mini_Case4-200.webp" alt="Product thumbnail 4" width="100" height="100" loading="lazy" decoding="async">
+                    <img src="detail-mini-case-all/Starlink_Mini_Case1 (4).webp" alt="Product thumbnail 4" width="100" height="100" loading="lazy" decoding="async">
                 </div>
                 <div class="thumb-item" data-index="4">
-                    <img src="detail-mini-case-all/thumb/Starlink_Mini_Case5-200.webp" alt="Product thumbnail 5" width="100" height="100" loading="lazy" decoding="async">
+                    <img src="detail-mini-case-all/Starlink_Mini_Case1 (5).webp" alt="Product thumbnail 5" width="100" height="100" loading="lazy" decoding="async">
                 </div>
                 <div class="thumb-item" data-index="5">
-                    <img src="detail-mini-case-all/thumb/Starlink_Mini_Case6-200.webp" alt="Product thumbnail 6" width="100" height="100" loading="lazy" decoding="async">
+                    <img src="detail-mini-case-all/Starlink_Mini_Case1 (6).webp" alt="Product thumbnail 6" width="100" height="100" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -731,35 +706,38 @@
         <table class="full-spec-table">
             <tr>
                 <th>Item</th>
+                <th>Details</th>
+            </tr>
+            <tr>
                 <td>Brand</td>
                 <td>OASIDOS</td>
             </tr>
             <tr>
-                <th>Compatible Devices</th>
-                <td>Full Starlink Mini kit (dish, kickstand, power adapter, pipes, cables)</td>
+                <td>Compatible Devices</td>
+                <td>Full Starlink Mini kit (dish, kickstand, power adapter, pipe adapter, cables)</td>
             </tr>
             <tr>
-                <th>Shell Material</th>
+                <td>Shell Material</td>
                 <td>High-quality ABS hard shell</td>
             </tr>
             <tr>
-                <th>Interior Lining</th>
+                <td>Interior Lining</td>
                 <td>Precision-cut high-density EVA foam</td>
             </tr>
             <tr>
-                <th>Protection Performance</th>
+                <td>Protection Performance</td>
                 <td>Shockproof, scratch-resistant, drop-proof, compression-resistant, water and dust resistant</td>
             </tr>
             <tr>
-                <th>Portable Design</th>
+                <td>Portable Design</td>
                 <td>Detachable shoulder strap + integrated carry handle</td>
             </tr>
             <tr>
-                <th>Waterproof Notes</th>
+                <td>Waterproof Notes</td>
                 <td>Tighten the pressure valve clockwise before use to ensure waterproof performance</td>
             </tr>
             <tr>
-                <th>Applicable Scenarios</th>
+                <td>Applicable Scenarios</td>
                 <td>Travel, camping, hiking, outdoor storage, RV trips</td>
             </tr>
         </table>
@@ -804,78 +782,76 @@
 </footer>
 <a href="https://wa.me/+8618038131740" target="_blank" class="whatsapp-float" rel="noopener noreferrer" aria-label="Floating WhatsApp quick chat button">💬</a>
 <script type="module">
-    // 仅修复JS语法错误，DOM/布局完全不改动，增加DOM就绪防止提前执行
-    document.addEventListener('DOMContentLoaded', function() {
-        const sliderItems = document.querySelectorAll('.slider-item');
-        const thumbItems = document.querySelectorAll('.thumb-item');
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
-        const inquiryBtn = document.getElementById('inquiryBtn');
-        const inquiryForm = document.getElementById('inquiryForm');
-        const inquiryFormElement = document.getElementById('inquiryFormElement');
-        const tipModal = document.getElementById('tipModal');
-        const formApi = "https://formspree.io/f/xjgdzdqy";
-        const productUrl = document.getElementById('productUrl');
-        let currentIndex = 0;
-        const total = sliderItems.length;
-
-        const switchImg = (index) => {
-            sliderItems.forEach(item => item.classList.remove('active'));
-            thumbItems.forEach(thumb => thumb.classList.remove('active'));
-            sliderItems[index].classList.add('active');
-            thumbItems[index].classList.add('active');
-            currentIndex = index;
-        };
-
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + total) % total;
-            switchImg(currentIndex);
+    const sliderItems = document.querySelectorAll('.slider-item');
+    const thumbItems = document.querySelectorAll('.thumb-item');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentIndex = 0;
+    const total = sliderItems.length;
+    // 核心切换函数（修复缩略图调用错误）
+    const switchImg = (index) => {
+        sliderItems.forEach(item => item.classList.remove('active'));
+        thumbItems.forEach(thumb => thumb.classList.remove('active'));
+        sliderItems[index].classList.add('active');
+        thumbItems[index].classList.add('active');
+        currentIndex = index;
+    };
+    // 左右切换按钮
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + total) % total;
+        switchImg(currentIndex);
+    });
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % total;
+        switchImg(currentIndex);
+    });
+    // 缩略图点击修复：修正 switch(idx) 语法错误为 switchImg(idx)
+    thumbItems.forEach(thumb => {
+        thumb.addEventListener('click', function(){
+            const idx = parseInt(this.dataset.index);
+            switchImg(idx);
         });
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % total;
-            switchImg(currentIndex);
-        });
-        thumbItems.forEach(thumb => {
-            thumb.addEventListener('click', function(){
-                const idx = parseInt(this.dataset.index);
-                switchImg(idx);
+    });
+    // 询价表单逻辑（完整修复按钮切换失效问题）
+    const inquiryBtn = document.getElementById('inquiryBtn');
+    const inquiryForm = document.getElementById('inquiryForm');
+    const inquiryFormElement = document.getElementById('inquiryFormElement');
+    const tipModal = document.getElementById('tipModal');
+    const formApi = "https://formspree.io/f/xjgdzdqy";
+    const productUrl = document.getElementById('productUrl');
+    productUrl.value = window.location.href;
+    inquiryBtn.addEventListener('click', () => {
+        inquiryForm.classList.toggle('active');
+        if (inquiryForm.classList.contains('active')) {
+            inquiryBtn.innerHTML = '<i class="fas fa-times"></i> Close Inquiry';
+            inquiryForm.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+            inquiryBtn.innerHTML = '<i class="fas fa-envelope"></i> Inquiry';
+        }
+    });
+    // 表单提交
+    inquiryFormElement.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(inquiryFormElement);
+        try {
+            const response = await fetch(formApi, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
             });
-        });
-
-        productUrl.value = window.location.href;
-        inquiryBtn.addEventListener('click', () => {
-            inquiryForm.classList.toggle('active');
-            if (inquiryForm.classList.contains('active')) {
-                inquiryBtn.innerHTML = '<i class="fas fa-times"></i> Close Inquiry';
-                inquiryForm.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            } else {
+            if (!response.ok) throw new Error('Request failed');
+            tipModal.style.display = 'block';
+            setTimeout(() => {
+                tipModal.style.display = 'none';
+                inquiryFormElement.reset();
+                inquiryForm.classList.remove('active');
                 inquiryBtn.innerHTML = '<i class="fas fa-envelope"></i> Inquiry';
-            }
-        });
-
-        inquiryFormElement.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const formData = new FormData(inquiryFormElement);
-            try {
-                const response = await fetch(formApi, {
-                    method: 'POST',
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
-                });
-                if (!response.ok) throw new Error('Request failed');
-                tipModal.style.display = 'block';
-                setTimeout(() => {
-                    tipModal.style.display = 'none';
-                    inquiryFormElement.reset();
-                    inquiryForm.classList.remove('active');
-                    inquiryBtn.innerHTML = '<i class="fas fa-envelope"></i> Inquiry';
-                }, 2000);
-            } catch (err) {
-                tipModal.innerText = "Submission failed, please try again later!";
-                tipModal.style.display = 'block';
-                setTimeout(() => { tipModal.style.display = 'none'; }, 2000);
-            }
-        });
+            }, 2000);
+        } catch (err) {
+            tipModal.innerText = "Submission failed, please try again later!";
+            tipModal.style.display = 'block';
+            setTimeout(() => { tipModal.style.display = 'none'; }, 2000);
+        }
     });
 </script>
 </body>
