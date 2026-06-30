@@ -97,13 +97,13 @@
         .thumb-item {width:100%;padding-top:100%;position:relative;background:#fafafa;border-radius:var(--radius);overflow:hidden;cursor:pointer;border:2px solid transparent}
         .thumb-item.active {border-color:var(--color-primary)}
         .thumb-item img {position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;display:block}
-        .product-right h1 {font-size:20px;line-height:1.4;color:var(--color-dark);margin-bottom:18}
+        .product-right h1 {font-size:20px;line-height:1.4;color:var(--color-dark);margin-bottom:18px}
         .price-moq {padding:12px 15px;background:#f6f7f8;border-radius:var(--radius);margin-bottom:18px}
         .info-title {font-size:16px;font-weight:700;color:var(--color-dark);margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid #eee}
         .bullet-list li {font-size:13px;margin-bottom:8px;padding-left:18px;position:relative;line-height:1.6}
         .bullet-list li::before {content:"•";position:absolute;left:0;color:var(--color-primary);font-weight:bold}
         .product-actions {margin-top:25px;display:flex;gap:12px;flex-wrap:wrap}
-        .action-btn {padding:14px 28px;border-radius:var(--radius);font-weight:500;font-size:16px;cursor:pointer;border:none;display:inline-flex;align-items:center;justify-content:center;gap:10px;color:#fff;min-height:48px}
+        .action-btn {padding:14px 28px;border-radius:var(--radius);font-weight:500;font-size:16px;cursor:pointer;border:none;display:inline-flex;align-items:center;gap:10px;color:#fff;min-height:48px}
         .chat-btn {background:#25D366}.chat-btn:hover {background:#12b356}
         .inquiry-btn {background:#2c3a4c}.inquiry-btn:hover {background:#1f2a37}
         .inquiry-form {display:none;margin-top:20px;padding:20px;background:#fbfbfb;border-radius:var(--radius);border:1px solid #eee}
@@ -111,7 +111,18 @@
         @keyframes fadeIn {from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
         .form-group {margin-bottom:15px}
         .form-group label {display:block;font-size:14px;font-weight:500;margin-bottom:6px;color:var(--color-dark)}
-        .form-group input,.form-group text {width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:var(--radius);font-size:14px;color:var(--color-text)}
+        .form-group input {width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:var(--radius);font-size:14px;color:var(--color-text)}
+        /* 修复textarea高度，固定多行输入框尺寸 */
+        .form-group textarea {
+            width:100%;
+            padding:10px 12px;
+            border:1px solid #ddd;
+            border-radius:var(--radius);
+            font-size:14px;
+            color:var(--color-text);
+            min-height:100px;
+            resize:vertical;
+        }
         .submit-btn {background:var(--color-primary);color:#fff;padding:10px 28px;border-radius:var(--radius);font-weight:500;font-size:16px;border:none;display:inline-flex;align-items:center;gap:10px}
         .tip-modal {position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.85);color:#fff;padding:16px 32px;border-radius:var(--radius);font-size:16px;z-index:10000;display:none}
         .spec-section {padding:30px 0;margin-bottom:40px}
@@ -155,9 +166,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap&display=swap">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"></noscript>
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"></noscript>
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css&display=swap">
-    <noscript><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <noscript><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0"></noscript>
 
     <script type="application/ld+json">
     {
@@ -186,7 +197,7 @@
                     "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case5 (3).webp",
                     "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case5 (4).webp",
                     "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case5 (5).webp",
-                    "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case5 (6).webp"
+                    "https://oasidos.com/detail-mini-case-all/Starlink_Mini_Case6 (6).webp"
                 ],
                 "priceCurrency": "USD",
                 "price": "14",
@@ -200,7 +211,7 @@
                     "availability":"https://schema.org/InStock",
                     "minimumOrderQuantity":{"@type":"QuantitativeValue","value":20,"unitCode":"PCE"},
                     "hasMerchantReturnPolicy":{"@type":"MerchantReturnPolicy","returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow","returnWindowDays":30,"returnMethod":"https://schema.org/ReturnByMail","applicableCountry":"US"},
-                    "shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","currency","value":"0"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":{"@type":"Country","name":"US"}},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","value":"3","unitCode":"Day"},"transitTime":{"@type":"QuantitativeValue","value":"7-15","unitCode":"Day"}}}
+                    "shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","currency":"0"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":{"@type":"Country"}},"deliveryTime":{"@type":"QuantitativeValue","value":"3","unitCode":"Day","transitTime":{"@type":"QuantitativeValue","value":"7-15","unitCode":"Day"}}}
                 },
                 "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"38"},
                 "review": [{"@type":"Review","author":{"@type":"Person","name":"Camping Buyer Lisa"},"reviewBody":"Perfect custom fit hard case for Starlink Mini, fully waterproof and crush resistant for RV trips.","reviewRating":{"@type":"Rating","ratingValue":"5"}}],
@@ -299,7 +310,7 @@
             <h1>Portable Starlink Mini Waterproof Hard Carry Case for Outdoor Camping Hiking</h1>
             <div class="price-moq">
                 <p><strong>MOQ:</strong> 20pcs</p>
-                <p><strong>EXW Factory Price:</strong> $14-$21.5/pcs</p>
+                <p><strong>EXW Price:</strong> $14-$21.5/pcs</p>
             </div>
             <h2 class="info-title">Product Highlights</h2>
             <ul class="bullet-list">
@@ -315,7 +326,7 @@
                     <i class="fab fa-whatsapp"></i> Chat now
                 </a>
                 <button class="action-btn inquiry-btn" id="inquiryBtn" aria-label="Toggle wholesale inquiry form">
-                    <i class="fas fa-envelope"></i> Wholesale Inquiry
+                    <i class="fas fa-envelope"></i> Inquiry
                 </button>
             </div>
             <div class="inquiry-form" id="inquiryForm">
@@ -393,7 +404,7 @@
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>OASIDOS Factory</h4>
-                <p>2nd Floor, Factory Building No. 1, No. 16 Kangzheng Road, Danzhutou Community, Nanwan Street, Shenzhen</p>
+                <p>2nd Floor, Factory Building No. 1, No. 16 Kangzheng Road, Danzhutou Community, Nanwan Street, Longgang District, Shenzhen</p>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
