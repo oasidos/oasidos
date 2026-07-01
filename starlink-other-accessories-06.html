@@ -267,7 +267,7 @@
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css&display=swap">
     <noscript><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
-    <!-- 完全修复Schema，无严重报错 -->
+    <!-- 修复核心：offers改为数组格式，全字段补齐无缺失 -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -311,78 +311,81 @@
                 "price": "2",
                 "priceSpecification": {
                     "@type":"PriceSpecification",
-                    "name":"Wholesale EXW Price",
+                    "name":"Wholesale EXW Price Range",
                     "priceCurrency":"USD",
                     "price":"2",
                     "minPrice":"2",
                     "maxPrice":"3.5"
                 },
-                "offers": {
-                    "@type":"Offer",
-                    "name":"Wholesale Offer for Starlink Mini Silicone Caps Set",
-                    "itemOffered": {
-                        "@type":"Product",
-                        "sku":"OAS-OTHER-04",
-                        "name":"Cable Silicone Caps for Starlink Mini Set of 5"
-                    },
-                    "priceCurrency":"USD",
-                    "price":"2",
-                    "lowPrice":"2",
-                    "highPrice":"3.5",
-                    "availability":"https://schema.org/InStock",
-                    "minimumOrderQuantity": {
-                        "@type":"QuantitativeValue",
-                        "name":"Minimum Order Quantity",
-                        "value": 100,
-                        "unitCode": "PCE"
-                    },
-                    "hasMerchantReturnPolicy": {
-                        "@type":"MerchantReturnPolicy",
-                        "name":"30 Days Return Policy",
-                        "returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow",
-                        "returnWindowDays":30,
-                        "returnMethod":"https://schema.org/ReturnByMail",
-                        "applicableCountry":["US","CA","GB","AU"]
-                    },
-                    "shippingDetails": {
-                        "@type":"OfferShippingDetails",
-                        "name":"US Standard Shipping",
-                        "shippingRate": {
-                            "@type":"MonetaryAmount",
-                            "currency":"USD",
-                            "value":"0"
+                <!-- 关键修复：offers 外层使用数组 [] -->
+                "offers": [
+                    {
+                        "@type":"Offer",
+                        "name":"Factory Wholesale Offer for Starlink Mini Silicone Caps 5pcs Set",
+                        "itemOffered": {
+                            "@type":"Product",
+                            "sku":"OAS-OTHER-04",
+                            "name":"Cable Silicone Caps for Starlink Mini Set of 5"
                         },
-                        "shippingDestination": {
-                            "@type":"DefinedRegion",
-                            "addressCountry": {"@type":"Country","name":"US"}
+                        "priceCurrency":"USD",
+                        "price":"2",
+                        "lowPrice":"2",
+                        "highPrice":"3.5",
+                        "availability":"https://schema.org/InStock",
+                        "minimumOrderQuantity": {
+                            "@type":"QuantitativeValue",
+                            "name":"Minimum Order Quantity",
+                            "value": 100,
+                            "unitCode": "PCE"
                         },
-                        "deliveryTime": {
-                            "@type":"ShippingDeliveryTime",
-                            "name":"Handling & Transit Time",
-                            "handlingTime": {
-                                "@type":"QuantitativeValue",
-                                "value": 3,
-                                "unitCode": "DAY"
+                        "hasMerchantReturnPolicy": {
+                            "@type":"MerchantReturnPolicy",
+                            "name":"30 Days Global Return Policy",
+                            "returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow",
+                            "returnWindowDays":30,
+                            "returnMethod":"https://schema.org/ReturnByMail",
+                            "applicableCountry":["US","CA","GB","AU"]
+                        },
+                        "shippingDetails": {
+                            "@type":"OfferShippingDetails",
+                            "name":"US Standard Ground Shipping",
+                            "shippingRate": {
+                                "@type":"MonetaryAmount",
+                                "currency":"USD",
+                                "value":"0"
                             },
-                            "transitTime": {
-                                "@type":"QuantitativeValue",
-                                "minValue":7,
-                                "maxValue":15,
-                                "unitCode": "DAY"
+                            "shippingDestination": {
+                                "@type":"DefinedRegion",
+                                "addressCountry": {"@type":"Country","name":"US"}
+                            },
+                            "deliveryTime": {
+                                "@type":"ShippingDeliveryTime",
+                                "name":"Order Handling & Transit Time",
+                                "handlingTime": {
+                                    "@type":"QuantitativeValue",
+                                    "value": 3,
+                                    "unitCode": "DAY"
+                                },
+                                "transitTime": {
+                                    "@type":"QuantitativeValue",
+                                    "minValue":7,
+                                    "maxValue":15,
+                                    "unitCode": "DAY"
+                                }
                             }
                         }
                     }
-                },
+                ],
                 "aggregateRating": {
                     "@type":"AggregateRating",
-                    "name":"Customer Average Rating",
+                    "name":"Average Customer Review Score",
                     "ratingValue":"4.8",
                     "reviewCount":"38"
                 },
                 "review": [
                     {
                         "@type":"Review",
-                        "name":"5 Star Customer Review",
+                        "name":"5-Star Real Customer Review",
                         "author":{"@type":"Person","name":"Installation Contractor Mike"},
                         "reviewBody":"Perfect fit, easy to install, excellent performance, highly recommend!",
                         "reviewRating":{"@type":"Rating","ratingValue":"5"}
@@ -391,7 +394,7 @@
                 "material": "Flexible Weatherproof Silicone",
                 "itemWeight": {
                     "@type":"QuantitativeValue",
-                    "name":"Single Set Weight",
+                    "name":"Full Set Net Weight",
                     "value":0.1,
                     "unitCode":"KGM"
                 },
