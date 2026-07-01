@@ -2,6 +2,7 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
+    <!-- 修复viewport无障碍违规：max-scale=5、允许缩放 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Starlink Cable Routing Kit Wall Pass Through Grommet Mounting Kit 3/4" and 5/16" Drill Bit, Wire Clips & Cable Ties for Starlink Gen 2/3 Dish & Mini Ethernet Installation | OASIDOS</title>
     <meta name="description" content="Starlink Cable Routing Kit Wall Pass Through Grommet Mounting Kit 3/4" and 5/16" Drill Bit, Wire Clips & Cable Ties for Starlink Gen 2/3 Dish & Mini Ethernet Installation. MOQ 20pcs, EXW $5.5-10/pcs, OEM custom support.">
@@ -25,11 +26,12 @@
 
     <style>
         :root {
+            /* 加深文字色，提升对比度至WCAG AA */
             --color-primary: #2C3E50;
-            --color-dark: #1a1a1a;
-            --color-text: #2d2d2d;
-            --color-text-light: #444444;
-            --color-text-footer: #f0f0f0;
+            --color-dark: #0F1A29;
+            --color-text: #1f1f1f;
+            --color-text-light: #2b2b2b;
+            --color-text-footer: #f8f8f8;
             --color-link-footer: #ffffff;
             --color-bg-light: #FFFFFF;
             --color-white: #FFFFFF;
@@ -40,6 +42,7 @@
         * {margin:0;padding:0;box-sizing:border-box}
         body {font-family:system-ui, -apple-system, sans-serif;color:var(--color-text);line-height:1.7;background:#fff}
         a {text-decoration:none;color:inherit;outline:2px transparent solid;outline-offset:2px}
+        /* 无障碍焦点样式，键盘用户可见 */
         a:focus-visible,
         button:focus-visible,
         input:focus-visible,
@@ -137,9 +140,9 @@
         }
         .thumb-item.active {border-color:var(--color-primary)}
         .thumb-item img {position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;display:block}
+        /* 严格标题层级：仅1个h1，次级全部h2，无跳级 */
         .product-right h1 {font-size:20px;line-height:1.4;color:var(--color-dark);margin-bottom:18px}
         .product-right h2.info-title {font-size:16px;font-weight:700;color:var(--color-dark);margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid #eee}
-        .inquiry-form h3 {font-size:15px;font-weight:600;color:var(--color-dark)}
         .price-moq {padding:12px 15px;background:#f6f7f8;border-radius:var(--radius);margin-bottom:18px}
         .bullet-list li {font-size:13px;margin-bottom:8px;padding-left:18px;position:relative;line-height:1.6;color:var(--color-text)}
         .bullet-list li::before {content:"•";position:absolute;left:0;color:var(--color-primary);font-weight:bold}
@@ -166,7 +169,7 @@
         @keyframes fadeIn {from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
         .form-group {margin-bottom:15px}
         .form-group label {display:block;font-size:14px;font-weight:500;margin-bottom:6px;color:var(--color-dark)}
-        /* 核心修复：统一input与textarea盒模型，宽度完全对齐 */
+        /* 修复Custom Requirements宽度不一致 */
         .form-group input,
         .form-group textarea {
             width: 100%;
@@ -179,7 +182,7 @@
         }
         .form-group textarea {
             min-height: 100px;
-            resize: vertical; /* 仅允许上下拉伸，不横向变形 */
+            resize: vertical;
         }
         .submit-btn {
             background:var(--color-primary);
@@ -219,7 +222,7 @@
         .footer-col h2 {font-size:18px;position:relative;padding-bottom:8px;color:#fff}
         .footer-col h2::after {content:'';position:absolute;left:0;bottom:0;width:40px;height:2px;background:var(--color-primary)}
         .footer-col p {font-size:14px;line-height:1.8;color:var(--color-text-footer)}
-        .footer-col a {font-size:14px;color:#e6e6e6;line-height:1.8}
+        .footer-col a {font-size:14px;color:#f2f2f2;line-height:1.8}
         .footer-col a:hover {color:#fff;text-decoration:underline}
         .copyright {text-align:center;padding-top:20px;border-top:1px solid #444;font-size:13px;color:#dddddd}
         .whatsapp-float {
@@ -262,7 +265,7 @@
         }
     </style>
 
-    <!-- 性能优化预加载+异步字体 -->
+    <!-- 性能优化资源预加载+异步字体 -->
     <link rel="preload" as="image" href="detail-other-accessories-all/Starlink_Other_Accessories5 (1).webp" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -329,32 +332,35 @@
     </script>
 </head>
 <body>
+<!-- 页面头部 全部a/button补充aria-label -->
 <header role="banner">
     <div class="container nav-wrap">
-        <a href="index.html" aria-label="OASIDOS Homepage">
+        <a href="index.html" aria-label="Return to OASIDOS official homepage">
             <img src="assets/logo.webp" alt="OASIDOS brand logo" width="180" height="50" loading="lazy" decoding="async" fetchpriority="low">
         </a>
         <button class="menu-toggle" aria-label="Open mobile navigation menu">
             <i class="fas fa-bars"></i>
         </button>
-        <nav aria-label="Main site navigation">
+        <nav aria-label="Main website navigation menu">
             <ul class="nav-menu">
                 <li><a href="index.html" aria-label="Home page">Home</a></li>
-                <li><a href="products.html" class="active" aria-label="Products page">Products</a></li>
-                <li><a href="about.html" aria-label="About Us page">About Us</a></li>
-                <li><a href="contact.html" aria-label="Contact page">Contact</a></li>
+                <li><a href="products.html" class="active" aria-label="All products page">Products</a></li>
+                <li><a href="about.html" aria-label="About our factory">About Us</a></li>
+                <li><a href="contact.html" aria-label="Contact sales team">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
+<!-- 补充main地标，修复Document does not have a main landmark -->
 <main class="container main" role="main">
     <div class="product-main-wrap">
         <div class="product-left">
-            <div class="slider-container" aria-label="Product image gallery">
+            <div class="slider-container" aria-label="Product image gallery for Starlink cable routing kit">
                 <div class="slider-box">
                     <div class="slider-item active">
+                        <!-- 完整alt描述，消除图片缺失alt报错 -->
                         <img src="detail-other-accessories-all/Starlink_Other_Accessories5 (1).webp"
-                             alt="Starlink Cable Routing Kit full set with drill bits silicone grommets wire clips cable ties"
+                             alt="Starlink Cable Routing Kit full set including metal drill bits silicone grommets wire clips cable ties"
                              width="800" height="800"
                              loading="eager"
                              fetchpriority="high"
@@ -362,51 +368,52 @@
                     </div>
                     <div class="slider-item">
                         <img src="detail-other-accessories-all/Starlink_Other_Accessories5 (2).webp"
-                             alt="3/4 inch & 5/16 inch metal drill bits included in Starlink wall pass through kit"
+                             alt="3/4 inch and 5/16 inch precision metal drill bits for wall hole drilling"
                              width="800" height="800" loading="lazy" decoding="async">
                     </div>
                     <div class="slider-item">
                         <img src="detail-other-accessories-all/Starlink_Other_Accessories5 (3).webp"
-                             alt="Expandable silicone wall grommet for Starlink Gen2 Gen3 Mini cable routing"
+                             alt="Expandable silicone wall grommet for Starlink Gen2 Gen3 Mini cable waterproof sealing"
                              width="800" height="800" loading="lazy" decoding="async">
                     </div>
                     <div class="slider-item">
                         <img src="detail-other-accessories-all/Starlink_Other_Accessories5 (4).webp"
-                             alt="Plastic wire clips and cable ties for Starlink cable arrangement"
+                             alt="Plastic wire clips and reusable cable ties for neat Starlink cable arrangement"
                              width="800" height="800" loading="lazy" decoding="async">
                     </div>
                     <div class="slider-item">
                         <img src="detail-other-accessories-all/Starlink_Other_Accessories5 (5).webp"
-                             alt="Wall installation render of Starlink cable pass through kit"
+                             alt="Rendering of wall cable pass through installation effect for RV and residential house"
                              width="800" height="800" loading="lazy" decoding="async">
                     </div>
                     <div class="slider-item">
                         <img src="detail-other-accessories-all/Starlink_Other_Accessories5 (6).webp"
-                             alt="Complete Starlink cable routing kit package display"
+                             alt="Complete Starlink wall mounting cable routing kit retail package display"
                              width="800" height="800" loading="lazy" decoding="async">
                     </div>
                 </div>
-                <button class="prev-btn" aria-label="View previous product slide"><i class="fas fa-chevron-left"></i></button>
-                <button class="next-btn" aria-label="View next product slide"><i class="fas fa-chevron-right"></i></button>
+                <!-- 轮播按钮无障碍名称 -->
+                <button class="prev-btn" aria-label="Show previous product photo"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn" aria-label="Show next product photo"><i class="fas fa-chevron-right"></i></button>
             </div>
-            <div class="thumb-list" aria-label="Product thumbnail selector">
-                <div class="thumb-item" data-index="0" tabindex="0" role="button" aria-label="View product image 1">
-                    <img src="detail-other-accessories-all/Starlink_Other_Accessories5 (1).webp" alt="Thumbnail full routing kit set" width="100" height="100" loading="lazy" decoding="async">
+            <div class="thumb-list" aria-label="Product thumbnail selector panel">
+                <div class="thumb-item" data-index="0" tabindex="0" role="button" aria-label="View full kit main picture">
+                    <img src="detail-other-accessories-all/Starlink_Other_Accessories5 (1).webp" alt="Thumbnail full cable routing kit set" width="100" height="100" loading="lazy" decoding="async">
                 </div>
-                <div class="thumb-item" data-index="1" tabindex="0" role="button" aria-label="View product image 2">
+                <div class="thumb-item" data-index="1" tabindex="0" role="button" aria-label="View drill bits thumbnail">
                     <img src="detail-other-accessories-all/Starlink_Other_Accessories5 (2).webp" alt="Thumbnail metal drill bits" width="100" height="100" loading="lazy" decoding="async">
                 </div>
-                <div class="thumb-item" data-index="2" tabindex="0" role="button" aria-label="View product image 3">
-                    <img src="detail-other-accessories-all/Starlink_Other_Accessories5 (3).webp" alt="Thumbnail silicone grommet" width="100" height="100" loading="lazy" decoding="async">
+                <div class="thumb-item" data-index="2" tabindex="0" role="button" aria-label="View silicone grommet thumbnail">
+                    <img src="detail-other-accessories-all/Starlink_Other_Accessories5 (3).webp" alt="Thumbnail waterproof silicone grommet" width="100" height="100" loading="lazy" decoding="async">
                 </div>
-                <div class="thumb-item" data-index="3" tabindex="0" role="button" aria-label="View product image 4">
-                    <img src="detail-other-accessories-all/Starlink_Other_Accessories5 (4).webp" alt="Thumbnail wire clips cable ties" width="100" height="100" loading="lazy" decoding="async">
+                <div class="thumb-item" data-index="3" tabindex="0" role="button" aria-label="View wire clips thumbnail">
+                    <img src="detail-other-accessories-all/Starlink_Other_Accessories5 (4).webp" alt="Thumbnail cable clips and ties" width="100" height="100" loading="lazy" decoding="async">
                 </div>
-                <div class="thumb-item" data-index="4" tabindex="0" role="button" aria-label="View product image 5">
+                <div class="thumb-item" data-index="4" tabindex="0" role="button" aria-label="View wall installation render thumbnail">
                     <img src="detail-other-accessories-all/Starlink_Other_Accessories5 (5).webp" alt="Thumbnail wall installation render" width="100" height="100" loading="lazy" decoding="async">
                 </div>
-                <div class="thumb-item" data-index="5" tabindex="0" role="button" aria-label="View product image 6">
-                    <img src="detail-other-accessories-all/Starlink_Other_Accessories5 (6).webp" alt="Thumbnail product package" width="100" height="100" loading="lazy" decoding="async">
+                <div class="thumb-item" data-index="5" tabindex="0" role="button" aria-label="View product package thumbnail">
+                    <img src="detail-other-accessories-all/Starlink_Other_Accessories5 (6).webp" alt="Thumbnail product packaging" width="100" height="100" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -425,10 +432,10 @@
                 <li><strong>Complete Installation Kit:</strong> Comes with wall wire clamps and cable ties to route cables orderly and store excess cable neatly</li>
             </ul>
             <div class="product-actions">
-                <a href="https://wa.me/+8618038131740" target="_blank" class="action-btn chat-btn" rel="noopener noreferrer" aria-label="Open WhatsApp chat with sales staff">
+                <a href="https://wa.me/+8618038131740" target="_blank" class="action-btn chat-btn" rel="noopener noreferrer" aria-label="Open WhatsApp chat with sales manager for wholesale quotation">
                     <i class="fab fa-whatsapp"></i> Chat now
                 </a>
-                <button class="action-btn inquiry-btn" id="inquiryBtn" aria-label="Toggle wholesale inquiry form">
+                <button class="action-btn inquiry-btn" id="inquiryBtn" aria-label="Open wholesale inquiry form">
                     <i class="fas fa-envelope"></i> Inquiry
                 </button>
             </div>
@@ -461,7 +468,7 @@
     </div>
     <section class="spec-section" aria-labelledby="spec-heading">
         <h2 id="spec-heading" class="info-title">Product Specifications</h2>
-        <table class="full-spec-table" aria-label="Product specification table">
+        <table class="full-spec-table" aria-label="Starlink cable routing kit specification sheet">
             <tr>
                 <th>Compatibility</th>
                 <td>Starlink Gen2/Gen3 & Mini wall routing</td>
@@ -499,24 +506,24 @@
             </div>
             <div class="footer-col">
                 <h2>Quick Links</h2>
-                <p><a href="index.html" aria-label="Home page">Home</a></p>
-                <p><a href="products.html" aria-label="All Products">All Products</a></p>
-                <p><a href="about.html" aria-label="About Us Factory">About Us Factory</a></p>
-                <p><a href="contact.html" aria-label="Contact Sales">Contact Sales</a></p>
+                <p><a href="index.html" aria-label="Visit homepage">Home</a></p>
+                <p><a href="products.html" aria-label="Browse all products">All Products</a></p>
+                <p><a href="about.html" aria-label="Factory introduction page">About Us Factory</a></p>
+                <p><a href="contact.html" aria-label="Contact sales department">Contact Sales</a></p>
             </div>
             <div class="footer-col">
                 <h2>Starlink Mini Accessories</h2>
-                <p><a href="starlink-mini-case-02.html">Lockable Mini Case</a></p>
-                <p><a href="starlink-mini-case-03.html">Black Protective Case</a></p>
-                <p><a href="starlink-mini-case-04.html">Green IP67 Hard Case</a></p>
-                <p><a href="starlink-mini-case-05.html">Portable Travel Case</a></p>
-                <p><a href="starlink-mini-case-06.html">Green Lockable Storage Bag</a></p>
-                <p><a href="starlink-other-accessories-01.html">6 Pack Wall Grommets</a></p>
-                <p><a href="starlink-other-accessories-03.html">Mini DC Power Cable</a></p>
-                <p><a href="starlink-other-accessories-04.html">8PCS White Wall Grommet</a></p>
-                <p><a href="starlink-other-accessories-05.html">Cable Routing Kit</a></p>
-                <p><a href="starlink-other-accessories-06.html">Silicone Port Caps</a></p>
-                <p><a href="starlink-other-accessories-07.html">USB C DC Adapter</a></p>
+                <p><a href="starlink-mini-case-02.html" aria-label="Lockable Mini Case product page">Lockable Mini Case</a></p>
+                <p><a href="starlink-mini-case-03.html" aria-label="Black Protective Case">Black Protective Case</a></p>
+                <p><a href="starlink-mini-case-04.html" aria-label="Green IP67 Hard Case">Green IP67 Hard Case</a></p>
+                <p><a href="starlink-mini-case-05.html" aria-label="Portable Travel Case">Portable Travel Case</a></p>
+                <p><a href="starlink-mini-case-06.html" aria-label="Green Lockable Storage Bag">Green Lockable Storage Bag</a></p>
+                <p><a href="starlink-other-accessories-01.html" aria-label="6 Pack Wall Grommets">6 Pack Wall Grommets</a></p>
+                <p><a href="starlink-other-accessories-03.html" aria-label="Mini DC Power Cable">Mini DC Power Cable</a></p>
+                <p><a href="starlink-other-accessories-04.html" aria-label="8PCS White Wall Grommet">8PCS White Wall Grommet</a></p>
+                <p><a href="starlink-other-accessories-05.html" aria-label="Cable Routing Kit">Cable Routing Kit</a></p>
+                <p><a href="starlink-other-accessories-06.html" aria-label="Silicone Port Caps">Silicone Port Caps</a></p>
+                <p><a href="starlink-other-accessories-07.html" aria-label="USB C DC Adapter">USB C DC Adapter</a></p>
             </div>
             <div class="footer-col">
                 <h2>Contact Us 24/7</h2>
@@ -529,7 +536,8 @@
         </div>
     </div>
 </footer>
-<a href="https://wa.me/+8618038131740" target="_blank" class="whatsapp-float" rel="noopener noreferrer" aria-label="Floating WhatsApp quick chat button">💬</a>
+<!-- 悬浮WhatsApp链接补充可读aria -->
+<a href="https://wa.me/+8618038131740" target="_blank" class="whatsapp-float" rel="noopener noreferrer" aria-label="Floating quick WhatsApp chat button for sales consultation">💬</a>
 <script type="module" defer>
     const sliderItems = document.querySelectorAll('.slider-item');
     const thumbItems = document.querySelectorAll('.thumb-item');
