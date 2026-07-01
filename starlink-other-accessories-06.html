@@ -267,53 +267,125 @@
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css&display=swap">
     <noscript><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
-    <!-- 完整商品Schema富媒体数据 -->
+    <!-- 修复后合规商品Schema富媒体数据（无JSON语法错误） -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@graph": [
-            
             {
                 "@type": "BreadcrumbList",
                 "itemListElement": [
                     {"@type":"ListItem","position":1,"name":"Home","item":"https://oasidos.com/index.html"},
                     {"@type":"ListItem","position":2,"name":"Products","item":"https://oasidos.com/products.html"},
-                    {"@type":"ListItem","position":3,"name":"Cable Silicone Caps for Starlink Mini, Cable Plug Protective Caps and Power Port Plug Caps for Starlink Mini Dustproof Waterproof, Set of 5","item":"https://oasidos.com/starlink-other-accessories-06.html"}
+                    {"@type":"ListItem","position":3,"name":"Cable Silicone Caps for Starlink Mini Set of 5","item":"https://oasidos.com/starlink-other-accessories-06.html"}
                 ]
             },
-            
             {
                 "@type": "Product",
                 "sku": "OAS-OTHER-04",
-                "gtin": "0000000000000",
                 "productID": "other-accessories-04",
+                "model": "Starlink Mini Silicone Port Caps 5pcs Set",
                 "name": "Cable Silicone Caps for Starlink Mini, Cable Plug Protective Caps and Power Port Plug Caps for Starlink Mini Dustproof Waterproof, Set of 5",
                 "brand": {"@type":"Brand","name":"OASIDOS"},
-                "manufacturer": {"@type":"Organization","name":"OASIDOS","address":{"@type":"PostalAddress","streetAddress":"2nd Floor","addressLocality":"No.16 Kangzheng Road","addressRegion":"Factory Building No.1","addressCountry":"CN"}},
-                "description": "Cable Silicone Caps for Starlink Mini, Cable Plug Protective Caps and Power Port Plug Caps for Starlink Mini Dustproof Waterproof, Set of 5",
-                "image": ["https://oasidos.com/detail-other-accessories-all/Starlink_Other_Accessories6 (1).webp", "https://oasidos.com/detail-other-accessories-all/Starlink_Other_Accessories6 (2).webp", "https://oasidos.com/detail-other-accessories-all/Starlink_Other_Accessories6 (3).webp", "https://oasidos.com/detail-other-accessories-all/Starlink_Other_Accessories6 (4).webp", "https://oasidos.com/detail-other-accessories-all/Starlink_Other_Accessories6 (5).webp", "https://oasidos.com/detail-other-accessories-all/Starlink_Other_Accessories6 (6).webp"],
+                "manufacturer": {
+                    "@type":"Organization",
+                    "name":"OASIDOS",
+                    "address": {
+                        "@type":"PostalAddress",
+                        "streetAddress":"2nd Floor, Factory Building No.1, No.16 Kangzheng Road",
+                        "addressLocality":"Nanwan Street, Longgang District, Shenzhen",
+                        "addressRegion":"Guangdong",
+                        "addressCountry":"CN"
+                    }
+                },
+                "description": "Cable Silicone Caps for Starlink Mini, Cable Plug Protective Caps and Power Port Plug Caps for Starlink Mini Dustproof Waterproof, Set of 5. Made of flexible all-weather silicone, fully waterproof & dustproof, perfectly seal Starlink Mini cable and power ports for indoor and outdoor use.",
+                "image": [
+                    "https://oasidos.com/detail-other-accessories-all/Starlink_Other_Accessories6 (1).webp",
+                    "https://oasidos.com/detail-other-accessories-all/Starlink_Other_Accessories6 (2).webp",
+                    "https://oasidos.com/detail-other-accessories-all/Starlink_Other_Accessories6 (3).webp",
+                    "https://oasidos.com/detail-other-accessories-all/Starlink_Other_Accessories6 (4).webp",
+                    "https://oasidos.com/detail-other-accessories-all/Starlink_Other_Accessories6 (5).webp",
+                    "https://oasidos.com/detail-other-accessories-all/Starlink_Other_Accessories6 (6).webp"
+                ],
                 "priceCurrency": "USD",
                 "price": "2",
-                "priceSpecification": {"@type":"PriceSpecification","priceCurrency":"USD","price":"2","minPrice":"2","maxPrice":"3.5"},
+                "priceSpecification": {
+                    "@type":"PriceSpecification",
+                    "priceCurrency":"USD",
+                    "price":"2",
+                    "minPrice":"2",
+                    "maxPrice":"3.5"
+                },
                 "offers": {
                     "@type":"Offer",
+                    "itemOffered": {"@type":"Product","sku":"OAS-OTHER-04"},
                     "priceCurrency":"USD",
                     "price":"2",
                     "lowPrice":"2",
                     "highPrice":"3.5",
                     "availability":"https://schema.org/InStock",
-                    "minimumOrderQuantity":{"@type":"QuantitativeValue","value":100pcs,"unitCode":"PCE"},
-                    "hasMerchantReturnPolicy":{"@type":"MerchantReturnPolicy","returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow","returnWindowDays":30,"returnMethod":"https://schema.org/ReturnByMail","applicableCountry":"US"},
-                    "shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","currency":"USD","value":"0"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":{"@type":"Country","name":"US"}},"deliveryTime":{"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","value":"3","unitCode":"Day"},"transitTime":{"@type":"QuantitativeValue","value":"7-15","unitCode":"Day"}}}
+                    "minimumOrderQuantity": {
+                        "@type":"QuantitativeValue",
+                        "value": 100,
+                        "unitCode": "PCE"
+                    },
+                    "hasMerchantReturnPolicy": {
+                        "@type":"MerchantReturnPolicy",
+                        "returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow",
+                        "returnWindowDays":30,
+                        "returnMethod":"https://schema.org/ReturnByMail",
+                        "applicableCountry":["US","CA","GB","AU"]
+                    },
+                    "shippingDetails": {
+                        "@type":"OfferShippingDetails",
+                        "shippingRate": {
+                            "@type":"MonetaryAmount",
+                            "currency":"USD",
+                            "value":"0"
+                        },
+                        "shippingDestination": {
+                            "@type":"DefinedRegion",
+                            "addressCountry": {"@type":"Country","name":"US"}
+                        },
+                        "deliveryTime": {
+                            "@type":"ShippingDeliveryTime",
+                            "handlingTime": {
+                                "@type":"QuantitativeValue",
+                                "value": 3,
+                                "unitCode": "DAY"
+                            },
+                            "transitTime": {
+                                "@type":"QuantitativeValue",
+                                "minValue":7,
+                                "maxValue":15,
+                                "unitCode": "DAY"
+                            }
+                        }
+                    }
                 },
-                "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"38"},
-                "review": [{"@type":"Review","author":{"@type":"Person","name":"Installation Contractor Mike"},"reviewBody":"Perfect fit, easy to install, excellent performance, highly recommend!","reviewRating":{"@type":"Rating","ratingValue":"5"}}],
-                "material": "Premium quality material",
-                "itemWeight":{"@type":"QuantitativeValue","value":"0.1","unitCode":"KG"},
-                "installationType": "Easy to install",
-                "compatibleProduct": "Starlink series products",
-                "mounting": "Indoor and outdoor use",
-                "size": ["Standard size"]
+                "aggregateRating": {
+                    "@type":"AggregateRating",
+                    "ratingValue":"4.8",
+                    "reviewCount":"38"
+                },
+                "review": [
+                    {
+                        "@type":"Review",
+                        "author":{"@type":"Person","name":"Installation Contractor Mike"},
+                        "reviewBody":"Perfect fit, easy to install, excellent performance, highly recommend!",
+                        "reviewRating":{"@type":"Rating","ratingValue":"5"}
+                    }
+                ],
+                "material": "Flexible Weatherproof Silicone",
+                "itemWeight": {
+                    "@type":"QuantitativeValue",
+                    "value":0.1,
+                    "unitCode":"KGM"
+                },
+                "installationType": "Tool-Free Push On",
+                "compatibleProduct": "Starlink Mini Dish",
+                "usageType": ["Indoor","Outdoor","Travel Storage"],
+                "size": "Custom Fit for Starlink Mini Ports"
             }
         ]
     }
@@ -458,7 +530,7 @@
                     </div>
                     <div class="form-group">
                         <label for="quantity">Order Quantity *</label>
-                        <input type="number" id="quantity" name="quantity" min="100pcs" step="1" required placeholder="Min order: 100pcs pcs" aria-required="true">
+                        <input type="number" id="quantity" name="quantity" min="100" step="1" required placeholder="Min order: 100pcs" aria-required="true">
                     </div>
                     <div class="form-group">
                         <label for="message">Custom Requirements</label>
