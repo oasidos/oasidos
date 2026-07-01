@@ -267,7 +267,7 @@
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css&display=swap">
     <noscript><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
-    <!-- 修复后合规商品Schema富媒体数据（无JSON语法错误） -->
+    <!-- 完全修复Schema，无严重报错 -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -311,6 +311,7 @@
                 "price": "2",
                 "priceSpecification": {
                     "@type":"PriceSpecification",
+                    "name":"Wholesale EXW Price",
                     "priceCurrency":"USD",
                     "price":"2",
                     "minPrice":"2",
@@ -318,7 +319,12 @@
                 },
                 "offers": {
                     "@type":"Offer",
-                    "itemOffered": {"@type":"Product","sku":"OAS-OTHER-04"},
+                    "name":"Wholesale Offer for Starlink Mini Silicone Caps Set",
+                    "itemOffered": {
+                        "@type":"Product",
+                        "sku":"OAS-OTHER-04",
+                        "name":"Cable Silicone Caps for Starlink Mini Set of 5"
+                    },
                     "priceCurrency":"USD",
                     "price":"2",
                     "lowPrice":"2",
@@ -326,11 +332,13 @@
                     "availability":"https://schema.org/InStock",
                     "minimumOrderQuantity": {
                         "@type":"QuantitativeValue",
+                        "name":"Minimum Order Quantity",
                         "value": 100,
                         "unitCode": "PCE"
                     },
                     "hasMerchantReturnPolicy": {
                         "@type":"MerchantReturnPolicy",
+                        "name":"30 Days Return Policy",
                         "returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow",
                         "returnWindowDays":30,
                         "returnMethod":"https://schema.org/ReturnByMail",
@@ -338,6 +346,7 @@
                     },
                     "shippingDetails": {
                         "@type":"OfferShippingDetails",
+                        "name":"US Standard Shipping",
                         "shippingRate": {
                             "@type":"MonetaryAmount",
                             "currency":"USD",
@@ -349,6 +358,7 @@
                         },
                         "deliveryTime": {
                             "@type":"ShippingDeliveryTime",
+                            "name":"Handling & Transit Time",
                             "handlingTime": {
                                 "@type":"QuantitativeValue",
                                 "value": 3,
@@ -365,12 +375,14 @@
                 },
                 "aggregateRating": {
                     "@type":"AggregateRating",
+                    "name":"Customer Average Rating",
                     "ratingValue":"4.8",
                     "reviewCount":"38"
                 },
                 "review": [
                     {
                         "@type":"Review",
+                        "name":"5 Star Customer Review",
                         "author":{"@type":"Person","name":"Installation Contractor Mike"},
                         "reviewBody":"Perfect fit, easy to install, excellent performance, highly recommend!",
                         "reviewRating":{"@type":"Rating","ratingValue":"5"}
@@ -379,6 +391,7 @@
                 "material": "Flexible Weatherproof Silicone",
                 "itemWeight": {
                     "@type":"QuantitativeValue",
+                    "name":"Single Set Weight",
                     "value":0.1,
                     "unitCode":"KGM"
                 },
