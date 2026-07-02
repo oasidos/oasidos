@@ -159,7 +159,8 @@
             min-width:140px;
         }
         .chat-btn {background:#25D366}.chat-btn:hover {background:#12b356}
-        .inquiry-btn {background:#2c3a4c}.inquiry-btn:hover {background:#1f2a37}
+        /* 已修改询价按钮主色为#2C3A4C */
+        .inquiry-btn {background:#2C3A4C}.inquiry-btn:hover {background:#232e3b}
         .inquiry-form {display:none;margin-top:20px;padding:20px;background:#fbfbfb;border-radius:var(--radius);border:1px solid #eee}
         .inquiry-form.active {display:block;animation:fadeIn 0.5s ease}
         @keyframes fadeIn {from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
@@ -266,7 +267,7 @@
     <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <noscript><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
-    <!-- 完整商品Schema富媒体数据 -->
+    <!-- 完整商品Schema富媒体数据 - 修复JSON语法逗号缺失问题 -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -286,7 +287,17 @@
                 "productID": "protective-cover-07",
                 "name": "Starlink Gen 3 Protective Cover Case, Silicone Hail Protector Cover",
                 "brand": {"@type":"Brand","name":"OASIDOS"},
-                "manufacturer": {"@type":"Organization","name":"OASIDOS","address":{"@type":"PostalAddress","streetAddress":"2nd Floor, Factory Building No.1, No.16 Kangzheng Road, Danzhutou Community, Nanwan Street","addressLocality":"Longgang District","addressRegion":"Guangdong","addressCountry":"CN"}},
+                "manufacturer": {
+                    "@type":"Organization",
+                    "name":"OASIDOS",
+                    "address": {
+                        "@type":"PostalAddress",
+                        "streetAddress":"2nd Floor, Factory Building No.1, No.16 Kangzheng Road, Danzhutou Community, Nanwan Street",
+                        "addressLocality":"Longgang District",
+                        "addressRegion":"Guangdong",
+                        "addressCountry":"CN"
+                    }
+                },
                 "description": "Starlink Gen 3 Protective Cover Case, Silicone Hail Protector Cover for Starlink Standard, Waterproof,Impact Resistant to Rocks/Sand/Hail. MOQ 20pcs, EXW $6-11/pcs, OEM custom support.",
                 "image": [
                     "https://oasidos.com/detail-protective-cover-all/Starlink_Protective-Cover7 (1).webp",
@@ -298,7 +309,13 @@
                 ],
                 "priceCurrency": "USD",
                 "price": "6",
-                "priceSpecification": {"@type":"PriceSpecification","priceCurrency":"USD","price":"6","minPrice":"6","maxPrice":"11"},
+                "priceSpecification": {
+                    "@type":"PriceSpecification",
+                    "priceCurrency":"USD",
+                    "price":"6",
+                    "minPrice":"6",
+                    "maxPrice":"11"
+                },
                 "offers": {
                     "@type":"Offer",
                     "priceCurrency": "USD",
@@ -306,14 +323,57 @@
                     "lowPrice":"6",
                     "highPrice":"11",
                     "availability":"https://schema.org/InStock",
-                    "minimumOrderQuantity":{"@type":"QuantitativeValue","value":20,"unitCode":"PCE"},
-                    "hasMerchantReturnPolicy":{"@type":"MerchantReturnPolicy","returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow","returnWindowDays":30,"returnMethod":"https://schema.org/ReturnByMail","applicableCountry":"US"},
-                    "shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":"0"},"shippingDestination":{"@type":"DefinedRegion","addressCountry":{"@type":"Country","name":"US"}},"deliveryTime":{"@type":"QuantitativeValue","value":"3","unitCode":"Day"}}}
+                    "minimumOrderQuantity":{
+                        "@type":"QuantitativeValue",
+                        "value":20,
+                        "unitCode":"PCE"
+                    },
+                    "hasMerchantReturnPolicy":{
+                        "@type":"MerchantReturnPolicy",
+                        "returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow",
+                        "returnWindowDays":30,
+                        "returnMethod":"https://schema.org/ReturnByMail",
+                        "applicableCountry":"US"
+                    },
+                    "shippingDetails":{
+                        "@type":"OfferShippingDetails",
+                        "shippingRate":{
+                            "@type":"MonetaryAmount",
+                            "value":"0"
+                        },
+                        "shippingDestination":{
+                            "@type":"DefinedRegion",
+                            "addressCountry":{
+                                "@type":"Country",
+                                "name":"US"
+                            }
+                        },
+                        "deliveryTime":{
+                            "@type":"QuantitativeValue",
+                            "value":3,
+                            "unitCode":"Day"
+                        }
+                    }
                 },
-                "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":46},
-                "review": [{"@type":"Review","author":{"@type":"Person","name":"Roof Installer Mike"},"reviewBody":"Hex texture dissipates heat very well, great hail protection for Gen3 dish, no signal loss at all.","reviewRating":{"@type":"Rating","ratingValue":"5"}}],
+                "aggregateRating":{
+                    "@type":"AggregateRating",
+                    "ratingValue":"4.9",
+                    "reviewCount":46
+                },
+                "review": [
+                    {
+                        "@type":"Review",
+                        "author":{"@type":"Person","name":"Roof Installer Mike"},
+                        "reviewBody":"Hex texture dissipates heat very well, great hail protection for Gen3 dish, no signal loss at all.",
+                        "reviewRating":{"@type":"Rating","ratingValue":"5"}
+                    }
+                ],
                 "material": "Flexible durable silicone",
-                "itemWeight":{"@type":"QuantitativeValue","value":"0.48","unitCode":"KG"},
+                "itemWeight":{
+                    "@type":"QuantitativeValue",
+                    "value":"0.48",
+                    "unitCode":"KG"
+                },
                 "installationType": "10-second tool-free install",
                 "compatibleProduct": "Starlink Gen 3 Satellite Dish",
                 "mounting": "Rooftop, car roof, yacht outdoor use",
