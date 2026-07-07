@@ -2,21 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- 仅移除maximum-scale，其余还原原始viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LM-3C Starlink Gen3 Router Wall Mount for V3/4X Mesh Router & Power Supply</title>
     <meta name="description" content="All-in-one Starlink Gen3 router wall mount LM-3C, fit V3/4X mesh router, MOQ 20pcs, EXW price $4.5-9/pc, space-saving ABS bracket kit.">
     <meta name="keywords" content="Starlink Gen3 router mount, Starlink V3 wall bracket, LM-3C router holder">
-    <link rel="canonical" href="https://oasidos.com/starlink-gen3-router-mount-lm3c.html">
+    <link rel="canonical" href="https://oasidos.com/starlink-router-mount-02.html">
 
-    <!-- 资源预连接 统一补crossorigin解决跨域重复请求 -->
     <link rel="preconnect" href="https://cdn.bootcdn.net" crossorigin>
-    <!-- 谷歌字体仅dns预解析，放弃强制加载避免页面阻塞报错 -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="dns-prefetch" href="https://wa.me">
 
-    <!-- 国内稳定Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -26,12 +22,14 @@
         :root {
             --color-primary: #2C3E50;
             --color-dark: #212121;
-            --color-text: #444444;
+            /* 修复对比度：加深正文文字，视觉几乎无变化 */
+            --color-text: #333333;
             --color-text-light: #777777;
             --color-bg-light: #FFFFFF;
             --color-white: #FFFFFF;
             --shadow: 0 2px 8px rgba(0, 0, 0.08);
             --radius: 4px;
+            --touch-padding: 12px;
         }
         * {
             margin: 0;
@@ -50,6 +48,9 @@
         }
         ul {
             list-style: none;
+        }
+        button {
+            font-family: inherit;
         }
         .container {
             width: 92%;
@@ -86,6 +87,9 @@
             font-weight: 500;
             color: var(--color-dark);
             transition: color 0.3s ease;
+            /* 扩大触摸热区，视觉不变 */
+            padding: var(--touch-padding) 4px;
+            display: inline-block;
         }
         .nav-menu li a:hover,
         .nav-menu li a.active {
@@ -95,8 +99,11 @@
             display: none;
             font-size: 24px;
             cursor: pointer;
+            /* 触摸扩容 */
+            padding: var(--touch-padding);
         }
-        .main {
+        /* main 地标容器，复用原有.main样式，无视觉改动 */
+        main.main {
             margin-top: 90px;
             padding: 40px 0;
         }
@@ -162,6 +169,8 @@
             transition: background 0.3s ease;
             outline: none;
             z-index: 3;
+            /* 扩大点击热区 */
+            padding: 12px;
         }
         .prev-btn:hover, .next-btn:hover {
             background: rgba(0,0,0,0.6);
@@ -187,6 +196,8 @@
             cursor: pointer;
             border: 2px solid transparent;
             transition: border 0.2s ease;
+            /* 触摸扩容 */
+            padding: 8px;
         }
         .thumb-item.active {
             border-color: var(--color-primary);
@@ -413,10 +424,11 @@
             height: 2px;
             background-color: var(--color-primary);
         }
+        /* 修复底部文字对比度 */
         .footer-col p,
         .footer-col a {
             font-size: 14px;
-            color: #ccc;
+            color: #dddddd;
             line-height: 1.8;
             transition: color 0.3s ease;
         }
@@ -428,7 +440,7 @@
             padding-top: 20px;
             border-top: 1px solid #333;
             font-size: 13px;
-            color: #999;
+            color: #cccccc;
         }
         .whatsapp-float {
             position: fixed;
@@ -514,7 +526,7 @@
             }
         }
     </style>
-    <!-- 仅保留1套完整合规Product结构化数据，删除重复第二套解决报错 -->
+    <!-- 唯一一套完整Schema，修复富媒体重复Product报错 -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -602,7 +614,8 @@
             <div class="menu-toggle"><i class="fas fa-bars"></i></div>
         </div>
     </header>
-    <div class="container main">
+    <!-- 新增main语义地标，修复缺失main landmark报错 -->
+    <main class="container main">
         <div class="product-main-wrap">
             <div class="product-left">
                 <div class="slider-container">
@@ -699,7 +712,8 @@
                     <p><strong>MOQ:</strong> 20pcs</p>
                     <p><strong>EXW Price:</strong> $4.5-9/pcs</p>
                 </div>
-                <h3 class="info-title">About this item</h3>
+                <!-- 修复标题层级：h3 → h2，解决顺序递减报错 -->
+                <h2 class="info-title">About this item</h2>
                 <ul class="bullet-list">
                     <li><strong>Upgraded Integrated Router Mount</strong>: Designed for Starlink Gen 3 (UTR-32) router and power supply, combines both units to cut cable clutter and save up to 60% workspace, ideal for RVs, boats and offices.</li>
                     <li><strong>Superior Durable ABS Build</strong>: High-grade ABS plastic with 200% higher stress tolerance than standard mounts, rigorously tested for impact, scratch and temperature resistance.</li>
@@ -716,7 +730,8 @@
                     </button>
                 </div>
                 <div class="inquiry-form" id="inquiryForm">
-                    <h3 class="info-title" style="margin-bottom:20px;">Send Inquiry</h3>
+                    <!-- 修复标题层级：h3 → h2 -->
+                    <h2 class="info-title" style="margin-bottom:20px;">Send Inquiry</h2>
                     <form id="inquiryFormElement" novalidate>
                         <input type="hidden" name="product_url" id="productUrl">
                         <div class="form-group">
@@ -743,7 +758,8 @@
             </div>
         </div>
         <div class="spec-section">
-            <h3 class="info-title">Features & Specifications</h3>
+            <!-- 修复标题层级：h3 → h2 -->
+            <h2 class="info-title">Features & Specifications</h2>
             <table class="full-spec-table">
                 <tr>
                     <th>Item</th>
@@ -783,7 +799,7 @@
                 </tr>
             </table>
         </div>
-    </div>
+    </main>
     <div class="tip-modal" id="tipModal" role="alert">OASIDOS will contact you in 24 hours!</div>
     <footer>
         <div class="footer-inner">
@@ -824,7 +840,7 @@
     <a href="https://wa.me/+8618038131740" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
-    <!-- 还原原始JS，修复prev点击笔误，完整恢复轮播+Inquiry按钮全部原始逻辑 -->
+    <!-- 原始完整JS无改动 -->
     <script type="module">
         const sliderItems = document.querySelectorAll('.slider-item');
         const thumbItems = document.querySelectorAll('.thumb-item');
@@ -858,7 +874,6 @@
             });
         });
 
-        // 完整还原Inquiry按钮展开/关闭表单原始逻辑
         const inquiryBtn = document.getElementById('inquiryBtn');
         const inquiryForm = document.getElementById('inquiryForm');
         const formEl = document.getElementById('inquiryFormElement');
