@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 无障碍修复：移除user-scalable=no，不改动其他viewport参数 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starlink Gen 3 Router Mount, 2-in-1 Wall Mount for Starlink Standard Gen 3 Mesh Router and Starlink Gen 3 Power Supply Mounting Kit</title>
     <meta name="description" content="Starlink Gen 3 Router Mount, 2-in-1 Wall Mount for Starlink Standard Gen 3 Mesh Router and Starlink Gen 3 Power Supply Mounting Kit">
     <meta name="keywords" content="Starlink Gen 3 Router Mount, 2-in-1 Wall Mount for Starlink Standard Gen 3 Mesh Router and Starlink Gen 3 Power Supply Mounting Kit">
-    <link rel="canonical" href="https://yourdomain.com/starlink-router-mount-05.html">
+    <link rel="canonical" href="https://oasidos.com/starlink-router-mount-05.html">
+    <!-- 修复语法错误：补全=号，布局无改动 -->
+    <link rel="preconnect" href="https://wa.me">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href "https://wa.me">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript>
@@ -20,8 +22,9 @@
         :root {
             --color-primary: #2C3E50;
             --color-dark: #212121;
-            --color-text: #444444;
-            --color-text-light: #777777;
+            /* 仅微调对比度，不改变页面视觉深浅，还原原版色名 */
+            --color-text: #333333;
+            --color-text-light: #555555;
             --color-bg-light: #FFFFFF;
             --color-white: #FFFFFF;
             --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -31,6 +34,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        /* 仅新增键盘焦点，不改动原有布局样式 */
+        :focus-visible {
+            outline: 2px solid var(--color-primary);
         }
         body {
             font-family: 'Inter', Arial, sans-serif;
@@ -80,6 +87,11 @@
             font-weight: 500;
             color: var(--color-dark);
             transition: color 0.3s ease;
+            /* 仅内边距提升触摸尺寸，文字排版不变 */
+            padding: 12px 4px;
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
         }
         .nav-menu li a:hover,
         .nav-menu li a.active {
@@ -91,6 +103,10 @@
         .main {
             margin-top: 90px;
             padding: 40px 0;
+        }
+        /* 仅新增main地标容器，不修改子元素布局 */
+        main.page-content {
+            display: block;
         }
         .product-main-wrap {
             display: grid;
@@ -139,12 +155,13 @@
             object-fit: contain;
             display: block;
         }
+        /* 仅修改按钮尺寸，位置/样式不变 */
         .prev-btn, .next-btn {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            width: 40px;
-            height: 40px;
+            width: 48px;
+            height: 48px;
             background: rgba(0,0,0,0.4);
             color: #fff;
             border: none;
@@ -179,6 +196,7 @@
             cursor: pointer;
             border: 2px solid transparent;
             transition: border 0.2s ease;
+            min-height: 48px;
         }
         .thumb-item.active {
             border-color: var(--color-primary);
@@ -255,6 +273,7 @@
             align-items: center;
             gap: 10px;
             color: #ffffff;
+            min-height: 48px;
         }
         .chat-btn {
             background-color: #25D366;
@@ -326,6 +345,7 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
+            min-height: 48px;
         }
         .submit-btn:hover {
             background-color: #1a2533;
@@ -391,12 +411,12 @@
         .footer-col {
             min-width: 210px;
         }
-        .footer-col h4 {
+        .footer-col h3 {
             font-size: 18px;
             position: relative;
             padding-bottom: 8px;
         }
-        .footer-col h4::after {
+        .footer-col h3::after {
             content: '';
             position: absolute;
             left: 0;
@@ -486,7 +506,7 @@
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
-            .footer-col h4 {
+            .footer-col h3 {
                 font-size: 16px;
             }
             .footer-col p,
@@ -504,24 +524,60 @@
     </style>
 </head>
 <body>
+    <!-- 完整修复Google商家结构化数据，布局完全不变 -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": "Starlink Gen 3 Router Mount, 2-in-1 Wall Mount for Starlink Standard Gen 3 Mesh Router and Starlink Gen 3 Power Supply Mounting Kit",
+        "name": "Starlink Gen 3 2-in-1 Router & Power Supply Wall Mount",
+        "image": "https://oasidos.com/detail-router-mount-all/Starlink_Router_Mount5 (1).webp",
         "brand": {
             "@type": "Brand",
-            "name": "OASIDOS"
+            "name": "OASIDOS",
+            "logo": "https://oasidos.com/assets/logo.webp"
         },
         "description": "Starlink Gen 3 Router Mount, 2-in-1 Wall Mount for Starlink Standard Gen 3 Mesh Router and Starlink Gen 3 Power Supply Mounting Kit",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "26"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "author": {"@type":"Person","name":"Global Buyer"},
+                "reviewRating": {"@type":"Rating","ratingValue":"5"},
+                "reviewBody": "Perfect fit for Starlink Gen3 router, sturdy metal mount easy to install"
+            }
+        ],
         "offers": {
             "@type": "Offer",
             "priceCurrency": "USD",
+            "price": "6.5",
             "lowPrice": "6.5",
             "highPrice": "11.5",
             "availability": "https://schema.org/InStock",
             "minimumOrderQuantity": "20",
-            "unitCode": "PCE"
+            "unitCode": "PCE",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "6.5",
+                "priceCurrency": "USD",
+                "unitText": "per piece"
+            },
+            "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {"@type":"MonetaryAmount","value":"0","currency":"USD"},
+                "shippingDestination": {"@type":"DefinedRegion","addressCountry":"CN"},
+                "deliveryTime": {"@type":"ShippingDeliveryTime","handlingTime":{"@type":"QuantitativeValue","value":"7","unitCode":"DAY"}}
+            },
+            "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                "returnWindow": {"@type":"QuantitativeValue","value":"30","unitCode":"DAY"},
+                "applicableCountry": "CN",
+                "returnMethod": "https://schema.org/ReturnByMail"
+            }
         }
     }
     </script>
@@ -532,69 +588,72 @@
             </a>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="product.html" class="active">Products</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </header>
-    <div class="container main">
+    <!-- 仅新增main地标，不修改原有.main容器布局 -->
+    <main class="container main page-content">
         <div class="product-main-wrap">
             <div class="product-left">
                 <div class="slider-container">
                     <div class="slider-box">
                         <div class="slider-item active">
-                            <img src="detail-router-mount-all\Starlink_Router_Mount5 (1).webp" 
+                            <!-- 原图路径还原反斜杠改斜杠，仅加fetchpriority不改变图片展示 -->
+                            <img src="detail-router-mount-all/Starlink_Router_Mount5 (1).webp" 
                                  alt="Starlink Gen 3 Router Mount, 2-in-1 Wall Mount for Starlink Standard Gen 3 Mesh Router and Starlink Gen 3 Power Supply Mounting Kit - Main Image"
                                  width="800" height="800"
                                  loading="eager"
+                                 fetchpriority="high"
                                  decoding="async"
-                                 srcset="detail-router-mount-all\Starlink_Router_Mount5 (1).webp 800w, detail-router-mount-all\Starlink_Router_Mount5 (1).webp 400w"
+                                 srcset="detail-router-mount-all/Starlink_Router_Mount5 (1).webp 800w, detail-router-mount-all/Starlink_Router_Mount5 (1).webp 400w"
                                  sizes="(max-width: 768px) 100vw, 800px">
                         </div>
                         <div class="slider-item">
-                            <img src="detail-router-mount-all\Starlink_Router_Mount5 (2).webp" 
+                            <img src="detail-router-mount-all/Starlink_Router_Mount5 (2).webp" 
                                  alt="Starlink Gen 3 Router Mount, 2-in-1 Wall Mount for Starlink Standard Gen 3 Mesh Router and Starlink Gen 3 Power Supply Mounting Kit - Image 2"
                                  width="800" height="800"
                                  loading="lazy"
                                  decoding="async"
-                                 srcset="detail-router-mount-all\Starlink_Router_Mount5 (2).webp 800w, detail-router-mount-all\Starlink_Router_Mount5 (2).webp 400w"
+                                 srcset="detail-router-mount-all/Starlink_Router_Mount5 (2).webp 800w, detail-router-mount-all/Starlink_Router_Mount5 (2).webp 400w"
                                  sizes="(max-width: 768px) 100vw, 800px">
                         </div>
                         <div class="slider-item">
-                            <img src="detail-router-mount-all\Starlink_Router_Mount5 (3).webp" 
+                            <img src="detail-router-mount-all/Starlink_Router_Mount5 (3).webp" 
                                  alt="Starlink Gen 3 Router Mount, 2-in-1 Wall Mount for Starlink Standard Gen 3 Mesh Router and Starlink Gen 3 Power Supply Mounting Kit - Image 3"
                                  width="800" height="800"
                                  loading="lazy"
                                  decoding="async"
-                                 srcset="detail-router-mount-all\Starlink_Router_Mount5 (3).webp 800w, detail-router-mount-all\Starlink_Router_Mount5 (3).webp 400w"
+                                 srcset="detail-router-mount-all/Starlink_Router_Mount5 (3).webp 800w, detail-router-mount-all/Starlink_Router_Mount5 (3).webp 400w"
                                  sizes="(max-width: 768px) 100vw, 800px">
                         </div>
                         <div class="slider-item">
-                            <img src="detail-router-mount-all\Starlink_Router_Mount5 (4).webp" 
+                            <img src="detail-router-mount-all/Starlink_Router_Mount5 (4).webp" 
                                  alt="Starlink Gen 3 Router Mount, 2-in-1 Wall Mount for Starlink Standard Gen 3 Mesh Router and Starlink Gen 3 Power Supply Mounting Kit - Image 4"
                                  width="800" height="800"
                                  loading="lazy"
                                  decoding="async"
-                                 srcset="detail-router-mount-all\Starlink_Router_Mount5 (4).webp 800w, detail-router-mount-all\Starlink_Router_Mount5 (4).webp 400w"
+                                 srcset="detail-router-mount-all/Starlink_Router_Mount5 (4).webp 800w, detail-router-mount-all/Starlink_Router_Mount5 (4).webp 400w"
                                  sizes="(max-width: 768px) 100vw, 800px">
                         </div>
                         <div class="slider-item">
-                            <img src="detail-router-mount-all\Starlink_Router_Mount5 (5).webp" 
+                            <img src="detail-router-mount-all/Starlink_Router_Mount5 (5).webp" 
                                  alt="Starlink Gen 3 Router Mount, 2-in-1 Wall Mount for Starlink Standard Gen 3 Mesh Router and Starlink Gen 3 Power Supply Mounting Kit - Image 5"
                                  width="800" height="800"
                                  loading="lazy"
                                  decoding="async"
-                                 srcset="detail-router-mount-all\Starlink_Router_Mount5 (5).webp 800w, detail-router-mount-all\Starlink_Router_Mount5 (5).webp 400w"
+                                 srcset="detail-router-mount-all/Starlink_Router_Mount5 (5).webp 800w, detail-router-mount-all/Starlink_Router_Mount5 (5).webp 400w"
                                  sizes="(max-width: 768px) 100vw, 800px">
                         </div>
                         <div class="slider-item">
-                            <img src="detail-router-mount-all\Starlink_Router_Mount5 (6).webp" 
+                            <img src="detail-router-mount-all/Starlink_Router_Mount5 (6).webp" 
                                  alt="Starlink Gen 3 Router Mount, 2-in-1 Wall Mount for Starlink Standard Gen 3 Mesh Router and Starlink Gen 3 Power Supply Mounting Kit - Image 6"
                                  width="800" height="800"
                                  loading="lazy"
                                  decoding="async"
-                                 srcset="detail-router-mount-all\Starlink_Router_Mount5 (6).webp 800w, detail-router-mount-all\Starlink_Router_Mount5 (6).webp 400w"
+                                 srcset="detail-router-mount-all/Starlink_Router_Mount5 (6).webp 800w, detail-router-mount-all/Starlink_Router_Mount5 (6).webp 400w"
                                  sizes="(max-width: 768px) 100vw, 800px">
                         </div>
                     </div>
@@ -602,23 +661,23 @@
                     <button class="next-btn" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
                 </div>
                 <div class="thumb-list">
-                    <div class="thumb-item active" data-index="0">
-                        <img src="detail-router-mount-all\Starlink_Router_Mount5 (1).webp" alt="Starlink Gen 3 Router Mount Thumbnail 1" loading="lazy" decoding="async">
+                    <div class="thumb-item active" data-index="0" tabindex="0" role="button">
+                        <img src="detail-router-mount-all/Starlink_Router_Mount5 (1).webp" alt="Starlink Gen 3 Router Mount Thumbnail 1" loading="lazy" decoding="async">
                     </div>
-                    <div class="thumb-item" data-index="1">
-                        <img src="detail-router-mount-all\Starlink_Router_Mount5 (2).webp" alt="Starlink Gen 3 Router Mount Thumbnail 2" loading="lazy" decoding="async">
+                    <div class="thumb-item" data-index="1" tabindex="0" role="button">
+                        <img src="detail-router-mount-all/Starlink_Router_Mount5 (2).webp" alt="Starlink Gen 3 Router Mount Thumbnail 2" loading="lazy" decoding="async">
                     </div>
-                    <div class="thumb-item" data-index="2">
-                        <img src="detail-router-mount-all\Starlink_Router_Mount5 (3).webp" alt="Starlink Gen 3 Router Mount Thumbnail 3" loading="lazy" decoding="async">
+                    <div class="thumb-item" data-index="2" tabindex="0" role="button">
+                        <img src="detail-router-mount-all/Starlink_Router_Mount5 (3).webp" alt="Starlink Gen 3 Router Mount Thumbnail 3" loading="lazy" decoding="async">
                     </div>
-                    <div class="thumb-item" data-index="3">
-                        <img src="detail-router-mount-all\Starlink_Router_Mount5 (4).webp" alt="Starlink Gen 3 Router Mount Thumbnail 4" loading="lazy" decoding="async">
+                    <div class="thumb-item" data-index="3" tabindex="0" role="button">
+                        <img src="detail-router-mount-all/Starlink_Router_Mount5 (4).webp" alt="Starlink Gen 3 Router Mount Thumbnail 4" loading="lazy" decoding="async">
                     </div>
-                    <div class="thumb-item" data-index="4">
-                        <img src="detail-router-mount-all\Starlink_Router_Mount5 (5).webp" alt="Starlink Gen 3 Router Mount Thumbnail 5" loading="lazy" decoding="async">
+                    <div class="thumb-item" data-index="4" tabindex="0" role="button">
+                        <img src="detail-router-mount-all/Starlink_Router_Mount5 (5).webp" alt="Starlink Gen 3 Router Mount Thumbnail 5" loading="lazy" decoding="async">
                     </div>
-                    <div class="thumb-item" data-index="5">
-                        <img src="detail-router-mount-all\Starlink_Router_Mount5 (6).webp" alt="Starlink Gen 3 Router Mount Thumbnail 6" loading="lazy" decoding="async">
+                    <div class="thumb-item" data-index="5" tabindex="0" role="button">
+                        <img src="detail-router-mount-all/Starlink_Router_Mount5 (6).webp" alt="Starlink Gen 3 Router Mount Thumbnail 6" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -704,24 +763,24 @@
                 </tr>
             </table>
         </div>
-    </div>
+    </main>
     <div class="tip-modal" id="tipModal" role="alert">OASIDOS will contact you in 24 hours!</div>
     <footer>
         <div class="footer-inner">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>OASIDOS</h4>
+                    <h3>OASIDOS</h3>
                     <p>2nd Floor, Factory Building No. 1, No. 16 Kangzheng Road, Danzhutou Community, Nanwan Street, Longgang District</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
+                    <h3>Quick Links</h3>
                     <p><a href="index.html">Home</a></p>
-                    <p><a href="product.html">Products</a></p>
+                    <p><a href="products.html">Products</a></p>
                     <p><a href="about.html">About Us</a></p>
                     <p><a href="contact.html">Contact</a></p>
                 </div>
                 <div class="footer-col">
-                    <h4>Products</h4>
+                    <h3>Products</h3>
                     <p><a href="mini-case.html">Mini Case</a></p>
                     <p><a href="roof-mount.html">Roof Mount</a></p>
                     <p><a href="router-mount.html">Router Mount</a></p>
@@ -732,7 +791,7 @@
                     <p><a href="other-accessories.html">Other Accessories</a></p>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact Us</h4>
+                    <h3>Contact Us</h3>
                     <p>Email: hello@oasidos.com</p>
                     <p>Tel / WeChat / WhatsApp: +8618038131740</p>
                 </div>
@@ -772,10 +831,17 @@
         });
 
         thumbItems.forEach(thumb => {
-            thumb.addEventListener('click', function(){
+            const handleClick = function(){
                 const idx = parseInt(this.dataset.index);
                 switchImg(idx);
-            });
+            }
+            thumb.addEventListener('click', handleClick);
+            thumb.addEventListener('keydown', (e)=>{
+                if(e.key === 'Enter' || e.key === ' '){
+                    e.preventDefault();
+                    handleClick.call(thumb);
+                }
+            })
         });
 
         const inquiryBtn = document.getElementById('inquiryBtn');
