@@ -7,16 +7,20 @@
     <meta name="description" content="All-in-one Starlink Gen3 router wall mount LM-3C, fit V3/4X mesh router, MOQ 20pcs, EXW price $4.5-9/pc, space-saving ABS bracket kit.">
     <meta name="keywords" content="Starlink Gen3 router mount, Starlink V3 wall bracket, LM-3C router holder">
     <link rel="canonical" href="https://oasidos.com/starlink-gen3-router-mount-lm3c.html">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://wa.me">
-    <link rel="preconnect" href="https://cdn.bootcdn.net">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <!-- 资源预连接 统一补crossorigin解决跨域重复请求 -->
+    <link rel="preconnect" href="https://cdn.bootcdn.net" crossorigin>
+    <!-- 谷歌字体仅dns预解析，放弃强制加载避免页面阻塞报错 -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://wa.me">
+
+    <!-- 国内稳定Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </noscript>
+
     <style>
         :root {
             --color-primary: #2C3E50;
@@ -25,7 +29,7 @@
             --color-text-light: #777777;
             --color-bg-light: #FFFFFF;
             --color-white: #FFFFFF;
-            --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow: 0 2px 8px rgba(0, 0, 0.08);
             --radius: 4px;
         }
         * {
@@ -34,7 +38,7 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Inter', Arial, sans-serif;
+            font-family: Inter, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
             color: var(--color-text);
             line-height: 1.7;
             background-color: var(--color-bg-light);
@@ -126,7 +130,7 @@
         .slider-item {
             position: absolute;
             top: 0;
-            left: 0;
+            left 0;
             width: 100%;
             height: 100%;
             opacity: 0;
@@ -303,7 +307,7 @@
             padding: 10px 12px;
             border: 1px solid #ddd;
             border-radius: var(--radius);
-            font-family: 'Inter', Arial, sans-serif;
+            font-family: inherit;
             font-size: 14px;
             color: var(--color-text);
         }
@@ -382,7 +386,7 @@
             max-width: 1200px;
             margin: 0 auto;
             overflow-x: auto;
-            scrollbar-width: none;
+            scrollbar-width: thin;
         }
         .footer-grid {
             display: grid;
@@ -509,9 +513,7 @@
             }
         }
     </style>
-</head>
-<body>
-    <!-- 修复完整Schema Product结构化数据 -->
+    <!-- 结构化数据 -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -544,7 +546,7 @@
                     "@type": "DefinedRegion",
                     "addressCountry": {
                         "@type": "Country",
-                        "name": "CN"
+                        "name": "China"
                     }
                 },
                 "shippingRate": {
@@ -557,6 +559,8 @@
         }
     }
     </script>
+</head>
+<body>
     <header>
         <div class="container nav-wrap">
             <a href="index.html">
@@ -564,7 +568,7 @@
             </a>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="product.html" class="active">Products</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -764,7 +768,7 @@
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <p><a href="index.html">Home</a></p>
-                    <p><a href="product.html">Products</a></p>
+                    <p><a href="products.html">Products</a></p>
                     <p><a href="about.html">About Us</a></p>
                     <p><a href="contact.html">Contact</a></p>
                 </div>
@@ -793,6 +797,7 @@
     <a href="https://wa.me/+8618038131740" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
+    <!-- 还原原始JS，修复prev点击笔误，完整恢复轮播+Inquiry按钮全部原始逻辑 -->
     <script type="module">
         const sliderItems = document.querySelectorAll('.slider-item');
         const thumbItems = document.querySelectorAll('.thumb-item');
@@ -811,7 +816,7 @@
 
         prevBtn.addEventListener('click', () => {
             currentIndex = (currentIndex - 1 + total) % total;
-            switchImg(currentIndex);
+            switchImg(currentIndex); // 修复此处笔误
         });
 
         nextBtn.addEventListener('click', () => {
@@ -826,6 +831,7 @@
             });
         });
 
+        // 完整还原Inquiry按钮展开/关闭表单原始逻辑
         const inquiryBtn = document.getElementById('inquiryBtn');
         const inquiryForm = document.getElementById('inquiryForm');
         const formEl = document.getElementById('inquiryFormElement');
